@@ -16,8 +16,8 @@ Sophisticated black and gold theme with premium aesthetics.
 ### 3. Magazine Editorial
 Editorial-inspired layout with asymmetric grids and storytelling approach.
 
-### 4. Interactive Grid (Coming Soon)
-Dynamic masonry layout with advanced filtering.
+### 4. Interactive Grid
+Dynamic masonry layout with advanced filtering and smooth animations.
 
 ### 5. Ultra Fancy 3D (Coming Soon)
 Mind-blowing experience with WebGL and cutting-edge animations.
