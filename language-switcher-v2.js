@@ -2,7 +2,12 @@
 class LanguageSwitcher {
     constructor() {
         this.currentLang = localStorage.getItem('language') || 'bg';
-        this.init();
+        // Wait for DOM and translations to load
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => this.init());
+        } else {
+            this.init();
+        }
     }
 
     init() {
@@ -166,6 +171,13 @@ class LanguageSwitcher {
     }
 
     applyTranslations() {
+        // Check if translations object exists
+        if (typeof translations === 'undefined') {
+            console.warn('Translations not loaded yet, retrying...');
+            setTimeout(() => this.applyTranslations(), 100);
+            return;
+        }
+        
         const t = translations[this.currentLang];
         
         // Apply translations to elements with data-translate attribute
@@ -202,5 +214,8 @@ class LanguageSwitcher {
 
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
-    new LanguageSwitcher();
+    // Give translations a moment to load
+    setTimeout(() => {
+        new LanguageSwitcher();
+    }, 50);
 });

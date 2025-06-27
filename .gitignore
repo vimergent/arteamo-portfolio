@@ -23,6 +23,15 @@ __pycache__/
 *.py[cod]
 .venv/
 
+# Node modules
+node_modules/
+package-lock.json
+
+# Test files
+test-*.js
+test-*.html
+final-validation.js
+
 # Deployment
 deploy.sh
 serve.py
