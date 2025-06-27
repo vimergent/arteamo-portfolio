@@ -1,0 +1,5 @@
+Version: 2.0
+Updated: 2024-06-27
+Language Switcher: v2
+Default Language: Bulgarian
+Status: All 4 websites complete

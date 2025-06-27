@@ -26,3 +26,5 @@ __pycache__/
 # Deployment
 deploy.sh
 serve.py
+fix-deploy.html
+debug-galleries.md
