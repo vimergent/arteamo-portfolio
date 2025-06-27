@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Arteamo | Luxury Interior Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="../translations.js"></script>
+    <script src="../language-switcher.js"></script>
+</head>
+<body>
+    <div class="page-loader">
+        <div class="loader-content">
+            <h1 class="loader-text">STUDIO ARTEAMO</h1>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-symbol">SA</div>
+                <div class="logo-text">
+                    <h1>STUDIO ARTEAMO</h1>
+                    <p>Luxury Interior Design</p>
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">
+                    <span class="nav-text">Home</span>
+                    <span class="nav-line"></span>
+                </a>
+                <a href="#portfolio" class="nav-link">
+                    <span class="nav-text">Portfolio</span>
+                    <span class="nav-line"></span>
+                </a>
+                <a href="#about" class="nav-link">
+                    <span class="nav-text">About</span>
+                    <span class="nav-line"></span>
+                </a>
+                <a href="#services" class="nav-link">
+                    <span class="nav-text">Services</span>
+                    <span class="nav-line"></span>
+                </a>
+                <a href="#contact" class="nav-link">
+                    <span class="nav-text">Contact</span>
+                    <span class="nav-line"></span>
+                </a>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div>
+            <video autoplay muted loop playsinline>
+                <source src="luxury-bg.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-content">
+            <span class="hero-subtitle">Established 2008</span>
+            <h1 class="hero-title">
+                <span class="title-line">Creating Spaces</span>
+                <span class="title-line">That Inspire</span>
+            </h1>
+            <p class="hero-description">Award-winning interior design studio transforming visions into extraordinary realities</p>
+            <a href="#portfolio" class="hero-cta">
+                <span>Explore Our Work</span>
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                    <path d="M5 10h10m0 0l-3-3m3 3l-3 3" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2 class="section-title">Portfolio</h2>
+            <p class="section-subtitle">Curated selection of our finest projects</p>
+        </div>
+
+        <div class="filter-bar">
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all">
+                    <span class="filter-number">08</span>
+                    <span class="filter-text">All Projects</span>
+                </button>
+                <button class="filter-btn" data-filter="residential">
+                    <span class="filter-number">04</span>
+                    <span class="filter-text">Residential</span>
+                </button>
+                <button class="filter-btn" data-filter="commercial">
+                    <span class="filter-number">02</span>
+                    <span class="filter-text">Commercial</span>
+                </button>
+                <button class="filter-btn" data-filter="hospitality">
+                    <span class="filter-number">02</span>
+                    <span class="filter-text">Hospitality</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="projects-container">
+            <div class="project-item" data-category="residential" data-year="2024">
+                <div class="project-number">01</div>
+                <div class="project-image">
+                    <img src="../Apartament Flavia Garden 2024/cam01.jpg" alt="Flavia Garden">
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <h3>View Project</h3>
+                            <div class="overlay-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-header">
+                        <h3>Flavia Garden Residence</h3>
+                        <span class="project-year">2024</span>
+                    </div>
+                    <p class="project-location">Varna, Bulgaria</p>
+                    <p class="project-area">120 m²</p>
+                </div>
+            </div>
+
+            <div class="project-item featured" data-category="commercial" data-year="2021">
+                <div class="project-number">02</div>
+                <div class="project-image">
+                    <img src="../Elite Clinic 2021/9.jpg" alt="Elite Clinic">
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <h3>View Project</h3>
+                            <div class="overlay-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-header">
+                        <h3>Elite Medical Clinic</h3>
+                        <span class="project-year">2021</span>
+                    </div>
+                    <p class="project-location">Varna, Bulgaria</p>
+                    <p class="project-area">250 m²</p>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="residential" data-year="2021">
+                <div class="project-number">03</div>
+                <div class="project-image">
+                    <img src="../Apartament K55_2021/4.jpg" alt="Apartment K55">
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <h3>View Project</h3>
+                            <div class="overlay-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-header">
+                        <h3>K55 Modern Apartment</h3>
+                        <span class="project-year">2021</span>
+                    </div>
+                    <p class="project-location">Varna, Bulgaria</p>
+                    <p class="project-area">95 m²</p>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="commercial" data-year="2020">
+                <div class="project-number">04</div>
+                <div class="project-image">
+                    <img src="../Balev Corporation 2020/Balev_29.jpg" alt="Balev Corporation">
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <h3>View Project</h3>
+                            <div class="overlay-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-header">
+                        <h3>Balev Corporation HQ</h3>
+                        <span class="project-year">2020</span>
+                    </div>
+                    <p class="project-location">Varna, Bulgaria</p>
+                    <p class="project-area">450 m²</p>
+                </div>
+            </div>
+
+            <div class="project-item featured" data-category="hospitality" data-year="2019">
+                <div class="project-number">05</div>
+                <div class="project-image">
+                    <img src="../Oliv vilas sv.Vlas 2019/O7.jpg" alt="Oliv Villas">
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <h3>View Project</h3>
+                            <div class="overlay-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-header">
+                        <h3>Oliv Luxury Villas</h3>
+                        <span class="project-year">2019</span>
+                    </div>
+                    <p class="project-location">Sveti Vlas, Bulgaria</p>
+                    <p class="project-area">800 m²</p>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="hospitality" data-year="2018">
+                <div class="project-number">06</div>
+                <div class="project-image">
+                    <img src="../Playground Grand Mall Varna 2018/6.jpg" alt="Playground">
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <h3>View Project</h3>
+                            <div class="overlay-line"></div>
+                        </div>
+                    </div>
+                <div class="project-info">
+                    <div class="project-header">
+                        <h3>Grand Mall Playground</h3>
+                        <span class="project-year">2018</span>
+                    </div>
+                    <p class="project-location">Varna, Bulgaria</p>
+                    <p class="project-area">350 m²</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-content">
+                <span class="section-number">02</span>
+                <h2 class="about-title">About Studio</h2>
+                <div class="about-text">
+                    <p class="lead">Founded in 2008 by Eng. Petya Petrova, Studio Arteamo has established itself as a premier interior design studio, creating spaces that transcend the ordinary.</p>
+                    <p>With over 15 years of excellence, we have transformed countless residential and commercial spaces across Bulgaria. Our philosophy centers on the belief that every space is an opportunity to express ideas and emotions through design.</p>
+                </div>
+                <div class="achievements">
+                    <h3>Awards & Recognition</h3>
+                    <div class="award-list">
+                        <div class="award-item">
+                            <span class="award-year">2009</span>
+                            <span class="award-title">First Place - 3D Bathroom Project</span>
+                            <span class="award-org">Ideal Standard</span>
+                        </div>
+                        <div class="award-item">
+                            <span class="award-year">2010</span>
+                            <span class="award-title">Third Prize - Peace & Relaxation</span>
+                            <span class="award-org">Bathroom of the Year</span>
+                        </div>
+                        <div class="award-item">
+                            <span class="award-year">2013</span>
+                            <span class="award-title">Bathroom of the Year - Jazz Standard</span>
+                            <span class="award-org">Ideal Standard</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Years of Excellence</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">200+</span>
+                    <span class="stat-label">Completed Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Industry Awards</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="services-container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <span class="service-number">01</span>
+                    <h3>Interior Design</h3>
+                    <p>From concept to completion, we create bespoke interiors that reflect your unique vision. Our design process combines aesthetic excellence with functional innovation.</p>
+                    <ul class="service-features">
+                        <li>Conceptual Design</li>
+                        <li>3D Visualization</li>
+                        <li>Technical Drawings</li>
+                        <li>Material Selection</li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <span class="service-number">02</span>
+                    <h3>Project Supervision</h3>
+                    <p>Ensuring flawless execution of every design detail. We oversee the entire implementation process to guarantee the highest standards of quality.</p>
+                    <ul class="service-features">
+                        <li>Construction Oversight</li>
+                        <li>Quality Control</li>
+                        <li>Vendor Coordination</li>
+                        <li>Timeline Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="contact-subtitle">Let's create something extraordinary together</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <span class="info-label">Call Us</span>
+                        <a href="tel:+359897983127" class="info-value">+359 897 983 127</a>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Email</span>
+                        <a href="mailto:studio@arteamo.net" class="info-value">studio@arteamo.net</a>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Visit</span>
+                        <a href="http://www.arteamo.net" class="info-value">www.arteamo.net</a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="4" required></textarea>
+                            <span class="form-line"></span>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M5 10h10m0 0l-3-3m3 3l-3 3" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">STUDIO ARTEAMO</div>
+            <div class="footer-text">
+                <p>&copy; 2024 Studio Arteamo. All rights reserved.</p>
+                <p>Luxury Interior Design Since 2008</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

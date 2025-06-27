@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Arteamo - Website Showcase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            color: #888;
+            font-size: 1.125rem;
+        }
+        
+        .showcase {
+            flex: 1;
+            padding: 3rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .websites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .website-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .website-card:hover {
+            border-color: #666;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .card-image {
+            height: 250px;
+            background: #222;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .preview-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.5rem 1rem;
+            background: #00ff88;
+            color: #000;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+        
+        .in-progress-badge {
+            background: #ff6b00;
+        }
+        
+        .card-content {
+            padding: 2rem;
+        }
+        
+        .card-number {
+            color: #666;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+        
+        .card-description {
+            color: #888;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .card-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .card-features li {
+            color: #aaa;
+            font-size: 0.875rem;
+            padding: 0.25rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .card-features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #00ff88;
+        }
+        
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            background: #333;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .card-link:hover {
+            background: #444;
+            transform: translateX(5px);
+        }
+        
+        .card-link.disabled {
+            background: #222;
+            color: #666;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        .card-link svg {
+            width: 16px;
+            height: 16px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #333;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .websites-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Studio Arteamo</h1>
+        <p>Website Portfolio Showcase - 5 Unique Design Approaches</p>
+    </header>
+    
+    <main class="showcase">
+        <div class="websites-grid">
+            <!-- Website 1 -->
+            <article class="website-card">
+                <div class="card-image">
+                    <img src="Apartament Flavia Garden 2024/cam01.jpg" alt="Minimalist Portfolio">
+                    <span class="preview-badge">Ready</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">Website 01</div>
+                    <h2 class="card-title">Modern Minimalist</h2>
+                    <p class="card-description">Clean, sophisticated design with focus on content and typography. Inspired by contemporary architecture portfolios.</p>
+                    <ul class="card-features">
+                        <li>Responsive grid layout</li>
+                        <li>Smooth animations</li>
+                        <li>Project filtering</li>
+                        <li>Modal galleries</li>
+                    </ul>
+                    <a href="website1-minimalist/index.html" class="card-link">
+                        View Website
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Website 2 -->
+            <article class="website-card">
+                <div class="card-image">
+                    <img src="Elite Clinic 2021/9.jpg" alt="Dark Luxury">
+                    <span class="preview-badge">Ready</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">Website 02</div>
+                    <h2 class="card-title">Dark Luxury</h2>
+                    <p class="card-description">Sophisticated black and gold theme with premium aesthetics. Features elegant typography and refined animations.</p>
+                    <ul class="card-features">
+                        <li>Video backgrounds</li>
+                        <li>Gold accents</li>
+                        <li>Parallax effects</li>
+                        <li>Premium feel</li>
+                    </ul>
+                    <a href="website2-dark-luxury/index.html" class="card-link">
+                        View Website
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Website 3 -->
+            <article class="website-card">
+                <div class="card-image">
+                    <img src="Apartament K55_2021/4.jpg" alt="Magazine Style">
+                    <span class="preview-badge in-progress-badge">In Progress</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">Website 03</div>
+                    <h2 class="card-title">Magazine Editorial</h2>
+                    <p class="card-description">Editorial-inspired layout with asymmetric grids and bold typography. Perfect for storytelling through design.</p>
+                    <ul class="card-features">
+                        <li>Asymmetric layouts</li>
+                        <li>Large typography</li>
+                        <li>Editorial design</li>
+                        <li>Content-focused</li>
+                    </ul>
+                    <a href="#" class="card-link disabled">
+                        In Progress
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Website 4 -->
+            <article class="website-card">
+                <div class="card-image">
+                    <img src="Balev Corporation 2020/Balev_29.jpg" alt="Interactive Grid">
+                    <span class="preview-badge in-progress-badge">In Progress</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">Website 04</div>
+                    <h2 class="card-title">Interactive Grid</h2>
+                    <p class="card-description">Dynamic masonry layout with advanced filtering and interactive elements. Emphasizes user engagement.</p>
+                    <ul class="card-features">
+                        <li>Masonry grid</li>
+                        <li>Advanced filters</li>
+                        <li>Hover animations</li>
+                        <li>Smooth transitions</li>
+                    </ul>
+                    <a href="#" class="card-link disabled">
+                        In Progress
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Website 5 -->
+            <article class="website-card">
+                <div class="card-image">
+                    <img src="Oliv vilas sv.Vlas 2019/O7.jpg" alt="Fancy 3D">
+                    <span class="preview-badge in-progress-badge">In Progress</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">Website 05</div>
+                    <h2 class="card-title">Ultra Fancy 3D</h2>
+                    <p class="card-description">Mind-blowing experience with WebGL, 3D transforms, and cutting-edge animations. The pinnacle of web design.</p>
+                    <ul class="card-features">
+                        <li>WebGL effects</li>
+                        <li>3D transforms</li>
+                        <li>Advanced animations</li>
+                        <li>Immersive experience</li>
+                    </ul>
+                    <a href="#" class="card-link disabled">
+                        In Progress
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2024 Studio Arteamo. Interior Design Excellence Since 2008.</p>
+    </footer>
+    
+    <script>
+        // Add some interactive effects
+        document.querySelectorAll('.website-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const angleX = (y - centerY) / 20;
+                const angleY = (centerX - x) / 20;
+                
+                card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateY(-5px)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Arteamo - Interior Design Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="../translations.js"></script>
+    <script src="../language-switcher.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>STUDIO ARTEAMO</h1>
+                <span class="tagline">Transforming Spaces Since 2008</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#projects" class="nav-link active">Projects</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title">Creating Spaces That Inspire</h2>
+            <p class="hero-subtitle">We believe that every space is a place for expressing ideas and emotions. Our mission is to create interiors that inspire and change the way we see the world.</p>
+        </div>
+    </section>
+
+    <section id="filters" class="filters">
+        <div class="filter-container">
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="office">Office</button>
+            </div>
+            <div class="sort-options">
+                <select id="sort-select">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="name">By Name</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="projects-grid">
+            <!-- Project Cards -->
+            <div class="project-card" data-category="residential" data-year="2024">
+                <div class="project-image">
+                    <img src="../../Apartament Flavia Garden 2024/cam01.jpg" alt="Apartament Flavia Garden">
+                    <div class="project-overlay">
+                        <h3 data-translate="projects.viewProject">View Project</h3>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Flavia Garden Apartment</h3>
+                    <p class="project-meta">Residential • 2024 • 120 m²</p>
+                    <p class="project-desc">A modern sanctuary combining elegance with comfort in the heart of Varna.</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="office" data-year="2021">
+                <div class="project-image">
+                    <img src="../../Elite Clinic 2021/9.jpg" alt="Elite Clinic">
+                    <div class="project-overlay">
+                        <h3 data-translate="projects.viewProject">View Project</h3>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Elite Clinic</h3>
+                    <p class="project-meta">Medical • 2021 • 250 m²</p>
+                    <p class="project-desc">A state-of-the-art medical facility designed for patient comfort and clinical efficiency.</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="residential" data-year="2021">
+                <div class="project-image">
+                    <img src="../../Apartament K55_2021/4.jpg" alt="Apartment K55">
+                    <div class="project-overlay">
+                        <h3 data-translate="projects.viewProject">View Project</h3>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Apartment K55</h3>
+                    <p class="project-meta">Residential • 2021 • 95 m²</p>
+                    <p class="project-desc">Contemporary living space with minimalist aesthetics and maximum functionality.</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="office" data-year="2020">
+                <div class="project-image">
+                    <img src="../../Balev Corporation 2020/Balev_29.jpg" alt="Balev Corporation">
+                    <div class="project-overlay">
+                        <h3 data-translate="projects.viewProject">View Project</h3>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Balev Corporation</h3>
+                    <p class="project-meta">Corporate Office • 2020 • 450 m²</p>
+                    <p class="project-desc">A dynamic corporate headquarters reflecting innovation and professionalism.</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="residential" data-year="2019">
+                <div class="project-image">
+                    <img src="../../Apartament Симфония - Бриз, Варна_ 2019/1а.jpg" alt="Symphony Breeze Apartment">
+                    <div class="project-overlay">
+                        <h3 data-translate="projects.viewProject">View Project</h3>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Symphony Breeze</h3>
+                    <p class="project-meta">Residential • 2019 • 110 m²</p>
+                    <p class="project-desc">Coastal elegance meets urban sophistication in this seaside apartment.</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="commercial" data-year="2019">
+                <div class="project-image">
+                    <img src="../../Oliv vilas sv.Vlas 2019/O7.jpg" alt="Oliv Villas">
+                    <div class="project-overlay">
+                        <h3 data-translate="projects.viewProject">View Project</h3>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Oliv Villas</h3>
+                    <p class="project-meta">Hospitality • 2019 • 800 m²</p>
+                    <p class="project-desc">Luxury vacation villas designed for ultimate relaxation and comfort.</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="commercial" data-year="2018">
+                <div class="project-image">
+                    <img src="../../Playground Grand Mall Varna 2018/6.jpg" alt="Playground Grand Mall">
+                    <div class="project-overlay">
+                        <h3 data-translate="projects.viewProject">View Project</h3>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Playground Grand Mall</h3>
+                    <p class="project-meta">Commercial • 2018 • 350 m²</p>
+                    <p class="project-desc">An innovative children's entertainment center bringing joy to families.</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="residential" data-year="2017">
+                <div class="project-image">
+                    <img src="../../Apartament Кв. Чайка, Варна_2017/D (1).jpg" alt="Chayka District Apartment">
+                    <div class="project-overlay">
+                        <h3 data-translate="projects.viewProject">View Project</h3>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Chayka District</h3>
+                    <p class="project-meta">Residential • 2017 • 85 m²</p>
+                    <p class="project-desc">A warm family home balancing traditional charm with modern convenience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 data-translate="about.title">About Studio Arteamo</h2>
+                <p class="lead" data-translate="about.founded">Founded in 2008 by Eng. Petya Petrova, Studio Arteamo has become one of the leading names in interior design.</p>
+                <p data-translate="about.experience">With extensive experience in both public and private projects, our studio has earned recognition through multiple awards including the prestigious "Bathroom of the Year" competition by Ideal Standard.</p>
+                <div class="awards">
+                    <h3 data-translate="about.awards">Awards & Recognition</h3>
+                    <ul>
+                        <li data-translate="about.award1">2009 - First Place, 3D Bathroom Project</li>
+                        <li data-translate="about.award2">2010 - Third Prize for "Peace and Relaxation" Project</li>
+                        <li data-translate="about.award3">2013 - Ideal Standard Bathroom of the Year for "Jazz Standard"</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="image-placeholder"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="services-container">
+            <h2 data-translate="services.title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3 data-translate="services.interiorDesign">Interior Design</h3>
+                    <p data-translate="services.interiorDesignDesc">We start with you - your desires, lifestyle, and aesthetics. Our team develops personalized concepts that combine avant-garde design with functionality. From initial sketches and 3D visualizations to detailed technical drawings, we create spaces that not only look impressive but feel like home.</p>
+                </div>
+                <div class="service-card">
+                    <h3 data-translate="services.supervision">Project Supervision</h3>
+                    <p data-translate="services.supervisionDesc">To ensure our vision becomes reality without compromise, we offer author supervision services. We oversee the entire execution process - from material selection to coordination with contractors. Our goal is to ensure flawless quality, deadline compliance, and project adherence down to the last detail.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2 data-translate="contact.title">Get In Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3 data-translate="contact.phone">Phone</h3>
+                    <p>+359 897 983 127</p>
+                </div>
+                <div class="contact-item">
+                    <h3 data-translate="contact.email">Email</h3>
+                    <p>studio@arteamo.net</p>
+                </div>
+                <div class="contact-item">
+                    <h3 data-translate="contact.website">Website</h3>
+                    <p>www.arteamo.net</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 Studio Arteamo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
