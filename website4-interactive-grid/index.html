@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Arteamo | Interactive Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="../translations.js"></script>
+    <script src="../language-switcher-v2.js"></script>
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text" data-translate="company.name">STUDIO ARTEAMO</span>
+                <span class="logo-year">2008</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#grid" class="nav-link active" data-translate="nav.portfolio">Portfolio</a>
+                <a href="#about" class="nav-link" data-translate="nav.about">About</a>
+                <a href="#contact" class="nav-link" data-translate="nav.contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-word" data-translate="company.slogan">Creating Spaces That Inspire</span>
+            </h1>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">200+</span>
+                    <span class="stat-label" data-translate="stats.projectsCompleted">Projects</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label" data-translate="stats.yearsExperience">Years</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label" data-translate="stats.industryAwards">Awards</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="filter-bar" class="filter-bar">
+        <div class="filter-container">
+            <div class="filter-group">
+                <button class="filter-tag active" data-filter="all">
+                    <span data-translate="projects.allProjects">All</span>
+                    <span class="count">8</span>
+                </button>
+                <button class="filter-tag" data-filter="residential">
+                    <span data-translate="projects.residential">Residential</span>
+                    <span class="count">4</span>
+                </button>
+                <button class="filter-tag" data-filter="commercial">
+                    <span data-translate="projects.commercial">Commercial</span>
+                    <span class="count">2</span>
+                </button>
+                <button class="filter-tag" data-filter="office">
+                    <span data-translate="projects.office">Office</span>
+                    <span class="count">2</span>
+                </button>
+            </div>
+            <div class="view-toggle">
+                <button class="view-btn active" data-view="grid">
+                    <svg width="16" height="16" viewBox="0 0 16 16">
+                        <rect x="0" y="0" width="6" height="6"/>
+                        <rect x="10" y="0" width="6" height="6"/>
+                        <rect x="0" y="10" width="6" height="6"/>
+                        <rect x="10" y="10" width="6" height="6"/>
+                    </svg>
+                </button>
+                <button class="view-btn" data-view="list">
+                    <svg width="16" height="16" viewBox="0 0 16 16">
+                        <rect x="0" y="1" width="16" height="2"/>
+                        <rect x="0" y="7" width="16" height="2"/>
+                        <rect x="0" y="13" width="16" height="2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="grid" class="projects-grid">
+        <div class="grid-container">
+            <!-- Project 1 -->
+            <div class="grid-item" data-category="residential" data-year="2024">
+                <div class="item-inner">
+                    <div class="item-image">
+                        <img src="../Apartament Flavia Garden 2024/cam01.jpg" alt="Flavia Garden">
+                        <div class="item-overlay">
+                            <span class="overlay-year">2024</span>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <span class="item-category" data-translate="projects.residential">Residential</span>
+                        <h3 class="item-title">Flavia Garden</h3>
+                        <p class="item-location">Varna • 120m²</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="grid-item large" data-category="office" data-year="2021">
+                <div class="item-inner">
+                    <div class="item-image">
+                        <img src="../Elite Clinic 2021/Cam09.jpg" alt="Elite Clinic">
+                        <div class="item-overlay">
+                            <span class="overlay-year">2021</span>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <span class="item-category" data-translate="projects.medical">Medical</span>
+                        <h3 class="item-title">Elite Clinic</h3>
+                        <p class="item-location">Varna • 250m²</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="grid-item" data-category="residential" data-year="2021">
+                <div class="item-inner">
+                    <div class="item-image">
+                        <img src="../Apartament K55_2021/Vladi (4).jpg" alt="K55">
+                        <div class="item-overlay">
+                            <span class="overlay-year">2021</span>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <span class="item-category" data-translate="projects.residential">Residential</span>
+                        <h3 class="item-title">K55 Apartment</h3>
+                        <p class="item-location">Varna • 95m²</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="grid-item" data-category="office" data-year="2020">
+                <div class="item-inner">
+                    <div class="item-image">
+                        <img src="../Balev Corporation 2020/Balev (1).jpg" alt="Balev">
+                        <div class="item-overlay">
+                            <span class="overlay-year">2020</span>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <span class="item-category" data-translate="projects.corporate">Corporate</span>
+                        <h3 class="item-title">Balev Corporation</h3>
+                        <p class="item-location">Varna • 450m²</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="grid-item large" data-category="residential" data-year="2019">
+                <div class="item-inner">
+                    <div class="item-image">
+                        <img src="../Apartament Симфония - Бриз, Варна_ 2019/Alex (1).jpg" alt="Symphony">
+                        <div class="item-overlay">
+                            <span class="overlay-year">2019</span>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <span class="item-category" data-translate="projects.residential">Residential</span>
+                        <h3 class="item-title">Symphony Breeze</h3>
+                        <p class="item-location">Varna • 110m²</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="grid-item" data-category="commercial" data-year="2019">
+                <div class="item-inner">
+                    <div class="item-image">
+                        <img src="../Oliv vilas sv.Vlas 2019/7O.V..jpg" alt="Oliv Villas">
+                        <div class="item-overlay">
+                            <span class="overlay-year">2019</span>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <span class="item-category" data-translate="projects.hospitality">Hospitality</span>
+                        <h3 class="item-title">Oliv Villas</h3>
+                        <p class="item-location">Sveti Vlas • 800m²</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 7 -->
+            <div class="grid-item" data-category="commercial" data-year="2018">
+                <div class="item-inner">
+                    <div class="item-image">
+                        <img src="../Playground Grand Mall Varna 2018/Playground (6).jpg" alt="Playground">
+                        <div class="item-overlay">
+                            <span class="overlay-year">2018</span>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <span class="item-category" data-translate="projects.commercial">Commercial</span>
+                        <h3 class="item-title">Grand Mall Playground</h3>
+                        <p class="item-location">Varna • 350m²</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 8 -->
+            <div class="grid-item" data-category="residential" data-year="2017">
+                <div class="item-inner">
+                    <div class="item-image">
+                        <img src="../Apartament Кв. Чайка, Варна_2017/Dnevna01.jpg" alt="Chayka">
+                        <div class="item-overlay">
+                            <span class="overlay-year">2017</span>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <span class="item-category" data-translate="projects.residential">Residential</span>
+                        <h3 class="item-title">Chayka District</h3>
+                        <p class="item-location">Varna • 85m²</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 data-translate="about.title">About Studio</h2>
+                <p class="about-text" data-translate="about.founded">Founded in 2008 by Eng. Petya Petrova, Studio Arteamo has become one of the leading names in interior design.</p>
+                <div class="services-list">
+                    <div class="service-item">
+                        <span class="service-icon">01</span>
+                        <h4 data-translate="services.interiorDesign">Interior Design</h4>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">02</span>
+                        <h4 data-translate="services.supervision">Project Supervision</h4>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">03</span>
+                        <h4 data-translate="services.visualization">3D Visualization</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2 data-translate="contact.title">Get In Touch</h2>
+            <div class="contact-grid">
+                <a href="tel:+359897983127" class="contact-card">
+                    <span class="contact-label" data-translate="contact.phone">Phone</span>
+                    <span class="contact-value">+359 897 983 127</span>
+                </a>
+                <a href="mailto:studio@arteamo.net" class="contact-card">
+                    <span class="contact-label" data-translate="contact.email">Email</span>
+                    <span class="contact-value">studio@arteamo.net</span>
+                </a>
+                <a href="http://www.arteamo.net" class="contact-card">
+                    <span class="contact-label" data-translate="contact.website">Website</span>
+                    <span class="contact-value">www.arteamo.net</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Studio Arteamo. <span data-translate="company.tagline">Transforming Spaces Since 2008</span></p>
+    </footer>
+
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

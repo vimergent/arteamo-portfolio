@@ -1,7 +1,7 @@
 // Language Switcher Component
 class LanguageSwitcher {
     constructor() {
-        this.currentLang = localStorage.getItem('language') || 'en';
+        this.currentLang = localStorage.getItem('language') || 'bg';
         this.init();
     }
 
