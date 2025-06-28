@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Design Varna | Studio Arteamo</title>
+    <meta name="description" content="Black Sea–inspired interiors & renovations in Varna. Residential, hospitality, 3D visuals.">
+    
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Studio Arteamo",
+        "description": "Black Sea–inspired interiors & renovations in Varna",
+        "url": "https://studioarteamo.netlify.app/website6-coastal/",
+        "telephone": "+359897983127",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Varna",
+            "addressCountry": "BG"
+        },
+        "image": "../Apartament Flavia Garden 2024/cam01.jpg"
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="../translations.js"></script>
+    <script src="../language-switcher-v2.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Studio Arteamo</span>
+                <span class="logo-tagline">Varna</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video -->
+    <section id="home" class="hero">
+        <div class="hero-video-container">
+            <div class="video-overlay"></div>
+            <!-- Using a placeholder image for video background -->
+            <img src="../Apartament Flavia Garden 2024/cam01.jpg" alt="Varna Coastline" class="hero-bg-image">
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Bringing understated</span>
+                <span class="title-line highlight">Black Sea calm</span>
+                <span class="title-line">to modern interiors in Varna</span>
+            </h1>
+            <a href="#portfolio" class="hero-cta">Explore Our Work</a>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Portfolio</h2>
+                <div class="filter-chips">
+                    <button class="chip active" data-filter="all">All</button>
+                    <button class="chip" data-filter="residential">Residential</button>
+                    <button class="chip" data-filter="hospitality">Hospitality</button>
+                    <button class="chip" data-filter="retail">Retail</button>
+                </div>
+            </div>
+            
+            <div class="portfolio-grid masonry">
+                <!-- Project 1 -->
+                <article class="portfolio-item" data-category="residential">
+                    <div class="portfolio-image">
+                        <img src="../Apartament Flavia Garden 2024/cam01.jpg" alt="Flavia Garden">
+                        <div class="portfolio-overlay">
+                            <h3>Flavia Garden Residence</h3>
+                            <p>Modern coastal living</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="portfolio-item tall" data-category="hospitality">
+                    <div class="portfolio-image">
+                        <img src="../Elite Clinic 2021/Cam09.jpg" alt="Elite Clinic">
+                        <div class="portfolio-overlay">
+                            <h3>Elite Wellness Center</h3>
+                            <p>Healing spaces by the sea</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="portfolio-item" data-category="residential">
+                    <div class="portfolio-image">
+                        <img src="../Apartament K55_2021/Vladi (4).jpg" alt="K55 Apartment">
+                        <div class="portfolio-overlay">
+                            <h3>K55 Seafront Apartment</h3>
+                            <p>Minimalist coastal design</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="portfolio-item wide" data-category="retail">
+                    <div class="portfolio-image">
+                        <img src="../Balev Corporation 2020/Balev (1).jpg" alt="Balev Corporation">
+                        <div class="portfolio-overlay">
+                            <h3>Balev Flagship Store</h3>
+                            <p>Retail excellence</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="portfolio-item" data-category="hospitality">
+                    <div class="portfolio-image">
+                        <img src="../Oliv vilas sv.Vlas 2019/7O.V..jpg" alt="Oliv Villas">
+                        <div class="portfolio-overlay">
+                            <h3>Oliv Beach Villas</h3>
+                            <p>Luxury resort interiors</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6 -->
+                <article class="portfolio-item tall" data-category="residential">
+                    <div class="portfolio-image">
+                        <img src="../Apartament Симфония - Бриз, Варна_ 2019/Alex (1).jpg" alt="Symphony Breeze">
+                        <div class="portfolio-overlay">
+                            <h3>Symphony Breeze</h3>
+                            <p>Elegant seaside living</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card" data-tilt>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="8" y="8" width="48" height="48" rx="4"/>
+                            <path d="M20 32h24M32 20v24"/>
+                        </svg>
+                    </div>
+                    <h3>Interior Design</h3>
+                    <p>Complete interior design solutions inspired by Varna's coastal beauty</p>
+                </div>
+                
+                <div class="service-card" data-tilt>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="32" cy="32" r="24"/>
+                            <path d="M32 8v16l11.3 11.3"/>
+                        </svg>
+                    </div>
+                    <h3>Project Management</h3>
+                    <p>End-to-end project supervision ensuring timely completion</p>
+                </div>
+                
+                <div class="service-card" data-tilt>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 52l20-20 20 20M32 32V8"/>
+                        </svg>
+                    </div>
+                    <h3>3D Visualization</h3>
+                    <p>Photorealistic renders bringing your vision to life</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Studio Arteamo</h2>
+                    <div class="founder-info">
+                        <img src="../Apartament Flavia Garden 2024/cam02.jpg" alt="Founder" class="founder-photo">
+                        <div>
+                            <p>Founded in 2008 by Engineer Petya Petrova, Studio Arteamo has become a beacon of design excellence in Varna.</p>
+                            <p>Our approach blends the serene beauty of the Black Sea with contemporary design principles.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="year">2008</span>
+                            <p>Studio founded in Varna</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="year">2009</span>
+                            <p>First place - 3D Bathroom Project</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="year">2013</span>
+                            <p>Ideal Standard Award</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="year">2024</span>
+                            <p>200+ completed projects</p>
+                        </div>
+                    </div>
+                    
+                    <div class="sustainability-pledge">
+                        <h3>Our Sustainability Pledge</h3>
+                        <p>We're committed to eco-friendly design, using sustainable materials and energy-efficient solutions in all our projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">Design Journal</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="../Playground Grand Mall Varna 2018/Playground (6).jpg" alt="Blog post">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">June 2024</span>
+                        <h3>Coastal Color Palettes for Modern Homes</h3>
+                        <p>Discover how to bring the calming essence of the Black Sea into your living space...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="../Apartament Кв. Чайка, Варна_2017/Dnevna01.jpg" alt="Blog post">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">May 2024</span>
+                        <h3>Sustainable Materials in Coastal Design</h3>
+                        <p>Exploring eco-friendly options that withstand the seaside climate...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="../Apartament Траката, Варна_2021/5-1-768x512.jpg" alt="Blog post">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">April 2024</span>
+                        <h3>Maximizing Natural Light in Varna Homes</h3>
+                        <p>Tips for harnessing the beautiful Black Sea sunlight in your interior...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Showcase -->
+    <section class="before-after">
+        <div class="container">
+            <h2 class="section-title">Transformations</h2>
+            <div class="before-after-slider">
+                <div class="comparison-container">
+                    <div class="comparison-slider">
+                        <div class="before-image">
+                            <img src="../Apartament K55_2021/Vladi (3).jpg" alt="Before">
+                            <span class="label">Before</span>
+                        </div>
+                        <div class="after-image">
+                            <img src="../Apartament K55_2021/Vladi (4).jpg" alt="After">
+                            <span class="label">After</span>
+                        </div>
+                        <div class="slider-handle">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed -->
+    <section class="instagram-feed">
+        <div class="container">
+            <h2 class="section-title">@studioarteamo</h2>
+            <div class="instagram-grid">
+                <div class="insta-item"><img src="../Apartament Flavia Garden 2024/cam01.jpg" alt="Instagram 1"></div>
+                <div class="insta-item"><img src="../Elite Clinic 2021/Cam09.jpg" alt="Instagram 2"></div>
+                <div class="insta-item"><img src="../Balev Corporation 2020/Balev (1).jpg" alt="Instagram 3"></div>
+                <div class="insta-item"><img src="../Apartament K55_2021/Vladi (4).jpg" alt="Instagram 4"></div>
+                <div class="insta-item"><img src="../Oliv vilas sv.Vlas 2019/7O.V..jpg" alt="Instagram 5"></div>
+                <div class="insta-item"><img src="../Apartament Симфония - Бриз, Варна_ 2019/Alex (1).jpg" alt="Instagram 6"></div>
+                <div class="insta-item"><img src="../Playground Grand Mall Varna 2018/Playground (6).jpg" alt="Instagram 7"></div>
+                <div class="insta-item"><img src="../Apartament Кв. Чайка, Варна_2017/Dnevna01.jpg" alt="Instagram 8"></div>
+                <div class="insta-item"><img src="../Apartament Траката, Варна_2021/5-1-768x512.jpg" alt="Instagram 9"></div>
+                <div class="insta-item"><img src="../Apartament Flavia Garden 2024/cam02.jpg" alt="Instagram 10"></div>
+                <div class="insta-item"><img src="../Elite Clinic 2021/Cam10.jpg" alt="Instagram 11"></div>
+                <div class="insta-item"><img src="../Balev Corporation 2020/Balev (2).jpg" alt="Instagram 12"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-form-wrapper">
+                    <h2 class="section-title">Start Your Project</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone">
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                            <label for="message">Tell us about your project</label>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Visit Our Studio</h3>
+                    <div class="map-container">
+                        <!-- Placeholder for Google Maps -->
+                        <div class="map-placeholder">
+                            <p>Studio Arteamo<br>Varna, Bulgaria</p>
+                        </div>
+                    </div>
+                    <div class="contact-details">
+                        <p><strong>Phone:</strong> +359 897 983 127</p>
+                        <p><strong>Email:</strong> studio@arteamo.net</p>
+                        <p><strong>Hours:</strong> Mon-Fri 9:00-18:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Studio Arteamo</h3>
+                    <p>Bringing understated Black Sea calm to modern interiors in Varna.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Pinterest">📌</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Studio Arteamo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Portfolio Items -->
+    <div class="modal" id="portfolio-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <img src="" alt="" class="modal-image">
+                <div class="modal-info">
+                    <h2 class="modal-title"></h2>
+                    <p class="modal-description"></p>
+                    <div class="project-details">
+                        <div class="detail">
+                            <span class="label">Year</span>
+                            <span class="value">2024</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Area</span>
+                            <span class="value">120 m²</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Type</span>
+                            <span class="value">Residential</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
