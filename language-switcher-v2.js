@@ -26,6 +26,13 @@ class LanguageSwitcher {
     }
 
     createSwitcher(style) {
+        // Check if language selector already exists in navigation
+        const existingSelector = document.getElementById('language-selector');
+        if (existingSelector) {
+            this.setupExistingSelector(existingSelector);
+            return;
+        }
+        
         const switcher = document.createElement('div');
         switcher.className = 'language-switcher';
         
@@ -164,9 +171,28 @@ class LanguageSwitcher {
         return baseStyles + (themeStyles[style] || themeStyles.default);
     }
 
+    setupExistingSelector(selector) {
+        // Set the current language
+        selector.value = this.currentLang;
+        
+        // Add event listener for language changes
+        selector.addEventListener('change', (e) => {
+            this.switchLanguage(e.target.value);
+        });
+        
+        console.log('✓ Using existing navigation language selector');
+    }
+
     switchLanguage(lang) {
         this.currentLang = lang;
         localStorage.setItem('language', lang);
+        
+        // Update the existing selector if it exists
+        const existingSelector = document.getElementById('language-selector');
+        if (existingSelector && existingSelector.value !== lang) {
+            existingSelector.value = lang;
+        }
+        
         this.applyTranslations();
     }
 

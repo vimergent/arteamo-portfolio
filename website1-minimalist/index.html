@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-translate="pageTitle">Studio Arteamo - Interior Design Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-enhanced.css">
 </head>
 <body>
     <nav class="navbar">
@@ -19,6 +19,14 @@
                 <a href="#about" class="nav-link" data-translate="nav.about">About</a>
                 <a href="#services" class="nav-link" data-translate="nav.services">Services</a>
                 <a href="#contact" class="nav-link" data-translate="nav.contact">Contact</a>
+                <div class="nav-language">
+                    <select class="lang-select" id="language-selector">
+                        <option value="bg">BG</option>
+                        <option value="en">EN</option>
+                        <option value="ru">RU</option>
+                        <option value="es">ES</option>
+                    </select>
+                </div>
             </div>
             <div class="mobile-menu-toggle">
                 <span></span>
@@ -30,7 +38,7 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h2 class="hero-title" data-translate="company.slogan">Creating Spaces That Inspire</h2>
+            <h2 class="hero-title serif" data-translate="company.slogan">Creating Spaces That Inspire</h2>
             <p class="hero-subtitle" data-translate="company.mission">We believe that every space is a place for expressing ideas and emotions. Our mission is to create interiors that inspire and change the way we see the world.</p>
         </div>
     </section>
@@ -215,7 +223,7 @@
     <section id="about" class="about">
         <div class="about-container">
             <div class="about-content">
-                <h2 data-translate="about.title">About Studio Arteamo</h2>
+                <h2 class="serif" data-translate="about.title">About Studio Arteamo</h2>
                 <p class="lead" data-translate="about.founded">Founded in 2008 by Eng. Petya Petrova, Studio Arteamo has become one of the leading names in interior design.</p>
                 <p data-translate="about.experience">With extensive experience in both public and private projects, our studio has earned recognition through multiple awards including the prestigious "Bathroom of the Year" competition by Ideal Standard.</p>
                 <div class="awards">
@@ -235,7 +243,7 @@
 
     <section id="services" class="services">
         <div class="services-container">
-            <h2 data-translate="services.title">Our Services</h2>
+            <h2 class="serif" data-translate="services.title">Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <h3 data-translate="services.interiorDesign">Interior Design</h3>
@@ -251,7 +259,7 @@
 
     <section id="contact" class="contact">
         <div class="contact-container">
-            <h2 data-translate="contact.title">Get In Touch</h2>
+            <h2 class="serif" data-translate="contact.title">Get In Touch</h2>
             <div class="contact-info">
                 <div class="contact-item">
                     <h3 data-translate="contact.phone">Phone</h3>
@@ -275,7 +283,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script-enhanced.js"></script>
     <script src="../translations.js"></script>
     <script src="../language-switcher-v2.js"></script>
     <script>
