@@ -180,7 +180,7 @@ class LanguageSwitcher {
             this.switchLanguage(e.target.value);
         });
         
-        console.log('✓ Using existing navigation language selector');
+        // Using existing navigation language selector
     }
 
     switchLanguage(lang) {

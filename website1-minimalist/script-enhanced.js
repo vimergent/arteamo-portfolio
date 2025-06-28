@@ -66,13 +66,9 @@ let cursorType = 'none';
 if (savedCursor && savedCursor !== 'none') {
     enableCustomCursor = true;
     cursorType = savedCursor;
-    console.log(`🎨 Using ${savedCursor} cursor from testing menu`);
 } else if (urlCursor) {
     enableCustomCursor = true;
     cursorType = 'minimal'; // Default for URL parameter
-    console.log('✨ Custom cursor enabled via URL parameter');
-} else {
-    console.log('🖱️  Using standard cursor (select cursor effects in testing menu above)');
 }
 
 // Apply cursor if enabled and on desktop
@@ -601,6 +597,3 @@ new AccessibilityEnhancements();
 
 // Global function for project gallery (required by onclick handlers)
 window.openProjectGallery = openProjectGallery;
-
-console.log('🎨 Enhanced Studio Arteamo Portfolio Loaded');
-console.log('✨ Premium minimalist experience initialized');
