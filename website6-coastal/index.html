@@ -105,7 +105,7 @@
             
             <div class="portfolio-grid masonry">
                 <!-- Project 1 -->
-                <article class="portfolio-item" data-category="residential">
+                <article class="portfolio-item" data-category="residential" onclick="openProjectGallery('Apartament Flavia Garden 2024', 'Flavia Garden Residence')" style="cursor: pointer;">
                     <div class="portfolio-image">
                         <img src="../Apartament Flavia Garden 2024/cam01.jpg" alt="Flavia Garden">
                         <div class="portfolio-overlay">
@@ -116,7 +116,7 @@
                 </article>
 
                 <!-- Project 2 -->
-                <article class="portfolio-item tall" data-category="hospitality">
+                <article class="portfolio-item tall" data-category="hospitality" onclick="openProjectGallery('Elite Clinic 2021', 'Elite Wellness Center')" style="cursor: pointer;">
                     <div class="portfolio-image">
                         <img src="../Elite Clinic 2021/Cam09.jpg" alt="Elite Clinic">
                         <div class="portfolio-overlay">
@@ -127,7 +127,7 @@
                 </article>
 
                 <!-- Project 3 -->
-                <article class="portfolio-item" data-category="residential">
+                <article class="portfolio-item" data-category="residential" onclick="openProjectGallery('Apartament K55_2021', 'K55 Seafront Apartment')" style="cursor: pointer;">
                     <div class="portfolio-image">
                         <img src="../Apartament K55_2021/Vladi (4).jpg" alt="K55 Apartment">
                         <div class="portfolio-overlay">
@@ -138,7 +138,7 @@
                 </article>
 
                 <!-- Project 4 -->
-                <article class="portfolio-item wide" data-category="retail">
+                <article class="portfolio-item wide" data-category="retail" onclick="openProjectGallery('Balev Corporation 2020', 'Balev Flagship Store')" style="cursor: pointer;">
                     <div class="portfolio-image">
                         <img src="../Balev Corporation 2020/Balev (1).jpg" alt="Balev Corporation">
                         <div class="portfolio-overlay">
@@ -149,7 +149,7 @@
                 </article>
 
                 <!-- Project 5 -->
-                <article class="portfolio-item" data-category="hospitality">
+                <article class="portfolio-item" data-category="hospitality" onclick="openProjectGallery('Oliv vilas sv.Vlas 2019', 'Oliv Beach Villas')" style="cursor: pointer;">
                     <div class="portfolio-image">
                         <img src="../Oliv vilas sv.Vlas 2019/7O.V..jpg" alt="Oliv Villas">
                         <div class="portfolio-overlay">
@@ -160,7 +160,7 @@
                 </article>
 
                 <!-- Project 6 -->
-                <article class="portfolio-item tall" data-category="residential">
+                <article class="portfolio-item tall" data-category="residential" onclick="openProjectGallery('Apartament Симфония - Бриз, Варна_ 2019', 'Symphony Breeze')" style="cursor: pointer;">
                     <div class="portfolio-image">
                         <img src="../Apartament Симфония - Бриз, Варна_ 2019/Alex (1).jpg" alt="Symphony Breeze">
                         <div class="portfolio-overlay">
@@ -338,7 +338,7 @@
                 <div class="insta-item"><img src="../Apartament Кв. Чайка, Варна_2017/Dnevna01.jpg" alt="Instagram 8"></div>
                 <div class="insta-item"><img src="../Apartament Траката, Варна_2021/5-1-768x512.jpg" alt="Instagram 9"></div>
                 <div class="insta-item"><img src="../Apartament Flavia Garden 2024/cam02.jpg" alt="Instagram 10"></div>
-                <div class="insta-item"><img src="../Elite Clinic 2021/Cam10.jpg" alt="Instagram 11"></div>
+                <div class="insta-item"><img src="../Elite Clinic 2021/Cam010.jpg" alt="Instagram 11"></div>
                 <div class="insta-item"><img src="../Balev Corporation 2020/Balev (2).jpg" alt="Instagram 12"></div>
             </div>
         </div>
@@ -450,5 +450,12 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        function openProjectGallery(projectFolder, projectName) {
+            const currentPath = window.location.pathname;
+            const fromPath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
+            window.location.href = `../gallery-template.html?project=${encodeURIComponent(projectFolder)}&name=${encodeURIComponent(projectName)}&from=${encodeURIComponent(fromPath)}`;
+        }
+    </script>
 </body>
 </html>

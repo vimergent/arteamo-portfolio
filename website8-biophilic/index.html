@@ -91,7 +91,7 @@
             
             <div class="portfolio-grid">
                 <!-- Project 1 -->
-                <article class="project-card">
+                <article class="project-card" onclick="openProjectGallery('Apartament K55_2021', 'Eco-Friendly Apartment')" style="cursor: pointer;">
                     <div class="before-after-slider">
                         <div class="before-image">
                             <img src="../Apartament K55_2021/Vladi (3).jpg" alt="Before renovation">
@@ -127,7 +127,7 @@
                 </article>
 
                 <!-- Project 2 -->
-                <article class="project-card">
+                <article class="project-card" onclick="openProjectGallery('Apartament Flavia Garden 2024', 'Biophilic Office Space')" style="cursor: pointer;">
                     <div class="before-after-slider">
                         <div class="before-image">
                             <img src="../Apartament Flavia Garden 2024/cam01.jpg" alt="Before">
@@ -163,14 +163,14 @@
                 </article>
 
                 <!-- Project 3 -->
-                <article class="project-card">
+                <article class="project-card" onclick="openProjectGallery('Elite Clinic 2021', 'Green Healthcare Design')" style="cursor: pointer;">
                     <div class="before-after-slider">
                         <div class="before-image">
                             <img src="../Elite Clinic 2021/Cam09.jpg" alt="Before">
                             <span class="label">Before</span>
                         </div>
                         <div class="after-image">
-                            <img src="../Elite Clinic 2021/Cam10.jpg" alt="After">
+                            <img src="../Elite Clinic 2021/Cam010.jpg" alt="After">
                             <span class="label">After</span>
                         </div>
                         <input type="range" class="slider-control" min="0" max="100" value="50">
@@ -208,7 +208,7 @@
             
             <div class="materials-grid">
                 <!-- FSC Wood -->
-                <div class="material-card">
+                <div class="material-card" onclick="openProjectGallery('Balev Corporation 2020', 'Reclaimed Oak Flooring')" style="cursor: pointer;">
                     <div class="material-image">
                         <img src="../Balev Corporation 2020/Balev (1).jpg" alt="FSC Certified Wood">
                         <div class="material-tag fsc">FSC Certified</div>
@@ -228,7 +228,7 @@
                 </div>
 
                 <!-- Recycled Textiles -->
-                <div class="material-card">
+                <div class="material-card" onclick="openProjectGallery('Oliv vilas sv.Vlas 2019', 'Ocean Plastic Fabrics')" style="cursor: pointer;">
                     <div class="material-image">
                         <img src="../Oliv vilas sv.Vlas 2019/7O.V..jpg" alt="Recycled Textiles">
                         <div class="material-tag recycled">100% Recycled</div>
@@ -248,7 +248,7 @@
                 </div>
 
                 <!-- Bamboo -->
-                <div class="material-card">
+                <div class="material-card" onclick="openProjectGallery('Apartament Симфония - Бриз, Варна_ 2019', 'Bamboo Composite')" style="cursor: pointer;">
                     <div class="material-image">
                         <img src="../Apartament Симфония - Бриз, Варна_ 2019/Alex (1).jpg" alt="Bamboo Materials">
                         <div class="material-tag renewable">Renewable</div>
@@ -268,7 +268,7 @@
                 </div>
 
                 <!-- Cork -->
-                <div class="material-card">
+                <div class="material-card" onclick="openProjectGallery('Playground Grand Mall Varna 2018', 'Cork Wall Panels')" style="cursor: pointer;">
                     <div class="material-image">
                         <img src="../Playground Grand Mall Varna 2018/Playground (6).jpg" alt="Cork Materials">
                         <div class="material-tag renewable">Renewable</div>
@@ -288,7 +288,7 @@
                 </div>
 
                 <!-- Recycled Metal -->
-                <div class="material-card">
+                <div class="material-card" onclick="openProjectGallery('Apartament Кв. Чайка, Варна_2017', 'Reclaimed Steel Fixtures')" style="cursor: pointer;">
                     <div class="material-image">
                         <img src="../Apartament Кв. Чайка, Варна_2017/Dnevna01.jpg" alt="Recycled Metal">
                         <div class="material-tag recycled">Recycled</div>
@@ -308,7 +308,7 @@
                 </div>
 
                 <!-- Low-VOC Paint -->
-                <div class="material-card">
+                <div class="material-card" onclick="openProjectGallery('Apartament Траката, Варна_2021', 'Plant-Based Paints')" style="cursor: pointer;">
                     <div class="material-image">
                         <img src="../Apartament Траката, Варна_2021/5-1-768x512.jpg" alt="Low-VOC Paint">
                         <div class="material-tag low-voc">Low VOC</div>
@@ -336,7 +336,7 @@
             <h2 class="section-title">Sustainability Insights</h2>
             
             <div class="blog-grid">
-                <article class="blog-post">
+                <article class="blog-post" onclick="openProjectGallery('Apartament Flavia Garden 2024', 'Zero-Waste Design')" style="cursor: pointer;">
                     <div class="post-image">
                         <img src="../Apartament Flavia Garden 2024/cam01.jpg" alt="Blog post">
                         <div class="carbon-saving-badge">
@@ -352,7 +352,7 @@
                     </div>
                 </article>
 
-                <article class="blog-post">
+                <article class="blog-post" onclick="openProjectGallery('Elite Clinic 2021', 'Living Walls')" style="cursor: pointer;">
                     <div class="post-image">
                         <img src="../Elite Clinic 2021/Cam09.jpg" alt="Blog post">
                         <div class="carbon-saving-badge">
@@ -368,7 +368,7 @@
                     </div>
                 </article>
 
-                <article class="blog-post">
+                <article class="blog-post" onclick="openProjectGallery('Balev Corporation 2020', 'Circular Design')" style="cursor: pointer;">
                     <div class="post-image">
                         <img src="../Balev Corporation 2020/Balev (1).jpg" alt="Blog post">
                         <div class="carbon-saving-badge">
@@ -504,5 +504,12 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        function openProjectGallery(projectFolder, projectName) {
+            const currentPath = window.location.pathname;
+            const fromPath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
+            window.location.href = `../gallery-template.html?project=${encodeURIComponent(projectFolder)}&name=${encodeURIComponent(projectName)}&from=${encodeURIComponent(fromPath)}`;
+        }
+    </script>
 </body>
 </html>

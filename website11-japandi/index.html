@@ -52,21 +52,21 @@
         <div class="content-container">
             <h2 data-translate="stories_title">три истории</h2>
             <div class="story-grid">
-                <a href="story-1.html" class="story-card">
+                <div class="story-card" onclick="openProjectGallery('Apartament Flavia Garden 2024', 'Flavia Garden')" style="cursor: pointer;">
                     <img src="../Apartament Flavia Garden 2024/cam010.jpg" alt="Story 1" loading="lazy">
                     <h3 data-translate="story1_title">светлина и сянка</h3>
                     <p data-translate="story1_year">2024</p>
-                </a>
-                <a href="story-2.html" class="story-card">
+                </div>
+                <div class="story-card" onclick="openProjectGallery('Elite Clinic 2021', 'Elite Clinic')" style="cursor: pointer;">
                     <img src="../Elite Clinic 2021/Cam01.jpg" alt="Story 2" loading="lazy">
                     <h3 data-translate="story2_title">естествени материали</h3>
                     <p data-translate="story2_year">2021</p>
-                </a>
-                <a href="story-3.html" class="story-card">
+                </div>
+                <div class="story-card" onclick="openProjectGallery('Apartament K55_2021', 'K55 Modern')" style="cursor: pointer;">
                     <img src="../Apartament K55_2021/Vladi (1).jpg" alt="Story 3" loading="lazy">
                     <h3 data-translate="story3_title">минимална елегантност</h3>
                     <p data-translate="story3_year">2021</p>
-                </a>
+                </div>
             </div>
         </div>
     </section>
@@ -92,5 +92,12 @@
     <script src="../translations.js"></script>
     <script src="../language-switcher-v2.js"></script>
     <script src="script.js"></script>
+    <script>
+        function openProjectGallery(projectFolder, projectName) {
+            const currentPath = window.location.pathname;
+            const fromPath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
+            window.location.href = `../gallery-template.html?project=${encodeURIComponent(projectFolder)}&name=${encodeURIComponent(projectName)}&from=${encodeURIComponent(fromPath)}`;
+        }
+    </script>
 </body>
 </html>

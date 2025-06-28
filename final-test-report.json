@@ -1,0 +1,347 @@
+[
+  {
+    "website": "website1-minimalist",
+    "status": "SUCCESS",
+    "title": "Studio Arteamo - Interior Design Portfolio",
+    "images": {
+      "total": 8,
+      "loaded": 8,
+      "broken": 0,
+      "lazy": 0
+    },
+    "navigation": {
+      "links": 4,
+      "internalLinks": 4,
+      "buttons": 4
+    },
+    "features": {
+      "hasLanguageSwitcher": false,
+      "languageSwitchWorks": false,
+      "hasTranslations": false
+    },
+    "errors": 1,
+    "missing404s": 0
+  },
+  {
+    "website": "website2-dark-luxury",
+    "status": "SUCCESS",
+    "title": "Studio Arteamo | Luxury Interior Design",
+    "images": {
+      "total": 6,
+      "loaded": 6,
+      "broken": 0,
+      "lazy": 0
+    },
+    "navigation": {
+      "links": 9,
+      "internalLinks": 6,
+      "buttons": 5
+    },
+    "features": {
+      "hasLanguageSwitcher": false,
+      "languageSwitchWorks": false,
+      "hasTranslations": false
+    },
+    "errors": 0,
+    "missing404s": 0
+  },
+  {
+    "website": "website3-magazine",
+    "status": "SUCCESS",
+    "title": "ARTEAMO | Editorial Interior Design Magazine",
+    "images": {
+      "total": 10,
+      "loaded": 10,
+      "broken": 0,
+      "lazy": 0
+    },
+    "navigation": {
+      "links": 12,
+      "internalLinks": 9,
+      "buttons": 1
+    },
+    "features": {
+      "hasLanguageSwitcher": false,
+      "languageSwitchWorks": false,
+      "hasTranslations": false
+    },
+    "errors": 0,
+    "missing404s": 0
+  },
+  {
+    "website": "website4-interactive-grid",
+    "status": "SUCCESS",
+    "title": "Studio Arteamo | Interactive Portfolio",
+    "images": {
+      "total": 8,
+      "loaded": 8,
+      "broken": 0,
+      "lazy": 0
+    },
+    "navigation": {
+      "links": 6,
+      "internalLinks": 3,
+      "buttons": 6
+    },
+    "features": {
+      "hasLanguageSwitcher": false,
+      "languageSwitchWorks": false,
+      "hasTranslations": false
+    },
+    "errors": 0,
+    "missing404s": 0
+  },
+  {
+    "website": "website5-fancy",
+    "status": "SUCCESS",
+    "title": "Studio Arteamo | Immersive Experience",
+    "images": {
+      "total": 12,
+      "loaded": 12,
+      "broken": 0,
+      "lazy": 0
+    },
+    "navigation": {
+      "links": 7,
+      "internalLinks": 4,
+      "buttons": 3
+    },
+    "features": {
+      "hasLanguageSwitcher": false,
+      "languageSwitchWorks": false,
+      "hasTranslations": false
+    },
+    "errors": 0,
+    "missing404s": 0
+  },
+  {
+    "website": "website6-coastal",
+    "status": "SUCCESS",
+    "title": "Interior Design Varna | Studio Arteamo",
+    "images": {
+      "total": 26,
+      "loaded": 25,
+      "broken": 1,
+      "lazy": 0
+    },
+    "navigation": {
+      "links": 17,
+      "internalLinks": 17,
+      "buttons": 8
+    },
+    "features": {
+      "hasLanguageSwitcher": false,
+      "languageSwitchWorks": false,
+      "hasTranslations": false
+    },
+    "errors": 0,
+    "missing404s": 0
+  },
+  {
+    "website": "website7-noir",
+    "status": "SUCCESS",
+    "title": "Studio Arteamo | Noir Luxe Interior Design",
+    "images": {
+      "total": 10,
+      "loaded": 10,
+      "broken": 0,
+      "lazy": 0
+    },
+    "navigation": {
+      "links": 10,
+      "internalLinks": 8,
+      "buttons": 5
+    },
+    "features": {
+      "hasLanguageSwitcher": false,
+      "languageSwitchWorks": false,
+      "hasTranslations": false
+    },
+    "errors": 0,
+    "missing404s": 0
+  },
+  {
+    "website": "website8-biophilic",
+    "status": "SUCCESS",
+    "title": "Studio Arteamo | Sustainable Biophilic Design",
+    "images": {
+      "total": 16,
+      "loaded": 16,
+      "broken": 0,
+      "lazy": 0
+    },
+    "navigation": {
+      "links": 14,
+      "internalLinks": 14,
+      "buttons": 2
+    },
+    "features": {
+      "hasLanguageSwitcher": false,
+      "languageSwitchWorks": false,
+      "hasTranslations": false
+    },
+    "errors": 0,
+    "missing404s": 0
+  },
+  {
+    "website": "website9-makeover",
+    "status": "SUCCESS",
+    "title": "Studio Arteamo - Makeover Stories",
+    "images": {
+      "total": 6,
+      "loaded": 6,
+      "broken": 0,
+      "lazy": 4
+    },
+    "navigation": {
+      "links": 4,
+      "internalLinks": 4,
+      "buttons": 8
+    },
+    "features": {
+      "hasLanguageSwitcher": true,
+      "languageSwitchWorks": false,
+      "hasTranslations": false
+    },
+    "errors": 0,
+    "missing404s": 0
+  },
+  {
+    "website": "website10-magazine-v2",
+    "status": "SUCCESS",
+    "title": "Studio Arteamo | Architectural Digest Bulgaria",
+    "images": {
+      "total": 9,
+      "loaded": 9,
+      "broken": 0,
+      "lazy": 0
+    },
+    "navigation": {
+      "links": 38,
+      "internalLinks": 38,
+      "buttons": 9
+    },
+    "features": {
+      "hasLanguageSwitcher": true,
+      "languageSwitchWorks": false,
+      "hasTranslations": false
+    },
+    "errors": 0,
+    "missing404s": 0
+  },
+  {
+    "website": "website11-japandi",
+    "status": "SUCCESS",
+    "title": "Studio Arteamo - Japandi Aesthetic",
+    "images": {
+      "total": 4,
+      "loaded": 4,
+      "broken": 0,
+      "lazy": 3
+    },
+    "navigation": {
+      "links": 6,
+      "internalLinks": 6,
+      "buttons": 5
+    },
+    "features": {
+      "hasLanguageSwitcher": true,
+      "languageSwitchWorks": false,
+      "hasTranslations": false
+    },
+    "errors": 0,
+    "missing404s": 0
+  },
+  {
+    "website": "website12-bulgarian",
+    "status": "SUCCESS",
+    "title": "Studio Arteamo - Българска традиция в модерен прочит",
+    "images": {
+      "total": 5,
+      "loaded": 5,
+      "broken": 0,
+      "lazy": 3
+    },
+    "navigation": {
+      "links": 5,
+      "internalLinks": 5,
+      "buttons": 8
+    },
+    "features": {
+      "hasLanguageSwitcher": true,
+      "languageSwitchWorks": false,
+      "hasTranslations": false
+    },
+    "errors": 0,
+    "missing404s": 0
+  },
+  {
+    "website": "website13-retro",
+    "status": "SUCCESS",
+    "title": "STUDIO ARTEAMO - RETRO WAVE '87",
+    "images": {
+      "total": 3,
+      "loaded": 3,
+      "broken": 0,
+      "lazy": 0
+    },
+    "navigation": {
+      "links": 3,
+      "internalLinks": 3,
+      "buttons": 6
+    },
+    "features": {
+      "hasLanguageSwitcher": true,
+      "languageSwitchWorks": false,
+      "hasTranslations": false
+    },
+    "errors": 1,
+    "missing404s": 0
+  },
+  {
+    "website": "website14-zen",
+    "status": "SUCCESS",
+    "title": "Studio Arteamo - Zen Space",
+    "images": {
+      "total": 3,
+      "loaded": 3,
+      "broken": 0,
+      "lazy": 0
+    },
+    "navigation": {
+      "links": 4,
+      "internalLinks": 4,
+      "buttons": 9
+    },
+    "features": {
+      "hasLanguageSwitcher": true,
+      "languageSwitchWorks": false,
+      "hasTranslations": false
+    },
+    "errors": 0,
+    "missing404s": 0
+  },
+  {
+    "website": "website15-ascii",
+    "status": "SUCCESS",
+    "title": "Studio Arteamo - Terminal Interface",
+    "images": {
+      "total": 0,
+      "loaded": 0,
+      "broken": 0,
+      "lazy": 0
+    },
+    "navigation": {
+      "links": 0,
+      "internalLinks": 0,
+      "buttons": 2
+    },
+    "features": {
+      "hasLanguageSwitcher": false,
+      "languageSwitchWorks": false,
+      "hasTranslations": false
+    },
+    "errors": 0,
+    "missing404s": 0
+  }
+]

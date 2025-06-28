@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Arteamo - Terminal Interface</title>
+    <meta name="description" content="Anti-portfolio. What if we couldn't show you any images?">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="terminal">
+        <div id="ascii-header">
+╔═╗╔╦╗╦ ╦╔╦╗╦╔═╗  ╔═╗╦═╗╔╦╗╔═╗╔═╗╔╦╗╔═╗
+╚═╗ ║ ║ ║ ║║║║ ║  ╠═╣╠╦╝ ║ ║╣ ╠═╣║║║║ ║
+╚═╝ ╩ ╚═╝═╩╝╩╚═╝  ╩ ╩╩╚═ ╩ ╚═╝╩ ╩╩ ╩╚═╝
+        </div>
+        
+        <div id="matrix-rain"></div>
+        
+        <div id="terminal-output">
+            <div class="line">STUDIO ARTEAMO TERMINAL v2.0.24</div>
+            <div class="line">Copyright (c) 2024 - Interior Design Through Text</div>
+            <div class="line">=====================================</div>
+            <div class="line">&nbsp;</div>
+            <div class="line typing" data-text="INITIALIZING PORTFOLIO SYSTEM...">INITIALIZING PORTFOLIO SYSTEM...</div>
+            <div class="line">&nbsp;</div>
+        </div>
+        
+        <div id="command-line">
+            <span class="prompt">arteamo@portfolio:~$</span>
+            <input type="text" id="terminal-input" autofocus autocomplete="off" spellcheck="false">
+            <span class="cursor">_</span>
+        </div>
+        
+        <div id="help-hint">Type 'HELP' for commands | 'BG/EN/RU/ES' for language</div>
+    </div>
+    
+    <!-- Hidden real gallery (Easter egg) -->
+    <div id="real-gallery" class="hidden">
+        <div class="real-gallery-header">
+            <h2 data-translate="gallery_title">Истински снимки</h2>
+            <button id="close-gallery" data-translate="close">Затвори</button>
+        </div>
+        <div class="real-gallery-grid">
+            <!-- Will be populated by JavaScript -->
+        </div>
+    </div>
+    
+    <!-- ASCII Art Templates -->
+    <div id="ascii-templates" class="hidden">
+        <pre id="living-room-ascii">
+    ╔═══════════════════════════════════╗
+    ║        ДНЕВНА / LIVING ROOM       ║
+    ╠═══════════════════════════════════╣
+    ║  ┌─────┐    ████████████████      ║
+    ║  │     │    ████████████████      ║
+    ║  │ ▓▓▓ │    ████████████████      ║
+    ║  │ ▓▓▓ │    ┌──┐  ┌──┐  ┌──┐     ║
+    ║  └─────┘    │  │  │  │  │  │     ║
+    ║             └──┘  └──┘  └──┘     ║
+    ║  ╔═════════════════════════╗      ║
+    ║  ║                         ║      ║
+    ║  ║    ═══════════════     ║      ║
+    ║  ║                         ║      ║
+    ║  ╚═════════════════════════╝      ║
+    ╚═══════════════════════════════════╝
+        </pre>
+        
+        <pre id="kitchen-ascii">
+    ┌─────────────────────────────────┐
+    │         КУХНЯ / KITCHEN         │
+    ├─────────────────────────────────┤
+    │ ╔═══╦═══╦═══╦═══╦═══╦═══╗      │
+    │ ║   ║   ║   ║   ║   ║   ║      │
+    │ ╠═══╬═══╬═══╬═══╬═══╬═══╣      │
+    │ ║ ○ ║   ║▓▓▓║   ║ ♨ ║   ║      │
+    │ ╚═══╩═══╩═══╩═══╩═══╩═══╝      │
+    │                                 │
+    │ ┌───────────────────────┐       │
+    │ │  ┌─┐ ┌─┐ ┌─┐ ┌─┐    │       │
+    │ │  │●│ │●│ │●│ │●│    │       │
+    │ │  └─┘ └─┘ └─┘ └─┘    │       │
+    │ └───────────────────────┘       │
+    └─────────────────────────────────┘
+        </pre>
+        
+        <pre id="bedroom-ascii">
+    ╔═══════════════════════════════╗
+    ║     СПАЛНЯ / BEDROOM          ║
+    ╠═══════════════════════════════╣
+    ║                               ║
+    ║   ╔═══════════════════╗       ║
+    ║   ║ ░░░░░░░░░░░░░░░░░ ║ ┌───┐ ║
+    ║   ║ ░░░░░░░░░░░░░░░░░ ║ │   │ ║
+    ║   ║ ░░░░░░░░░░░░░░░░░ ║ │   │ ║
+    ║   ║ ░░░░░░░░░░░░░░░░░ ║ │   │ ║
+    ║   ╚═══════════════════╝ │   │ ║
+    ║   ─────────────────────┘   │ ║
+    ║   ○         ○               │ ║
+    ╚═══════════════════════════════╝
+        </pre>
+    </div>
+    
+    <!-- Sound toggle -->
+    <button id="sound-toggle" class="sound-btn" aria-label="Toggle sound">🔊</button>
+    
+    <script src="../translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Arteamo - Interior Design Portfolio</title>
+    <title data-translate="pageTitle">Studio Arteamo - Interior Design Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="../translations.js"></script>
-    <script src="../language-switcher-v2.js"></script>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <h1>STUDIO ARTEAMO</h1>
-                <span class="tagline">Transforming Spaces Since 2008</span>
+                <h1 data-translate="company.name">STUDIO ARTEAMO</h1>
+                <span class="tagline" data-translate="company.tagline">Transforming Spaces Since 2008</span>
             </div>
             <div class="nav-menu">
-                <a href="#projects" class="nav-link active">Projects</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#projects" class="nav-link active" data-translate="nav.projects">Projects</a>
+                <a href="#about" class="nav-link" data-translate="nav.about">About</a>
+                <a href="#services" class="nav-link" data-translate="nav.services">Services</a>
+                <a href="#contact" class="nav-link" data-translate="nav.contact">Contact</a>
             </div>
             <div class="mobile-menu-toggle">
                 <span></span>
@@ -32,24 +30,24 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h2 class="hero-title">Creating Spaces That Inspire</h2>
-            <p class="hero-subtitle">We believe that every space is a place for expressing ideas and emotions. Our mission is to create interiors that inspire and change the way we see the world.</p>
+            <h2 class="hero-title" data-translate="company.slogan">Creating Spaces That Inspire</h2>
+            <p class="hero-subtitle" data-translate="company.mission">We believe that every space is a place for expressing ideas and emotions. Our mission is to create interiors that inspire and change the way we see the world.</p>
         </div>
     </section>
 
     <section id="filters" class="filters">
         <div class="filter-container">
             <div class="filter-group">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="residential">Residential</button>
-                <button class="filter-btn" data-filter="commercial">Commercial</button>
-                <button class="filter-btn" data-filter="office">Office</button>
+                <button class="filter-btn active" data-filter="all" data-translate="filters.allProjects">All Projects</button>
+                <button class="filter-btn" data-filter="residential" data-translate="filters.residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial" data-translate="filters.commercial">Commercial</button>
+                <button class="filter-btn" data-filter="office" data-translate="filters.office">Office</button>
             </div>
             <div class="sort-options">
                 <select id="sort-select">
-                    <option value="newest">Newest First</option>
-                    <option value="oldest">Oldest First</option>
-                    <option value="name">By Name</option>
+                    <option value="newest" data-translate="filters.newestFirst">Newest First</option>
+                    <option value="oldest" data-translate="filters.oldestFirst">Oldest First</option>
+                    <option value="name" data-translate="filters.byName">By Name</option>
                 </select>
             </div>
         </div>
@@ -58,7 +56,7 @@
     <section id="projects" class="projects">
         <div class="projects-grid">
             <!-- Project Cards -->
-            <div class="project-card" data-category="residential" data-year="2024">
+            <div class="project-card" data-category="residential" data-year="2024" onclick="openProjectGallery('Apartament Flavia Garden 2024', 'Flavia Garden Apartment')" style="cursor: pointer;">
                 <div class="project-image">
                     <img src="../Apartament Flavia Garden 2024/cam01.jpg" alt="Apartament Flavia Garden">
                     <div class="project-overlay">
@@ -66,13 +64,13 @@
                     </div>
                 </div>
                 <div class="project-info">
-                    <h3>Flavia Garden Apartment</h3>
-                    <p class="project-meta">Residential • 2024 • 120 m²</p>
-                    <p class="project-desc">A modern sanctuary combining elegance with comfort in the heart of Varna.</p>
+                    <h3 data-translate="projectData.flaviaGarden">Flavia Garden Apartment</h3>
+                    <p class="project-meta"><span data-translate="projectData.residential">Residential</span> • 2024 • 120 m²</p>
+                    <p class="project-desc" data-translate="projectData.flaviaGardenDesc">A modern sanctuary combining elegance with comfort in the heart of Varna.</p>
                 </div>
             </div>
 
-            <div class="project-card" data-category="office" data-year="2021">
+            <div class="project-card" data-category="office" data-year="2021" onclick="openProjectGallery('Elite Clinic 2021', 'Elite Clinic')" style="cursor: pointer;">
                 <div class="project-image">
                     <img src="../Elite Clinic 2021/Cam09.jpg" alt="Elite Clinic">
                     <div class="project-overlay">
@@ -80,13 +78,13 @@
                     </div>
                 </div>
                 <div class="project-info">
-                    <h3>Elite Clinic</h3>
-                    <p class="project-meta">Medical • 2021 • 250 m²</p>
-                    <p class="project-desc">A state-of-the-art medical facility designed for patient comfort and clinical efficiency.</p>
+                    <h3 data-translate="projectData.eliteClinic">Elite Clinic</h3>
+                    <p class="project-meta"><span data-translate="projectData.medical">Medical</span> • 2021 • 250 m²</p>
+                    <p class="project-desc" data-translate="projectData.eliteClinicDesc">A state-of-the-art medical facility designed for patient comfort and clinical efficiency.</p>
                 </div>
             </div>
 
-            <div class="project-card" data-category="residential" data-year="2021">
+            <div class="project-card" data-category="residential" data-year="2021" onclick="openProjectGallery('Apartament K55_2021', 'Apartment K55')" style="cursor: pointer;">
                 <div class="project-image">
                     <img src="../Apartament K55_2021/Vladi (4).jpg" alt="Apartment K55">
                     <div class="project-overlay">
@@ -94,13 +92,13 @@
                     </div>
                 </div>
                 <div class="project-info">
-                    <h3>Apartment K55</h3>
-                    <p class="project-meta">Residential • 2021 • 95 m²</p>
-                    <p class="project-desc">Contemporary living space with minimalist aesthetics and maximum functionality.</p>
+                    <h3 data-translate="projectData.apartmentK55">Apartment K55</h3>
+                    <p class="project-meta"><span data-translate="projectData.residential">Residential</span> • 2021 • 95 m²</p>
+                    <p class="project-desc" data-translate="projectData.apartmentK55Desc">Contemporary living space with minimalist aesthetics and maximum functionality.</p>
                 </div>
             </div>
 
-            <div class="project-card" data-category="office" data-year="2020">
+            <div class="project-card" data-category="office" data-year="2020" onclick="openProjectGallery('Balev Corporation 2020', 'Balev Corporation')" style="cursor: pointer;">
                 <div class="project-image">
                     <img src="../Balev Corporation 2020/Balev (1).jpg" alt="Balev Corporation">
                     <div class="project-overlay">
@@ -108,13 +106,13 @@
                     </div>
                 </div>
                 <div class="project-info">
-                    <h3>Balev Corporation</h3>
-                    <p class="project-meta">Corporate Office • 2020 • 450 m²</p>
-                    <p class="project-desc">A dynamic corporate headquarters reflecting innovation and professionalism.</p>
+                    <h3 data-translate="projectData.balevCorporation">Balev Corporation</h3>
+                    <p class="project-meta"><span data-translate="projectData.corporate">Corporate Office</span> • 2020 • 450 m²</p>
+                    <p class="project-desc" data-translate="projectData.balevCorporationDesc">A dynamic corporate headquarters reflecting innovation and professionalism.</p>
                 </div>
             </div>
 
-            <div class="project-card" data-category="residential" data-year="2019">
+            <div class="project-card" data-category="residential" data-year="2019" onclick="openProjectGallery('Apartament Симфония - Бриз, Варна_ 2019', 'Symphony Breeze')" style="cursor: pointer;">
                 <div class="project-image">
                     <img src="../Apartament Симфония - Бриз, Варна_ 2019/Alex (1).jpg" alt="Symphony Breeze Apartment">
                     <div class="project-overlay">
@@ -122,13 +120,13 @@
                     </div>
                 </div>
                 <div class="project-info">
-                    <h3>Symphony Breeze</h3>
-                    <p class="project-meta">Residential • 2019 • 110 m²</p>
-                    <p class="project-desc">Coastal elegance meets urban sophistication in this seaside apartment.</p>
+                    <h3 data-translate="projectData.symphonyBreeze">Symphony Breeze</h3>
+                    <p class="project-meta"><span data-translate="projectData.residential">Residential</span> • 2019 • 110 m²</p>
+                    <p class="project-desc" data-translate="projectData.symphonyBreezeDesc">Coastal elegance meets urban sophistication in this seaside apartment.</p>
                 </div>
             </div>
 
-            <div class="project-card" data-category="commercial" data-year="2019">
+            <div class="project-card" data-category="commercial" data-year="2019" onclick="openProjectGallery('Oliv vilas sv.Vlas 2019', 'Oliv Villas')" style="cursor: pointer;">
                 <div class="project-image">
                     <img src="../Oliv vilas sv.Vlas 2019/7O.V..jpg" alt="Oliv Villas">
                     <div class="project-overlay">
@@ -136,13 +134,13 @@
                     </div>
                 </div>
                 <div class="project-info">
-                    <h3>Oliv Villas</h3>
-                    <p class="project-meta">Hospitality • 2019 • 800 m²</p>
-                    <p class="project-desc">Luxury vacation villas designed for ultimate relaxation and comfort.</p>
+                    <h3 data-translate="projectData.olivVillas">Oliv Villas</h3>
+                    <p class="project-meta"><span data-translate="projectData.hospitality">Hospitality</span> • 2019 • 800 m²</p>
+                    <p class="project-desc" data-translate="projectData.olivVillasDesc">Luxury vacation villas designed for ultimate relaxation and comfort.</p>
                 </div>
             </div>
 
-            <div class="project-card" data-category="commercial" data-year="2018">
+            <div class="project-card" data-category="commercial" data-year="2018" onclick="openProjectGallery('Playground Grand Mall Varna 2018', 'Playground Grand Mall')" style="cursor: pointer;">
                 <div class="project-image">
                     <img src="../Playground Grand Mall Varna 2018/Playground (6).jpg" alt="Playground Grand Mall">
                     <div class="project-overlay">
@@ -150,13 +148,13 @@
                     </div>
                 </div>
                 <div class="project-info">
-                    <h3>Playground Grand Mall</h3>
-                    <p class="project-meta">Commercial • 2018 • 350 m²</p>
-                    <p class="project-desc">An innovative children's entertainment center bringing joy to families.</p>
+                    <h3 data-translate="projectData.playgroundMall">Playground Grand Mall</h3>
+                    <p class="project-meta"><span data-translate="projectData.commercial">Commercial</span> • 2018 • 350 m²</p>
+                    <p class="project-desc" data-translate="projectData.playgroundMallDesc">An innovative children's entertainment center bringing joy to families.</p>
                 </div>
             </div>
 
-            <div class="project-card" data-category="residential" data-year="2017">
+            <div class="project-card" data-category="residential" data-year="2017" onclick="openProjectGallery('Apartament Кв. Чайка, Варна_2017', 'Chayka District')" style="cursor: pointer;">
                 <div class="project-image">
                     <img src="../Apartament Кв. Чайка, Варна_2017/Dnevna01.jpg" alt="Chayka District Apartment">
                     <div class="project-overlay">
@@ -164,9 +162,51 @@
                     </div>
                 </div>
                 <div class="project-info">
-                    <h3>Chayka District</h3>
-                    <p class="project-meta">Residential • 2017 • 85 m²</p>
-                    <p class="project-desc">A warm family home balancing traditional charm with modern convenience.</p>
+                    <h3 data-translate="projectData.chaykaDistrict">Chayka District</h3>
+                    <p class="project-meta"><span data-translate="projectData.residential">Residential</span> • 2017 • 85 m²</p>
+                    <p class="project-desc" data-translate="projectData.chaykaDistrictDesc">A warm family home balancing traditional charm with modern convenience.</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="residential" data-year="2021" onclick="openProjectGallery('Apartament Траката, Варна_2021', 'Trakata Residence')" style="cursor: pointer;">
+                <div class="project-image">
+                    <img src="../Apartament Траката, Варна_2021/1-1-2000x1200.jpg" alt="Trakata Residence">
+                    <div class="project-overlay">
+                        <h3 data-translate="projects.viewProject">View Project</h3>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 data-translate="projectData.trakataResidence">Trakata Residence</h3>
+                    <p class="project-meta"><span data-translate="projectData.residential">Residential</span> • 2021 • 105 m²</p>
+                    <p class="project-desc" data-translate="projectData.trakataResidenceDesc">Modern elegance meets comfort in this sophisticated residential project.</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="residential" data-year="2019" onclick="openProjectGallery('Gichev sped 2019', 'Gichev Residence')" style="cursor: pointer;">
+                <div class="project-image">
+                    <img src="../Gichev sped 2019/GichevSped1 (1).jpg" alt="Gichev Residence">
+                    <div class="project-overlay">
+                        <h3 data-translate="projects.viewProject">View Project</h3>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 data-translate="projectData.gichevResidence">Gichev Residence</h3>
+                    <p class="project-meta"><span data-translate="projectData.residential">Residential</span> • 2019 • 130 m²</p>
+                    <p class="project-desc" data-translate="projectData.gichevResidenceDesc">A refined family home showcasing contemporary design principles.</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="office" data-year="2022" onclick="openProjectGallery('Work Del Mar 2022', 'Del Mar Office')" style="cursor: pointer;">
+                <div class="project-image">
+                    <img src="../Work Del Mar 2022/1 (1).jpg" alt="Del Mar Office">
+                    <div class="project-overlay">
+                        <h3 data-translate="projects.viewProject">View Project</h3>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 data-translate="projectData.delMarOffice">Del Mar Office</h3>
+                    <p class="project-meta"><span data-translate="projectData.office">Office</span> • 2022 • 200 m²</p>
+                    <p class="project-desc" data-translate="projectData.delMarOfficeDesc">Modern workspace design promoting productivity and well-being.</p>
                 </div>
             </div>
         </div>
@@ -231,10 +271,19 @@
 
     <footer class="footer">
         <div class="footer-container">
-            <p>&copy; 2024 Studio Arteamo. All rights reserved.</p>
+            <p>&copy; 2024 <span data-translate="company.name">Studio Arteamo</span>. <span data-translate="common.allRightsReserved">All rights reserved</span>.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script src="../translations.js"></script>
+    <script src="../language-switcher-v2.js"></script>
+    <script>
+        function openProjectGallery(projectFolder, projectName) {
+            const currentPath = window.location.pathname;
+            const fromPath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
+            window.location.href = `../gallery-premium.html?project=${encodeURIComponent(projectFolder)}&name=${encodeURIComponent(projectName)}&from=${encodeURIComponent(fromPath)}`;
+        }
+    </script>
 </body>
 </html>

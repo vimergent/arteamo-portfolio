@@ -1,0 +1,93 @@
+[
+  {
+    "website": "website1-minimalist",
+    "status": "SUCCESS",
+    "hasOnclick": true,
+    "galleryOpened": true
+  },
+  {
+    "website": "website2-dark-luxury",
+    "status": "SUCCESS",
+    "hasOnclick": true,
+    "galleryOpened": true
+  },
+  {
+    "website": "website3-magazine",
+    "status": "SUCCESS",
+    "hasOnclick": true,
+    "galleryOpened": true
+  },
+  {
+    "website": "website4-interactive-grid",
+    "status": "SUCCESS",
+    "hasOnclick": true,
+    "galleryOpened": true
+  },
+  {
+    "website": "website5-fancy",
+    "status": "SUCCESS",
+    "hasOnclick": true,
+    "galleryOpened": false
+  },
+  {
+    "website": "website6-coastal",
+    "status": "SUCCESS",
+    "hasOnclick": true,
+    "galleryOpened": true
+  },
+  {
+    "website": "website7-noir",
+    "status": "SUCCESS",
+    "hasOnclick": true,
+    "galleryOpened": false
+  },
+  {
+    "website": "website8-biophilic",
+    "status": "SUCCESS",
+    "hasOnclick": true,
+    "galleryOpened": false
+  },
+  {
+    "website": "website9-makeover",
+    "status": "SUCCESS",
+    "hasOnclick": true,
+    "galleryOpened": true
+  },
+  {
+    "website": "website10-magazine-v2",
+    "status": "FAILED",
+    "elementData": {
+      "exists": false
+    }
+  },
+  {
+    "website": "website11-japandi",
+    "status": "SUCCESS",
+    "hasOnclick": true,
+    "galleryOpened": true
+  },
+  {
+    "website": "website12-bulgarian",
+    "status": "SUCCESS",
+    "hasOnclick": true,
+    "galleryOpened": true
+  },
+  {
+    "website": "website13-retro",
+    "status": "FAILED",
+    "elementData": {
+      "exists": false
+    }
+  },
+  {
+    "website": "website14-zen",
+    "status": "SUCCESS",
+    "hasOnclick": true,
+    "galleryOpened": false
+  },
+  {
+    "website": "website15-ascii",
+    "status": "SUCCESS",
+    "type": "ascii"
+  }
+]

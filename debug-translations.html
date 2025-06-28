@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Translations</title>
+</head>
+<body>
+    <h1>Translation Debug</h1>
+    <p>Check console for debugging info</p>
+    
+    <div id="test-element" data-translate="nav.projects">Projects</div>
+    <div id="lang-container"></div>
+    
+    <script src="./translations.js"></script>
+    <script>
+        console.log('Translations loaded?', typeof translations !== 'undefined');
+        if (typeof translations !== 'undefined') {
+            console.log('Translations object:', translations);
+            console.log('Available languages:', Object.keys(translations));
+        } else {
+            console.log('Translations not loaded!');
+        }
+    </script>
+    <script src="./language-switcher-v2.js"></script>
+    <script>
+        console.log('LanguageSwitcher loaded?', typeof LanguageSwitcher !== 'undefined');
+        
+        setTimeout(() => {
+            const langContainer = document.getElementById('lang-container');
+            const switcher = document.querySelector('.language-switcher');
+            if (switcher) {
+                langContainer.innerHTML = 'Language switcher created successfully!';
+                langContainer.style.color = 'green';
+            } else {
+                langContainer.innerHTML = 'Language switcher NOT created';
+                langContainer.style.color = 'red';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

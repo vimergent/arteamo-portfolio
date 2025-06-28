@@ -205,9 +205,16 @@ class LanguageSwitcher {
         });
 
         // Update document title if it has translation
-        const titleElement = document.querySelector('[data-translate-title]');
+        const titleElement = document.querySelector('title[data-translate]');
         if (titleElement) {
-            document.title = titleElement.textContent + ' - Studio Arteamo';
+            const keys = titleElement.dataset.translate.split('.');
+            let translation = t;
+            keys.forEach(key => {
+                translation = translation[key];
+            });
+            if (translation) {
+                document.title = translation;
+            }
         }
     }
 }

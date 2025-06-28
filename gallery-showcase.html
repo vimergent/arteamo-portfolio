@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Evolution Showcase - Studio Arteamo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .showcase-header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+        
+        .showcase-header h1 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 200;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        
+        .showcase-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .evolution-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+        
+        .evolution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .gallery-version {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .gallery-version:hover {
+            transform: translateY(-10px);
+        }
+        
+        .version-preview {
+            height: 300px;
+            background: #f8f9fa;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .version-preview iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            transform: scale(0.8);
+            transform-origin: top left;
+        }
+        
+        .version-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .basic-badge {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .advanced-badge {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .premium-badge {
+            background: linear-gradient(135deg, #ffd700, #ffb347);
+            color: #000;
+        }
+        
+        .version-content {
+            padding: 40px;
+        }
+        
+        .version-title {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 16px;
+        }
+        
+        .version-description {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .features-list li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 30px;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .features-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .premium-features li:before {
+            content: '✨';
+        }
+        
+        .demo-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .demo-link:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+        
+        .premium-link {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+        
+        .premium-link:hover {
+            background: linear-gradient(135deg, #5a67d8, #6b46c1);
+        }
+        
+        .evolution-stats {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 200;
+            color: #667eea;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .tech-highlights {
+            margin-top: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px;
+            color: white;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .tech-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .tech-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            font-weight: 300;
+        }
+        
+        .tech-item p {
+            opacity: 0.9;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .evolution-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .version-preview {
+                height: 200px;
+            }
+            
+            .version-content {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="showcase-header">
+        <h1>Gallery Evolution</h1>
+        <p>From functional simplicity to sophisticated minimalism - see how our gallery experience evolved to match the Studio Arteamo aesthetic</p>
+    </div>
+    
+    <div class="evolution-container">
+        <div class="evolution-grid">
+            <!-- Basic Gallery -->
+            <div class="gallery-version">
+                <div class="version-preview">
+                    <div class="version-badge basic-badge">Basic</div>
+                    <div style="padding: 40px; text-align: center; color: #666;">
+                        <div style="width: 60px; height: 60px; background: #e9ecef; border-radius: 8px; margin: 0 auto 20px;"></div>
+                        <p>Simple responsive grid</p>
+                    </div>
+                </div>
+                <div class="version-content">
+                    <h2 class="version-title">Original Gallery</h2>
+                    <p class="version-description">
+                        Clean and functional gallery with essential features for viewing project images.
+                    </p>
+                    <ul class="features-list">
+                        <li>Responsive grid layout</li>
+                        <li>Basic lightbox functionality</li>
+                        <li>Keyboard navigation</li>
+                        <li>Image counter</li>
+                        <li>Back navigation</li>
+                    </ul>
+                    <a href="gallery-template.html?project=Apartament%20Flavia%20Garden%202024&name=Basic%20Gallery&from=./" class="demo-link">
+                        View Basic Gallery
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Advanced Gallery -->
+            <div class="gallery-version">
+                <div class="version-preview">
+                    <div class="version-badge advanced-badge">Advanced</div>
+                    <div style="padding: 40px; text-align: center; color: #666;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 8px; margin: 0 auto 20px;"></div>
+                        <p>Hero section + animations</p>
+                    </div>
+                </div>
+                <div class="version-content">
+                    <h2 class="version-title">Advanced Gallery</h2>
+                    <p class="version-description">
+                        Enhanced experience with cinematic animations and modern design elements.
+                    </p>
+                    <ul class="features-list">
+                        <li>Animated entrance effects</li>
+                        <li>Hero image section</li>
+                        <li>Staggered grid animations</li>
+                        <li>Enhanced hover effects</li>
+                        <li>Backdrop blur lightbox</li>
+                        <li>Smooth transitions</li>
+                    </ul>
+                    <a href="gallery-advanced.html?project=Apartament%20Flavia%20Garden%202024&name=Advanced%20Gallery&from=./" class="demo-link">
+                        View Advanced Gallery
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Premium Gallery -->
+            <div class="gallery-version">
+                <div class="version-preview">
+                    <div class="version-badge premium-badge">Premium</div>
+                    <div style="padding: 40px; text-align: center; color: #666;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #ffd700, #ffb347); border-radius: 8px; margin: 0 auto 20px;"></div>
+                        <p>Sophisticated minimalism</p>
+                    </div>
+                </div>
+                <div class="version-content">
+                    <h2 class="version-title">Premium Sophisticated</h2>
+                    <p class="version-description">
+                        The ultimate minimalist gallery experience with sophisticated interactions and premium features.
+                    </p>
+                    <ul class="features-list premium-features">
+                        <li>Sophisticated loading animation</li>
+                        <li>Scroll progress indicator</li>
+                        <li>Minimalist hero with statistics</li>
+                        <li>Glassmorphism effects</li>
+                        <li>Premium lightbox with download</li>
+                        <li>Advanced keyboard shortcuts</li>
+                        <li>Refined typography</li>
+                        <li>Optimized performance</li>
+                        <li>Minimalist design philosophy</li>
+                    </ul>
+                    <a href="gallery-premium.html?project=Apartament%20Flavia%20Garden%202024&name=Premium%20Gallery&from=./" class="demo-link premium-link">
+                        Experience Premium
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l14 9-14 9V3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="evolution-stats">
+            <h2>Gallery Evolution Metrics</h2>
+            <div class="stats-grid">
+                <div class="stat">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Gallery Versions</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Premium Features</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Minimalist Aesthetic</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">60fps</span>
+                    <span class="stat-label">Smooth Animations</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tech-highlights">
+            <h2>Technical Excellence</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h3>🎨 Design Philosophy</h3>
+                    <p>Sophisticated minimalism that aligns with Studio Arteamo's aesthetic principles while maintaining exceptional usability.</p>
+                </div>
+                <div class="tech-item">
+                    <h3>⚡ Performance</h3>
+                    <p>Optimized animations using hardware acceleration and efficient CSS transforms for smooth 60fps experiences.</p>
+                </div>
+                <div class="tech-item">
+                    <h3>📱 Responsive</h3>
+                    <p>Mobile-first design with adaptive animations that work beautifully across all devices and screen sizes.</p>
+                </div>
+                <div class="tech-item">
+                    <h3>♿ Accessibility</h3>
+                    <p>Full keyboard navigation, screen reader support, and respectful motion preferences for inclusive design.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

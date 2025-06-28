@@ -82,7 +82,7 @@
         <div class="carousel-container">
             <div class="carousel-track">
                 <!-- Project 1 -->
-                <article class="carousel-item">
+                <article class="carousel-item" onclick="openProjectGallery('Apartament Flavia Garden 2024', 'Flavia Garden')" style="cursor: pointer;">
                     <div class="project-image">
                         <img src="../Apartament Flavia Garden 2024/cam01.jpg" alt="Flavia Garden">
                         <div class="image-overlay"></div>
@@ -95,7 +95,7 @@
                 </article>
 
                 <!-- Project 2 -->
-                <article class="carousel-item">
+                <article class="carousel-item" onclick="openProjectGallery('Elite Clinic 2021', 'Elite Clinic')" style="cursor: pointer;">
                     <div class="project-image">
                         <img src="../Elite Clinic 2021/Cam09.jpg" alt="Elite Clinic">
                         <div class="image-overlay"></div>
@@ -108,7 +108,7 @@
                 </article>
 
                 <!-- Project 3 -->
-                <article class="carousel-item">
+                <article class="carousel-item" onclick="openProjectGallery('Apartament K55_2021', 'K55 Residence')" style="cursor: pointer;">
                     <div class="project-image">
                         <img src="../Apartament K55_2021/Vladi (4).jpg" alt="K55 Residence">
                         <div class="image-overlay"></div>
@@ -121,7 +121,7 @@
                 </article>
 
                 <!-- Project 4 -->
-                <article class="carousel-item">
+                <article class="carousel-item" onclick="openProjectGallery('Balev Corporation 2020', 'Balev HQ')" style="cursor: pointer;">
                     <div class="project-image">
                         <img src="../Balev Corporation 2020/Balev (1).jpg" alt="Balev HQ">
                         <div class="image-overlay"></div>
@@ -134,7 +134,7 @@
                 </article>
 
                 <!-- Project 5 -->
-                <article class="carousel-item">
+                <article class="carousel-item" onclick="openProjectGallery('Oliv vilas sv.Vlas 2019', 'Oliv Villas')" style="cursor: pointer;">
                     <div class="project-image">
                         <img src="../Oliv vilas sv.Vlas 2019/7O.V..jpg" alt="Oliv Villas">
                         <div class="image-overlay"></div>
@@ -147,7 +147,7 @@
                 </article>
 
                 <!-- Project 6 -->
-                <article class="carousel-item">
+                <article class="carousel-item" onclick="openProjectGallery('Apartament Симфония - Бриз, Варна_ 2019', 'Symphony Breeze')" style="cursor: pointer;">
                     <div class="project-image">
                         <img src="../Apartament Симфония - Бриз, Варна_ 2019/Alex (1).jpg" alt="Symphony">
                         <div class="image-overlay"></div>
@@ -215,7 +215,7 @@
                         </ul>
                     </div>
                     <div class="panel-image">
-                        <img src="../Elite Clinic 2021/Cam10.jpg" alt="Bespoke Furniture">
+                        <img src="../Elite Clinic 2021/Cam010.jpg" alt="Bespoke Furniture">
                         <div class="parallax-overlay"></div>
                     </div>
                 </div>
@@ -352,5 +352,12 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        function openProjectGallery(projectFolder, projectName) {
+            const currentPath = window.location.pathname;
+            const fromPath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
+            window.location.href = `../gallery-template.html?project=${encodeURIComponent(projectFolder)}&name=${encodeURIComponent(projectName)}&from=${encodeURIComponent(fromPath)}`;
+        }
+    </script>
 </body>
 </html>

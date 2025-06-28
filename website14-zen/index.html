@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Arteamo - Zen Space</title>
+    <meta name="description" content="Пространство за спокойствие. Интериорен дизайн като медитация.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400&family=Noto+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Breathing Circle Meditation -->
+    <div id="breathing-intro" class="breathing-intro">
+        <div class="breathing-circle">
+            <div class="breath-inner"></div>
+            <p class="breath-text" data-translate="breathe">Дишайте</p>
+        </div>
+    </div>
+
+    <!-- Ambient Mode Overlay -->
+    <div id="ambient-mode" class="ambient-mode">
+        <div class="floating-images"></div>
+        <p class="ambient-text" data-translate="ambient_text">Кликнете за връщане</p>
+    </div>
+
+    <!-- Zen Garden (Hidden) -->
+    <div id="zen-garden" class="zen-garden">
+        <canvas id="sand-canvas"></canvas>
+        <div class="garden-tools">
+            <button class="tool-btn active" data-tool="rake">熊手</button>
+            <button class="tool-btn" data-tool="stone">石</button>
+            <button class="tool-btn" data-tool="clear">清</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Navigation -->
+        <nav class="zen-nav">
+            <a href="#" class="logo-zen">
+                <span class="logo-char">靜</span>
+                <span class="logo-text">arteamo</span>
+            </a>
+            <div class="nav-items">
+                <a href="#projects" class="nav-link" data-translate="nav_projects">проекти</a>
+                <a href="#philosophy" class="nav-link" data-translate="nav_philosophy">философия</a>
+                <a href="#contact" class="nav-link" data-translate="nav_contact">контакт</a>
+                <button id="sound-toggle" class="sound-toggle" aria-label="Toggle sound">
+                    <span class="sound-icon">🔔</span>
+                </button>
+                <div id="language-switcher" class="language-switcher">
+                    <span class="current-lang">BG</span>
+                    <div class="lang-dropdown">
+                        <button data-lang="bg">BG</button>
+                        <button data-lang="en">EN</button>
+                        <button data-lang="ru">RU</button>
+                        <button data-lang="es">ES</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero-zen">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line" data-translate="hero_line1">пространство</span>
+                    <span class="title-line" data-translate="hero_line2">за</span>
+                    <span class="title-line" data-translate="hero_line3">спокойствие</span>
+                </h1>
+                <div class="hero-haiku">
+                    <p class="haiku-line typing-text" data-translate="haiku_line1"></p>
+                    <p class="haiku-line typing-text" data-translate="haiku_line2"></p>
+                    <p class="haiku-line typing-text" data-translate="haiku_line3"></p>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-circle"></div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-zen">
+            <h2 class="section-title" data-translate="projects_title">нашите пространства</h2>
+            
+            <div class="projects-container">
+                <!-- Project 1 -->
+                <article class="project-zen" data-project="1" onclick="openProjectGallery('Apartament Flavia Garden 2024', 'Градина на спокойствието')" style="cursor: pointer;">
+                    <div class="ink-wash-container">
+                        <img src="../Apartament Flavia Garden 2024/cam010.jpg" alt="Zen space" class="project-image">
+                        <div class="ink-wash-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3 data-translate="project1_title">Градина на спокойствието</h3>
+                        <div class="project-haiku">
+                            <p class="haiku-text" data-text="Светлина танцува / През бамбукови сенки / Тишина диша">
+                                <span class="haiku-cursor">|</span>
+                            </p>
+                        </div>
+                        <p class="project-year">2024</p>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-zen" data-project="2" onclick="openProjectGallery('Elite Clinic 2021', 'Лечебно пространство')" style="cursor: pointer;">
+                    <div class="ink-wash-container">
+                        <img src="../Elite Clinic 2021/Cam07.jpg" alt="Healing space" class="project-image">
+                        <div class="ink-wash-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3 data-translate="project2_title">Лечебно пространство</h3>
+                        <div class="project-haiku">
+                            <p class="haiku-text" data-text="Бяла стена диша / Минимализъм лекува / Душата почива">
+                                <span class="haiku-cursor">|</span>
+                            </p>
+                        </div>
+                        <p class="project-year">2021</p>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-zen" data-project="3" onclick="openProjectGallery('Apartament K55_2021', 'Медитативен дом')" style="cursor: pointer;">
+                    <div class="ink-wash-container">
+                        <img src="../Apartament K55_2021/Vladi (7).jpg" alt="Meditative home" class="project-image">
+                        <div class="ink-wash-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3 data-translate="project3_title">Медитативен дом</h3>
+                        <div class="project-haiku">
+                            <p class="haiku-text" data-text="Утринна роса / Събужда дървени стени / Новият ден идва">
+                                <span class="haiku-cursor">|</span>
+                            </p>
+                        </div>
+                        <p class="project-year">2021</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section id="philosophy" class="philosophy-zen">
+            <div class="philosophy-content">
+                <h2 class="section-title" data-translate="philosophy_title">нашата философия</h2>
+                <div class="philosophy-text">
+                    <p data-translate="philosophy_text1">
+                        В пространството между нещата откриваме истинската красота.
+                        Ние създаваме домове, които дишат, стаи, които медитират,
+                        и места, където душата намира покой.
+                    </p>
+                    <p data-translate="philosophy_text2">
+                        Всеки проект е пътуване към вътрешната хармония,
+                        където функцията среща поезията, а простотата разкрива дълбочина.
+                    </p>
+                </div>
+                <div class="philosophy-symbols">
+                    <div class="symbol">
+                        <span class="symbol-char">間</span>
+                        <span class="symbol-meaning" data-translate="symbol1">пространство</span>
+                    </div>
+                    <div class="symbol">
+                        <span class="symbol-char">靜</span>
+                        <span class="symbol-meaning" data-translate="symbol2">спокойствие</span>
+                    </div>
+                    <div class="symbol">
+                        <span class="symbol-char">和</span>
+                        <span class="symbol-meaning" data-translate="symbol3">хармония</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-zen">
+            <h2 class="section-title" data-translate="contact_title">свържете се в тишина</h2>
+            
+            <form class="contact-form-zen">
+                <div class="form-field">
+                    <input type="text" id="name" required>
+                    <label for="name" data-translate="form_name">име</label>
+                    <div class="field-line"></div>
+                </div>
+                <div class="form-field">
+                    <input type="email" id="email" required>
+                    <label for="email" data-translate="form_email">имейл</label>
+                    <div class="field-line"></div>
+                </div>
+                <div class="form-field">
+                    <textarea id="message" rows="4" required></textarea>
+                    <label for="message" data-translate="form_message">съобщение</label>
+                    <div class="field-line"></div>
+                </div>
+                <button type="submit" class="submit-zen" data-translate="form_submit">изпрати</button>
+            </form>
+
+            <div class="contact-info-zen">
+                <p class="info-item">
+                    <span class="info-label" data-translate="info_phone">телефон:</span>
+                    <span>+359 897 983 127</span>
+                </p>
+                <p class="info-item">
+                    <span class="info-label" data-translate="info_email">имейл:</span>
+                    <span>studio@arteamo.net</span>
+                </p>
+                <p class="info-item">
+                    <span class="info-label" data-translate="info_location">място:</span>
+                    <span>Варна, България</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-zen">
+            <p data-translate="footer_text">© 2024 Studio Arteamo · Създадено с внимание</p>
+        </footer>
+    </div>
+
+    <!-- Audio elements for sound design -->
+    <audio id="singing-bowl" preload="auto">
+        <source src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YQA=" type="audio/wav">
+    </audio>
+    <audio id="rain-sound" preload="auto" loop>
+        <source src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YQA=" type="audio/wav">
+    </audio>
+
+    <script src="../translations.js"></script>
+    <script src="../language-switcher-v2.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function openProjectGallery(projectFolder, projectName) {
+            const currentPath = window.location.pathname;
+            const fromPath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
+            window.location.href = `../gallery-template.html?project=${encodeURIComponent(projectFolder)}&name=${encodeURIComponent(projectName)}&from=${encodeURIComponent(fromPath)}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Arteamo - Makeover Stories</title>
+    <meta name="description" content="Трансформации на пространства - от идея до реалност">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-bar"></div>
+            <p data-translate="loading">Зареждане...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">arteamo</span>
+                <span class="logo-tagline" data-translate="tagline">makeover</span>
+            </a>
+            <div class="nav-links">
+                <a href="#stories" data-translate="nav_stories">Истории</a>
+                <a href="#process" data-translate="nav_process">Процес</a>
+                <a href="#contact" data-translate="nav_contact">Контакт</a>
+                <div id="language-switcher" class="language-switcher">
+                    <span class="current-lang">BG</span>
+                    <div class="lang-dropdown">
+                        <button data-lang="bg">BG</button>
+                        <button data-lang="en">EN</button>
+                        <button data-lang="ru">RU</button>
+                        <button data-lang="es">ES</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Scrolling Narrative -->
+    <section class="hero">
+        <div class="hero-scroll-container">
+            <div class="hero-panel strip-out">
+                <h1 class="hero-title" data-translate="hero_title_before">Преди</h1>
+                <div class="hero-image before-image">
+                    <img src="../Apartament K55_2021/Vladi (1).jpg" alt="Before">
+                </div>
+            </div>
+            <div class="hero-panel transformation">
+                <div class="transformation-text">
+                    <h2 data-translate="transformation_text">Трансформацията<br>започва<br>тук</h2>
+                </div>
+            </div>
+            <div class="hero-panel final-look">
+                <h1 class="hero-title" data-translate="hero_title_after">След</h1>
+                <div class="hero-image after-image">
+                    <img src="../Apartament K55_2021/Vladi (10).jpg" alt="After">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span data-translate="scroll_hint">Скролирайте за историята</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <div class="social-proof-bar">
+        <div class="social-proof-content">
+            <span class="proof-number" id="square-meters">12,450</span>
+            <span class="proof-text" data-translate="proof_text">м² преобразени през 2024-25</span>
+        </div>
+    </div>
+
+    <!-- Makeover Stories -->
+    <section id="stories" class="stories">
+        <div class="container">
+            <h2 class="section-title" data-translate="stories_title">Истории на трансформация</h2>
+            
+            <div class="story-grid">
+                <!-- Story 1 -->
+                <article class="story-card" data-story="1" onclick="openProjectGallery('Apartament Flavia Garden 2024', 'Flavia Garden')" style="cursor: pointer;">
+                    <div class="story-before-after">
+                        <div class="before-container">
+                            <img src="../Apartament Flavia Garden 2024/cam01.jpg" alt="Before" loading="lazy">
+                            <span class="label" data-translate="before">Преди</span>
+                        </div>
+                        <div class="after-container">
+                            <img src="../Apartament Flavia Garden 2024/cam010.jpg" alt="After" loading="lazy">
+                            <span class="label" data-translate="after">След</span>
+                        </div>
+                        <div class="slider-handle">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <circle cx="20" cy="20" r="19" fill="white" stroke="#FF8C78" stroke-width="2"/>
+                                <path d="M10 20 L18 14 L18 26 Z" fill="#FF8C78"/>
+                                <path d="M30 20 L22 14 L22 26 Z" fill="#FF8C78"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <h3 data-translate="story1_title">Семейно гнездо във Флавия Гардън</h3>
+                        <div class="story-timeline">
+                            <div class="timeline-phase active" data-phase="1">
+                                <span data-translate="phase_planning">Планиране</span>
+                            </div>
+                            <div class="timeline-phase" data-phase="2">
+                                <span data-translate="phase_demo">Демонтаж</span>
+                            </div>
+                            <div class="timeline-phase" data-phase="3">
+                                <span data-translate="phase_build">Изграждане</span>
+                            </div>
+                            <div class="timeline-phase" data-phase="4">
+                                <span data-translate="phase_finish">Довършване</span>
+                            </div>
+                        </div>
+                        <div class="story-details">
+                            <div class="detail-item">
+                                <span class="detail-label" data-translate="budget">Бюджет:</span>
+                                <span class="detail-value">€45,000</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label" data-translate="duration">Продължителност:</span>
+                                <span class="detail-value" data-translate="duration1">3 месеца</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label" data-translate="area">Площ:</span>
+                                <span class="detail-value">120м²</span>
+                            </div>
+                        </div>
+                        <button class="story-cta" data-translate="view_story">Вижте историята</button>
+                    </div>
+                </article>
+
+                <!-- Story 2 -->
+                <article class="story-card" data-story="2" onclick="openProjectGallery('Elite Clinic 2021', 'Elite Clinic')" style="cursor: pointer;">
+                    <div class="story-before-after">
+                        <div class="before-container">
+                            <img src="../Elite Clinic 2021/Cam01.jpg" alt="Before" loading="lazy">
+                            <span class="label" data-translate="before">Преди</span>
+                        </div>
+                        <div class="after-container">
+                            <img src="../Elite Clinic 2021/Cam09.jpg" alt="After" loading="lazy">
+                            <span class="label" data-translate="after">След</span>
+                        </div>
+                        <div class="slider-handle">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <circle cx="20" cy="20" r="19" fill="white" stroke="#FF8C78" stroke-width="2"/>
+                                <path d="M10 20 L18 14 L18 26 Z" fill="#FF8C78"/>
+                                <path d="M30 20 L22 14 L22 26 Z" fill="#FF8C78"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <h3 data-translate="story2_title">Модерна клиника с душа</h3>
+                        <div class="story-timeline">
+                            <div class="timeline-phase active" data-phase="1">
+                                <span data-translate="phase_planning">Планиране</span>
+                            </div>
+                            <div class="timeline-phase" data-phase="2">
+                                <span data-translate="phase_demo">Демонтаж</span>
+                            </div>
+                            <div class="timeline-phase" data-phase="3">
+                                <span data-translate="phase_build">Изграждане</span>
+                            </div>
+                            <div class="timeline-phase" data-phase="4">
+                                <span data-translate="phase_finish">Довършване</span>
+                            </div>
+                        </div>
+                        <div class="story-details">
+                            <div class="detail-item">
+                                <span class="detail-label" data-translate="budget">Бюджет:</span>
+                                <span class="detail-value">€75,000</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label" data-translate="duration">Продължителност:</span>
+                                <span class="detail-value" data-translate="duration2">4 месеца</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label" data-translate="area">Площ:</span>
+                                <span class="detail-value">200м²</span>
+                            </div>
+                        </div>
+                        <button class="story-cta" data-translate="view_story">Вижте историята</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <h2 class="section-title" data-translate="process_title">Нашият процес</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3 data-translate="step1_title">Консултация</h3>
+                    <p data-translate="step1_desc">Разбираме вашата визия и нужди</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3 data-translate="step2_title">Планиране</h3>
+                    <p data-translate="step2_desc">Създаваме детайлен план и бюджет</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3 data-translate="step3_title">Изпълнение</h3>
+                    <p data-translate="step3_desc">Трансформираме пространството ви</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3 data-translate="step4_title">Завършване</h3>
+                    <p data-translate="step4_desc">Предаваме вашия нов дом</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-translate="contact_title">Започнете вашата трансформация</h2>
+            <form class="contact-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Име" data-translate-placeholder="form_name" required>
+                    <input type="email" placeholder="Имейл" data-translate-placeholder="form_email" required>
+                </div>
+                <textarea placeholder="Разкажете ни за вашия проект" data-translate-placeholder="form_message" rows="5" required></textarea>
+                <button type="submit" class="submit-btn" data-translate="form_submit">Изпратете запитване</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta">
+        <button class="cta-button" data-translate="sticky_cta">Започнете вашата промяна</button>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Studio Arteamo</p>
+            <p>+359 897 983 127</p>
+        </div>
+    </footer>
+
+    <script src="../translations.js"></script>
+    <script src="../language-switcher-v2.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function openProjectGallery(projectFolder, projectName) {
+            const currentPath = window.location.pathname;
+            const fromPath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
+            window.location.href = `../gallery-template.html?project=${encodeURIComponent(projectFolder)}&name=${encodeURIComponent(projectName)}&from=${encodeURIComponent(fromPath)}`;
+        }
+    </script>
+</body>
+</html>
