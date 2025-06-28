@@ -71,8 +71,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom Cursor */
-body {
+/* Custom Cursor (optional enhancement) */
+body.custom-cursor-enabled {
     cursor: none;
 }
 
@@ -911,7 +911,7 @@ p {
         display: none;
     }
     
-    body {
+    body.custom-cursor-enabled {
         cursor: auto;
     }
     

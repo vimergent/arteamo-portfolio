@@ -53,9 +53,17 @@ class CustomCursor {
     }
 }
 
-// Initialize custom cursor on desktop
-if (window.innerWidth > 768) {
+// Initialize custom cursor on desktop (optional)
+// To enable custom cursor, add ?cursor=true to the URL or change enableCustomCursor to true
+const urlParams = new URLSearchParams(window.location.search);
+const enableCustomCursor = urlParams.get('cursor') === 'true' || false; // Set to true to always enable
+
+if (enableCustomCursor && window.innerWidth > 768 && !('ontouchstart' in window)) {
+    document.body.classList.add('custom-cursor-enabled');
     new CustomCursor();
+    console.log('✨ Custom cursor enabled');
+} else {
+    console.log('🖱️  Using standard cursor (add ?cursor=true to URL to enable custom cursor)');
 }
 
 // Enhanced navbar scroll effect
