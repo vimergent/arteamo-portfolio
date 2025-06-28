@@ -290,16 +290,17 @@ p {
 }
 
 .hero-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: var(--font-size-5xl);
-    font-weight: 300;
+    font-weight: 500;
     margin-bottom: var(--spacing-md);
-    letter-spacing: -0.04em;
+    letter-spacing: -0.02em;
     line-height: 1.1;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--premium-charcoal) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-style: normal;
 }
 
 .hero-subtitle {

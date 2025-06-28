@@ -361,11 +361,11 @@ class FontTester {
             }
             
             .navbar {
-                top: 0;
+                top: 120px;
             }
             
             .hero {
-                margin-top: 140px;
+                margin-top: 200px;
             }
             
             /* Mobile responsiveness */
@@ -385,7 +385,7 @@ class FontTester {
                 }
                 
                 .hero {
-                    margin-top: 120px;
+                    margin-top: 180px;
                 }
             }
         `;
@@ -630,12 +630,12 @@ class FontTester {
             .logo h1,
             .nav-link,
             .filter-btn,
-            .project-info h3 {
+            .project-info h3,
+            .hero-title {
                 font-family: ${combo.headings}, sans-serif !important;
             }
             
             .serif,
-            .hero-title.serif,
             h2.serif {
                 font-family: ${combo.serif}, serif !important;
             }
@@ -646,7 +646,8 @@ class FontTester {
             }
             
             .hero-title {
-                font-weight: 300 !important;
+                font-weight: 500 !important;
+                font-style: normal !important;
             }
             
             .nav-link {
