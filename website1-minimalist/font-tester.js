@@ -108,6 +108,14 @@ class FontTester {
         this.createTestMenu();
         this.loadSavedFont();
         this.applyCurrentFont();
+        
+        // Apply cursor effects after a short delay to ensure DOM is ready
+        setTimeout(() => {
+            const savedCursor = localStorage.getItem('selectedCursor');
+            if (savedCursor && savedCursor !== 'none') {
+                this.applyCursorEffect(savedCursor);
+            }
+        }, 100);
     }
     
     createTestMenu() {
@@ -466,11 +474,18 @@ class FontTester {
         
         // Apply settings and reload
         setTimeout(() => {
-            this.loadGoogleFonts(combo.googleFonts, () => {
+            // If we have Google Fonts to load, load them first
+            if (combo.googleFonts) {
+                this.loadGoogleFonts(combo.googleFonts, () => {
+                    this.updateSiteStyles(combo);
+                    window.location.reload();
+                });
+            } else {
+                // No Google Fonts needed, just apply styles and reload
                 this.updateSiteStyles(combo);
                 window.location.reload();
-            });
-        }, 500);
+            }
+        }, 300);
     }
     
     resetSettings() {

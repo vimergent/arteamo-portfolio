@@ -53,17 +53,33 @@ class CustomCursor {
     }
 }
 
-// Initialize custom cursor on desktop (optional)
-// To enable custom cursor, add ?cursor=true to the URL or change enableCustomCursor to true
+// Initialize cursor system - now managed by font tester
+// Check if cursor effect is selected via testing menu
+const savedCursor = localStorage.getItem('selectedCursor');
 const urlParams = new URLSearchParams(window.location.search);
-const enableCustomCursor = urlParams.get('cursor') === 'true' || false; // Set to true to always enable
+const urlCursor = urlParams.get('cursor') === 'true';
 
+// Priority: localStorage setting > URL parameter > default (none)
+let enableCustomCursor = false;
+let cursorType = 'none';
+
+if (savedCursor && savedCursor !== 'none') {
+    enableCustomCursor = true;
+    cursorType = savedCursor;
+    console.log(`🎨 Using ${savedCursor} cursor from testing menu`);
+} else if (urlCursor) {
+    enableCustomCursor = true;
+    cursorType = 'minimal'; // Default for URL parameter
+    console.log('✨ Custom cursor enabled via URL parameter');
+} else {
+    console.log('🖱️  Using standard cursor (select cursor effects in testing menu above)');
+}
+
+// Apply cursor if enabled and on desktop
 if (enableCustomCursor && window.innerWidth > 768 && !('ontouchstart' in window)) {
     document.body.classList.add('custom-cursor-enabled');
-    new CustomCursor();
-    console.log('✨ Custom cursor enabled');
-} else {
-    console.log('🖱️  Using standard cursor (add ?cursor=true to URL to enable custom cursor)');
+    // Note: Actual cursor implementation is handled by FontTester class
+    // This just enables the CSS for custom cursor
 }
 
 // Enhanced navbar scroll effect
