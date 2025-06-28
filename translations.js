@@ -10,7 +10,8 @@ const translations = {
             services: "Services",
             contact: "Contact",
             insights: "Insights",
-            featured: "Featured"
+            featured: "Featured",
+            stories: "Stories"
         },
         // Company Info
         company: {
@@ -80,6 +81,22 @@ const translations = {
             exploreWork: "Explore Our Work",
             inquireProject: "Inquire About This Project",
             continueReading: "Continue Reading"
+        },
+        // Japandi specific
+        japandi: {
+            hero_title: "Where East Meets Nordic Serenity",
+            philosophy: "In the harmonious blend of Japanese minimalism and Scandinavian functionality, we find a design philosophy that celebrates simplicity, natural materials, and the beauty of imperfection. Each space becomes a sanctuary of calm, where every element serves both purpose and poetry.",
+            stories_title: "Design Stories",
+            story1_title: "The Art of Empty Space",
+            story1_year: "2023",
+            story2_title: "Natural Light & Shadow",
+            story2_year: "2023",
+            story3_title: "Crafted Simplicity",
+            story3_year: "2024",
+            form_name: "Name",
+            form_email: "Email",
+            form_message: "Message",
+            form_submit: "Send"
         }
     },
     bg: {
@@ -92,7 +109,8 @@ const translations = {
             services: "Услуги",
             contact: "Контакти",
             insights: "Прозрения",
-            featured: "Избрани"
+            featured: "Избрани",
+            stories: "Истории"
         },
         // Company Info
         company: {
@@ -162,6 +180,22 @@ const translations = {
             exploreWork: "Разгледайте нашата работа",
             inquireProject: "Запитване за този проект",
             continueReading: "Продължи четенето"
+        },
+        // Japandi specific
+        japandi: {
+            hero_title: "Където Изтокът среща Нордическото спокойствие",
+            philosophy: "В хармоничната комбинация от японски минимализъм и скандинавска функционалност откриваме дизайнерска философия, която възхвалява простотата, естествените материали и красотата на несъвършенството. Всяко пространство се превръща в убежище на спокойствието, където всеки елемент служи както на практичността, така и на поезията.",
+            stories_title: "Дизайнерски истории",
+            story1_title: "Изкуството на празното пространство",
+            story1_year: "2023",
+            story2_title: "Естествена светлина и сянка",
+            story2_year: "2023",
+            story3_title: "Изработена простота",
+            story3_year: "2024",
+            form_name: "Име",
+            form_email: "Имейл",
+            form_message: "Съобщение",
+            form_submit: "Изпрати"
         }
     },
     ru: {
@@ -174,7 +208,8 @@ const translations = {
             services: "Услуги",
             contact: "Контакты",
             insights: "Инсайты",
-            featured: "Избранное"
+            featured: "Избранное",
+            stories: "Истории"
         },
         // Company Info
         company: {
@@ -244,6 +279,22 @@ const translations = {
             exploreWork: "Исследовать нашу работу",
             inquireProject: "Запрос об этом проекте",
             continueReading: "Продолжить чтение"
+        },
+        // Japandi specific
+        japandi: {
+            hero_title: "Где Восток встречает Северное спокойствие",
+            philosophy: "В гармоничном сочетании японского минимализма и скандинавской функциональности мы находим философию дизайна, которая прославляет простоту, натуральные материалы и красоту несовершенства. Каждое пространство становится убежищем спокойствия, где каждый элемент служит как цели, так и поэзии.",
+            stories_title: "Истории дизайна",
+            story1_title: "Искусство пустого пространства",
+            story1_year: "2023",
+            story2_title: "Естественный свет и тень",
+            story2_year: "2023",
+            story3_title: "Созданная простота",
+            story3_year: "2024",
+            form_name: "Имя",
+            form_email: "Эл. почта",
+            form_message: "Сообщение",
+            form_submit: "Отправить"
         }
     },
     es: {
@@ -256,7 +307,8 @@ const translations = {
             services: "Servicios",
             contact: "Contacto",
             insights: "Perspectivas",
-            featured: "Destacados"
+            featured: "Destacados",
+            stories: "Historias"
         },
         // Company Info
         company: {
@@ -326,6 +378,22 @@ const translations = {
             exploreWork: "Explorar nuestro trabajo",
             inquireProject: "Consultar sobre este proyecto",
             continueReading: "Continuar leyendo"
+        },
+        // Japandi specific
+        japandi: {
+            hero_title: "Donde el Este encuentra la serenidad nórdica",
+            philosophy: "En la armoniosa mezcla del minimalismo japonés y la funcionalidad escandinava, encontramos una filosofía de diseño que celebra la simplicidad, los materiales naturales y la belleza de la imperfección. Cada espacio se convierte en un santuario de calma, donde cada elemento sirve tanto al propósito como a la poesía.",
+            stories_title: "Historias de diseño",
+            story1_title: "El arte del espacio vacío",
+            story1_year: "2023",
+            story2_title: "Luz y sombra natural",
+            story2_year: "2023",
+            story3_title: "Simplicidad artesanal",
+            story3_year: "2024",
+            form_name: "Nombre",
+            form_email: "Correo electrónico",
+            form_message: "Mensaje",
+            form_submit: "Enviar"
         }
     }
 };

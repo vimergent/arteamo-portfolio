@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story of Balance - Studio Arteamo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400&family=Noto+Serif+JP:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .story-hero {
+            height: 60vh;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 4rem;
+        }
+        
+        .story-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .story-header {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: white;
+            background: rgba(34, 34, 34, 0.8);
+            padding: 2rem 3rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .story-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        .story-image-full {
+            margin: 4rem -24px;
+            height: 500px;
+            overflow: hidden;
+        }
+        
+        .story-image-full img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .story-caption {
+            text-align: center;
+            font-size: 0.875rem;
+            color: #9AA49A;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+        
+        .story-text {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin: 2rem 0;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin: 4rem 0 2rem;
+            color: #222;
+            text-decoration: none;
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        
+        .back-link:hover {
+            color: #9AA49A;
+        }
+    </style>
+</head>
+<body>
+    <article class="story-page">
+        <!-- Hero Image -->
+        <div class="story-hero">
+            <img src="../Apartament Симфония - Бриз, Варна_ 2019/Alex (1).jpg" alt="Balanced interior space">
+            <div class="story-header">
+                <h1>III. Balance</h1>
+                <p>Finding harmony between function and form</p>
+            </div>
+        </div>
+
+        <!-- Story Content -->
+        <div class="story-body">
+            <p class="story-text">
+                Balance is not symmetry. It is the careful calibration of opposing forces—
+                fullness and emptiness, warmth and coolness, tradition and modernity. 
+                In every space we create, these dualities dance together, creating 
+                dynamic equilibrium.
+            </p>
+
+            <div class="story-image-full">
+                <img src="../Apartament Симфония - Бриз, Варна_ 2019/Alex (5).jpg" alt="Living space with balanced elements">
+            </div>
+            <p class="story-caption">Open space balanced with intimate corners</p>
+
+            <p class="story-text">
+                The Japanese concept of 'ma'—negative space—teaches us that emptiness 
+                is not absence but presence. A bare wall becomes a canvas for light 
+                and shadow. An uncluttered surface invites contemplation. Space between 
+                objects allows each piece to breathe and be fully appreciated.
+            </p>
+
+            <div class="story-image-full">
+                <img src="../Apartament Симфония - Бриз, Варна_ 2019/Alex (8).jpg" alt="Minimalist dining area">
+            </div>
+            <p class="story-caption">Function elevated to art through simplicity</p>
+
+            <p class="story-text">
+                Scandinavian hygge meets Japanese tea ceremony in our approach to comfort. 
+                Spaces are designed for both solitary reflection and warm gatherings. 
+                A reading nook with perfect light, a dining table that invites lingering 
+                conversations, a bathroom that becomes a personal spa.
+            </p>
+
+            <div class="story-image-full">
+                <img src="../Apartament Симфония - Бриз, Варна_ 2019/Alex (12).jpg" alt="Cozy reading corner">
+            </div>
+            <p class="story-caption">Comfort without excess, warmth without clutter</p>
+
+            <p class="story-text">
+                Technology serves but never dominates. Hidden storage maintains visual 
+                calm. Multipurpose furniture adapts to changing needs. Every design 
+                decision weighs beauty against utility, ensuring neither is sacrificed 
+                for the other.
+            </p>
+
+            <div class="story-image-full">
+                <img src="../Apartament Симфония - Бриз, Варна_ 2019/Alex (16).jpg" alt="Integrated storage solutions">
+            </div>
+            <p class="story-caption">Storage as architecture, function as form</p>
+
+            <p class="story-text">
+                The ultimate balance is between the space and its inhabitants. Our designs 
+                are not museums but homes—places that evolve with their owners, that age 
+                gracefully, that provide a serene backdrop for the beautiful chaos of 
+                daily life.
+            </p>
+
+            <a href="index.html" class="back-link">← Return to Stories</a>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <p>Studio Arteamo · Varna · 2024</p>
+    </footer>
+
+    <script>
+        // Minimal script for page
+        document.body.classList.add('loading');
+        window.addEventListener('load', () => {
+            document.body.classList.remove('loading');
+            document.body.classList.add('loaded');
+        });
+
+        // Lazy load images
+        const images = document.querySelectorAll('img');
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '0';
+                    entry.target.addEventListener('load', () => {
+                        entry.target.style.transition = 'opacity 0.5s ease';
+                        entry.target.style.opacity = '1';
+                    });
+                    imageObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        images.forEach(img => imageObserver.observe(img));
+    </script>
+</body>
+</html>

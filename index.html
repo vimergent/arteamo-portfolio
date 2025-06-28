@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Arteamo - Website Showcase</title>
+    <title>Studio Arteamo - Website Portfolio Showcase</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -37,6 +37,28 @@
         .header p {
             color: #888;
             font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+        
+        .progress-bar {
+            max-width: 600px;
+            margin: 1rem auto;
+            background: #222;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00ff88 0%, #00cc66 100%);
+            transition: width 0.5s ease;
+        }
+        
+        .progress-text {
+            color: #00ff88;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
         }
         
         .showcase {
@@ -96,6 +118,10 @@
         
         .in-progress-badge {
             background: #ff6b00;
+        }
+        
+        .not-started-badge {
+            background: #666;
         }
         
         .card-content {
@@ -191,7 +217,11 @@
 <body>
     <header class="header">
         <h1>Studio Arteamo</h1>
-        <p>Website Portfolio Showcase - 5 Unique Design Approaches</p>
+        <p>Website Portfolio Showcase - 15 Unique Design Approaches</p>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 60%"></div>
+        </div>
+        <p class="progress-text">9 of 15 websites completed</p>
     </header>
     
     <main class="showcase">
@@ -250,7 +280,7 @@
             <article class="website-card">
                 <div class="card-image">
                     <img src="Apartament K55_2021/Vladi (4).jpg" alt="Magazine Style">
-                    <span class="preview-badge in-progress-badge">In Progress</span>
+                    <span class="preview-badge">Ready</span>
                 </div>
                 <div class="card-content">
                     <div class="card-number">Website 03</div>
@@ -262,10 +292,10 @@
                         <li>Editorial design</li>
                         <li>Content-focused</li>
                     </ul>
-                    <a href="#" class="card-link disabled">
-                        In Progress
+                    <a href="website3-magazine/index.html" class="card-link">
+                        View Website
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                         </svg>
                     </a>
                 </div>
@@ -300,7 +330,7 @@
             <article class="website-card">
                 <div class="card-image">
                     <img src="Oliv vilas sv.Vlas 2019/7O.V..jpg" alt="Fancy 3D">
-                    <span class="preview-badge in-progress-badge">In Progress</span>
+                    <span class="preview-badge">Ready</span>
                 </div>
                 <div class="card-content">
                     <div class="card-number">Website 05</div>
@@ -311,6 +341,256 @@
                         <li>3D transforms</li>
                         <li>Advanced animations</li>
                         <li>Immersive experience</li>
+                    </ul>
+                    <a href="website5-fancy/index.html" class="card-link">
+                        View Website
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Website 6 -->
+            <article class="website-card">
+                <div class="card-image">
+                    <img src="Apartament Flavia Garden 2024/cam02.jpg" alt="Coastal Modern">
+                    <span class="preview-badge">Ready</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">Website 06</div>
+                    <h2 class="card-title">Coastal Modern Varna</h2>
+                    <p class="card-description">Black Sea-inspired design with warm whites, sea-foam teal palette. Features masonry portfolio and dark mode.</p>
+                    <ul class="card-features">
+                        <li>Video hero section</li>
+                        <li>Before/After slider</li>
+                        <li>Instagram feed</li>
+                        <li>Dark mode toggle</li>
+                    </ul>
+                    <a href="website6-coastal/index.html" class="card-link">
+                        View Website
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Website 7 -->
+            <article class="website-card">
+                <div class="card-image">
+                    <img src="Balev Corporation 2020/Balev (1).jpg" alt="Noir Luxe">
+                    <span class="preview-badge">Ready</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">Website 07</div>
+                    <h2 class="card-title">Noir Luxe Showcase</h2>
+                    <p class="card-description">Dark elegance with jet black and antique gold. Horizontal scroll portfolio with luxury testimonials.</p>
+                    <ul class="card-features">
+                        <li>GSAP-like animations</li>
+                        <li>Horizontal carousel</li>
+                        <li>Parallax effects</li>
+                        <li>Sticky CTA</li>
+                    </ul>
+                    <a href="website7-noir/index.html" class="card-link">
+                        View Website
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Website 8 -->
+            <article class="website-card">
+                <div class="card-image">
+                    <img src="Apartament K55_2021/Vladi (4).jpg" alt="Biophilic Design">
+                    <span class="preview-badge">Ready</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">Website 08</div>
+                    <h2 class="card-title">Sustainable Biophilic</h2>
+                    <p class="card-description">Eco-conscious design with moss and clay palette. Features CO₂ meter and sustainable materials library.</p>
+                    <ul class="card-features">
+                        <li>Real-time CO₂ meter</li>
+                        <li>Materials library</li>
+                        <li>Carbon savings badges</li>
+                        <li>Animated SVG leaves</li>
+                    </ul>
+                    <a href="website8-biophilic/index.html" class="card-link">
+                        View Website
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Website 9 -->
+            <article class="website-card">
+                <div class="card-image">
+                    <img src="Apartament Симфония - Бриз, Варна_ 2019/Alex (1).jpg" alt="Makeover Stories">
+                    <span class="preview-badge not-started-badge">Not Started</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">Website 09</div>
+                    <h2 class="card-title">Makeover Stories</h2>
+                    <p class="card-description">React SPA focused on before-and-after transformation journeys with timeline sliders and budget breakdowns.</p>
+                    <ul class="card-features">
+                        <li>Before/After timelines</li>
+                        <li>Budget visualization</li>
+                        <li>Materials lists</li>
+                        <li>Framer Motion</li>
+                    </ul>
+                    <a href="#" class="card-link disabled">
+                        Not Started
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Website 10 -->
+            <article class="website-card">
+                <div class="card-image">
+                    <img src="Elite Clinic 2021/Cam01.jpg" alt="Architectural Digest Style">
+                    <span class="preview-badge not-started-badge">Not Started</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">Website 10</div>
+                    <h2 class="card-title">Magazine (Variant 2)</h2>
+                    <p class="card-description">Architectural Digest style with WordPress REST API simulation. Features shop integration and ad slots.</p>
+                    <ul class="card-features">
+                        <li>4-column grid</li>
+                        <li>Article templates</li>
+                        <li>Shop integration</li>
+                        <li>Infinite scroll</li>
+                    </ul>
+                    <a href="#" class="card-link disabled">
+                        Not Started
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Website 11 -->
+            <article class="website-card">
+                <div class="card-image">
+                    <img src="Apartament Flavia Garden 2024/cam010.jpg" alt="Japandi Aesthetic">
+                    <span class="preview-badge">Ready</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">Website 11</div>
+                    <h2 class="card-title">Japandi Minimal</h2>
+                    <p class="card-description">Ultra-minimal Japanese-Scandinavian aesthetic with < 10KB JS. Features Ken Burns effects and zen philosophy.</p>
+                    <ul class="card-features">
+                        <li>< 10KB JavaScript</li>
+                        <li>Ken Burns hero</li>
+                        <li>3 story pages</li>
+                        <li>CSS-only validation</li>
+                    </ul>
+                    <a href="website11-japandi/index.html" class="card-link">
+                        View Website
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Website 12 -->
+            <article class="website-card">
+                <div class="card-image">
+                    <img src="Apartament Кв. Чайка, Варна_2017/Dnevna01.jpg" alt="Bulgarian Traditional">
+                    <span class="preview-badge not-started-badge">Not Started</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">Website 12</div>
+                    <h2 class="card-title">Bulgarian Traditional</h2>
+                    <p class="card-description">Vibrant design with Bulgarian folk motifs. Features SVG animations and hidden Easter egg gallery.</p>
+                    <ul class="card-features">
+                        <li>Folk motif borders</li>
+                        <li>Animated cursor trail</li>
+                        <li>Easter egg gallery</li>
+                        <li>Nuxt-inspired structure</li>
+                    </ul>
+                    <a href="#" class="card-link disabled">
+                        Not Started
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Website 13 -->
+            <article class="website-card">
+                <div class="card-image">
+                    <img src="Playground Grand Mall Varna 2018/Playground (1).jpg" alt="80s Retro">
+                    <span class="preview-badge not-started-badge">Not Started</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">Website 13</div>
+                    <h2 class="card-title">Retro Memphis</h2>
+                    <p class="card-description">80s Memphis Design meets Miami Vice. Features synth music, VHS transitions, and neon effects.</p>
+                    <ul class="card-features">
+                        <li>Synth background music</li>
+                        <li>VHS glitch effects</li>
+                        <li>Neon hover states</li>
+                        <li>Commodore boot screen</li>
+                    </ul>
+                    <a href="#" class="card-link disabled">
+                        Not Started
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Website 14 -->
+            <article class="website-card">
+                <div class="card-image">
+                    <img src="Elite Clinic 2021/Cam07.jpg" alt="Zen Experience">
+                    <span class="preview-badge not-started-badge">Not Started</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">Website 14</div>
+                    <h2 class="card-title">Zen Meditation</h2>
+                    <p class="card-description">Living website that responds to user calmness. Features breathing animations and mindful scrolling.</p>
+                    <ul class="card-features">
+                        <li>Breathing animations</li>
+                        <li>Ink wash effects</li>
+                        <li>Ambient soundscapes</li>
+                        <li>Hidden zen garden</li>
+                    </ul>
+                    <a href="#" class="card-link disabled">
+                        Not Started
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Website 15 -->
+            <article class="website-card">
+                <div class="card-image">
+                    <img src="Work Del Mar 2022/1 (1).jpg" alt="ASCII Terminal">
+                    <span class="preview-badge in-progress-badge">In Progress</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">Website 15</div>
+                    <h2 class="card-title">ASCII Anti-Portfolio</h2>
+                    <p class="card-description">Terminal-based brutalism. Everything is ASCII art with command-line navigation and Matrix effects.</p>
+                    <ul class="card-features">
+                        <li>Full ASCII interface</li>
+                        <li>Terminal commands</li>
+                        <li>Matrix rain effects</li>
+                        <li>Hidden photo gallery</li>
                     </ul>
                     <a href="#" class="card-link disabled">
                         In Progress
@@ -325,10 +605,18 @@
     
     <footer class="footer">
         <p>&copy; 2024 Studio Arteamo. Interior Design Excellence Since 2008.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.875rem;">Last updated: June 28, 2025</p>
     </footer>
     
     <script>
-        // Add some interactive effects
+        // Update progress bar
+        const completedCount = document.querySelectorAll('.preview-badge:not(.in-progress-badge):not(.not-started-badge)').length;
+        const totalCount = 15;
+        const percentage = (completedCount / totalCount) * 100;
+        document.querySelector('.progress-fill').style.width = percentage + '%';
+        document.querySelector('.progress-text').textContent = `${completedCount} of ${totalCount} websites completed`;
+        
+        // Add interactive effects
         document.querySelectorAll('.website-card').forEach(card => {
             card.addEventListener('mousemove', (e) => {
                 const rect = card.getBoundingClientRect();

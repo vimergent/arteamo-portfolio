@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Arteamo - Japandi Aesthetic</title>
+    <meta name="description" content="Минималистичен подход към интериорния дизайн. Японско-скандинавска естетика от Studio Arteamo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navigation">
+        <div class="nav-container">
+            <a href="#" class="logo">arteamo</a>
+            <div class="nav-links">
+                <a href="#stories" data-translate="nav_stories">истории</a>
+                <a href="#contact" data-translate="nav_contact">контакт</a>
+                <div id="language-switcher" class="language-switcher">
+                    <span class="current-lang">BG</span>
+                    <div class="lang-dropdown">
+                        <button data-lang="bg">BG</button>
+                        <button data-lang="en">EN</button>
+                        <button data-lang="ru">RU</button>
+                        <button data-lang="es">ES</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-image-container">
+            <img src="../Apartament Flavia Garden 2024/cam01.jpg" alt="Minimalist interior" class="hero-image">
+        </div>
+        <div class="hero-text">
+            <h1 data-translate="hero_title">пространство<br>за<br>спокойствие</h1>
+        </div>
+    </section>
+
+    <section class="philosophy">
+        <div class="content-container">
+            <p class="philosophy-text" data-translate="philosophy">
+                Където японската естетика среща скандинавската функционалност.
+                Създаваме пространства, които дишат.
+            </p>
+        </div>
+    </section>
+
+    <section id="stories" class="stories">
+        <div class="content-container">
+            <h2 data-translate="stories_title">три истории</h2>
+            <div class="story-grid">
+                <a href="story-1.html" class="story-card">
+                    <img src="../Apartament Flavia Garden 2024/cam010.jpg" alt="Story 1" loading="lazy">
+                    <h3 data-translate="story1_title">светлина и сянка</h3>
+                    <p data-translate="story1_year">2024</p>
+                </a>
+                <a href="story-2.html" class="story-card">
+                    <img src="../Elite Clinic 2021/Cam01.jpg" alt="Story 2" loading="lazy">
+                    <h3 data-translate="story2_title">естествени материали</h3>
+                    <p data-translate="story2_year">2021</p>
+                </a>
+                <a href="story-3.html" class="story-card">
+                    <img src="../Apartament K55_2021/Vladi (1).jpg" alt="Story 3" loading="lazy">
+                    <h3 data-translate="story3_title">минимална елегантност</h3>
+                    <p data-translate="story3_year">2021</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="content-container">
+            <form class="contact-form">
+                <input type="text" placeholder="име" data-translate-placeholder="form_name" required>
+                <input type="email" placeholder="имейл" data-translate-placeholder="form_email" required>
+                <textarea placeholder="съобщение" data-translate-placeholder="form_message" rows="6" required></textarea>
+                <button type="submit" data-translate="form_submit">изпрати</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content-container">
+            <p>&copy; 2024 Studio Arteamo</p>
+            <p>+359 897 983 127</p>
+        </div>
+    </footer>
+
+    <script src="../translations.js"></script>
+    <script src="../language-switcher-v2.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
