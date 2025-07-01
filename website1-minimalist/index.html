@@ -175,7 +175,7 @@
             galleryData.forEach(project => {
                 project.images.forEach(image => {
                     allImages.push({
-                        src: `../${encodeImagePath(project.folder)}/${encodeImagePath(image)}`,
+                        src: `../../${encodeImagePath(project.folder)}/${encodeImagePath(image)}`,
                         projectName: project.name,
                         projectFolder: project.folder
                     });
