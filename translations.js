@@ -1899,5 +1899,9 @@ const translations = {
             olivVillasDesc: "Луксозни ваканционни вили, проектирани за максимална релаксация и комфорт.",
             playgroundMallDesc: "Иновативен детски развлекателен център, носещ радост на семействата.",
             chaykaDistrictDesc: "Топъл семеен дом, балансиращ традиционен чар със съвременно удобство."
-        },    }
+        }
+    }
 };
+
+// Make translations available globally
+window.translations = translations;
