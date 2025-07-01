@@ -1,0 +1,58 @@
+{
+  "timestamp": "2025-07-01T18:30:42.404Z",
+  "loadingMetrics": {
+    "totalLoadTime": "1401ms",
+    "domContentLoaded": "331ms",
+    "pageLoadComplete": "617ms",
+    "firstPaint": "360ms",
+    "firstContentfulPaint": "360ms"
+  },
+  "browserMetrics": {
+    "jsHeapUsedSize": "1.55MB",
+    "jsHeapTotalSize": "2.50MB",
+    "documents": 9,
+    "frames": 4,
+    "layoutDuration": "73ms",
+    "scriptDuration": "54ms"
+  },
+  "resources": {
+    "total": 1,
+    "byType": {
+      "link": 1
+    },
+    "largest": []
+  },
+  "renderBlockingResources": {
+    "stylesheets": [
+      "file:///root/Interiori/websites/website1-minimalist/styles-enhanced.css",
+      "file:///root/Interiori/websites/mobile-optimizations.css"
+    ],
+    "scripts": [
+      "file:///root/Interiori/websites/website1-minimalist/font-tester.js",
+      "file:///root/Interiori/websites/website1-minimalist/script-enhanced.js",
+      "file:///root/Interiori/websites/translations.js",
+      "file:///root/Interiori/websites/language-switcher-v2.js",
+      "file:///root/Interiori/websites/project-config.js",
+      "file:///root/Interiori/websites/awards-handler.js",
+      "file:///root/Interiori/websites/contact-form.js",
+      "file:///root/Interiori/websites/website1-minimalist/dynamic-projects.js"
+    ]
+  },
+  "optimizationStatus": {
+    "imageOptimization": {
+      "total": 23,
+      "lazyLoaded": 12,
+      "percentage": "52.2%"
+    },
+    "scriptOptimization": {
+      "total": 10,
+      "async": 0,
+      "defer": 1,
+      "optimized": 1
+    },
+    "minification": {
+      "cssMinified": 0,
+      "jsMinified": 0
+    }
+  }
+}
