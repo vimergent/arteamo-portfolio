@@ -519,7 +519,16 @@ const translations = {
             website: "Уебсайт",
             call: "Обадете се",
             message: "Вашето съобщение",
-            send: "Изпрати съобщение"
+            send: "Изпрати съобщение",
+            formName: "Вашето име",
+            formEmail: "Вашият имейл",
+            formPhone: "Телефонен номер",
+            formSubject: "Тема",
+            formMessage: "Вашето съобщение",
+            formSubmit: "Изпрати съобщение",
+            formSending: "Изпращане...",
+            formSuccess: "Благодарим ви! Вашето съобщение беше изпратено успешно.",
+            formError: "Съжаляваме, възникна грешка при изпращането на съобщението. Моля, опитайте отново."
         },
         // Stats
         stats: {
@@ -957,7 +966,16 @@ const translations = {
             website: "Веб-сайт",
             call: "Позвонить",
             message: "Ваше сообщение",
-            send: "Отправить сообщение"
+            send: "Отправить сообщение",
+            formName: "Ваше имя",
+            formEmail: "Ваш email",
+            formPhone: "Номер телефона",
+            formSubject: "Тема",
+            formMessage: "Ваше сообщение",
+            formSubmit: "Отправить сообщение",
+            formSending: "Отправка...",
+            formSuccess: "Спасибо! Ваше сообщение успешно отправлено.",
+            formError: "Извините, произошла ошибка при отправке сообщения. Пожалуйста, попробуйте снова."
         },
         // Stats
         stats: {
@@ -1395,7 +1413,16 @@ const translations = {
             website: "Sitio web",
             call: "Llámanos",
             message: "Tu mensaje",
-            send: "Enviar mensaje"
+            send: "Enviar mensaje",
+            formName: "Tu nombre",
+            formEmail: "Tu correo electrónico",
+            formPhone: "Número de teléfono",
+            formSubject: "Asunto",
+            formMessage: "Tu mensaje",
+            formSubmit: "Enviar mensaje",
+            formSending: "Enviando...",
+            formSuccess: "¡Gracias! Tu mensaje ha sido enviado con éxito.",
+            formError: "Lo sentimos, hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo."
         },
         // Stats
         stats: {
@@ -1844,7 +1871,16 @@ const translations = {
             website: "Уебсайт",
             call: "Обадете се",
             message: "Вашето съобщение",
-            send: "Изпрати съобщение"
+            send: "Изпрати съобщение",
+            formName: "Вашето име",
+            formEmail: "Вашият имейл",
+            formPhone: "Телефонен номер",
+            formSubject: "Тема",
+            formMessage: "Вашето съобщение",
+            formSubmit: "Изпрати съобщение",
+            formSending: "Изпращане...",
+            formSuccess: "Благодарим ви! Вашето съобщение беше изпратено успешно.",
+            formError: "Съжаляваме, възникна грешка при изпращането на съобщението. Моля, опитайте отново."
         },
         // Stats
         stats: {
@@ -1899,7 +1935,292 @@ const translations = {
             olivVillasDesc: "Луксозни ваканционни вили, проектирани за максимална релаксация и комфорт.",
             playgroundMallDesc: "Иновативен детски развлекателен център, носещ радост на семействата.",
             chaykaDistrictDesc: "Топъл семеен дом, балансиращ традиционен чар със съвременно удобство."
+        },
+    he: {
+        // Navigation
+        nav: {
+            home: "בית",
+            projects: "פרויקטים",
+            portfolio: "תיק עבודות",
+            about: "אודות",
+            services: "שירותים",
+            contact: "צור קשר",
+            insights: "תובנות",
+            featured: "מומלצים",
+            stories: "סיפורים"
+        },
+        // Company Info
+        company: {
+            name: "סטודיו ארטאמו",
+            tagline: "משנים חללים מאז 2008",
+            slogan: "יוצרים חללים שמעוררים השראה",
+            mission: "אנו מאמינים שכל חלל הוא מקום לביטוי רעיונות ורגשות. המשימה שלנו היא ליצור פנים שמעוררים השראה ומשנים את הדרך בה אנו רואים את העולם.",
+            luxuryTagline: "עיצוב פנים יוקרתי",
+            journalTagline: "כתב העת לעיצוב פנים"
+        },
+        // Page Title
+        pageTitle: "סטודיו ארטאמו - תיק עבודות עיצוב פנים",
+        // About Section
+        about: {
+            title: "אודות סטודיו ארטאמו",
+            founded: "נוסד בשנת 2008 על ידי המהנדסת פטיה פטרובה, סטודיו ארטאמו הפך לאחד השמות המובילים בעיצוב פנים.",
+            experience: "עם ניסיון רב בפרויקטים ציבוריים ופרטיים כאחד, הסטודיו שלנו זכה להכרה באמצעות פרסים רבים כולל תחרות 'חדר האמבטיה של השנה' היוקרתית של Ideal Standard.",
+            awards: "פרסים והכרה",
+            award1: "2009 - מקום ראשון, פרויקט חדר אמבטיה תלת מימדי",
+            award1_link: "https://thebathroom.bg/archive/Banya-na-godinata-2009/",
+            award2: "2010 - פרס שלישי עבור פרויקט 'שלום ורגיעה'",
+            award2_link: "https://thebathroom.bg/archive/Banya-na-godinata-2010/",
+            award3: "2013 - חדר האמבטיה של השנה של Ideal Standard עבור 'Jazz Standard'",
+            award3_link: "https://thebathroom.bg/archive/Banya-na-godinata-2013/"
+        },
+        // Services
+        services: {
+            title: "השירותים שלנו",
+            interiorDesign: "עיצוב פנים",
+            interiorDesignDesc: "אנחנו מתחילים איתך - הרצונות שלך, אורח החיים והאסתטיקה. הצוות שלנו מפתח קונספטים מותאמים אישית המשלבים עיצוב חדשני עם פונקציונליות.",
+            supervision: "פיקוח על פרויקטים",
+            supervisionDesc: "כדי להבטיח שהחזון שלנו הופך למציאות ללא פשרות, אנו מציעים שירותי פיקוח. אנו מפקחים על כל תהליך הביצוע.",
+            consultation: "ייעוץ עיצוב פנים",
+            spacePlanning: "תכנון חלל ופריסה",
+            visualization: "הדמיה תלת מימדית",
+            projectManagement: "ניהול פרויקטים",
+            materialSelection: "בחירת חומרים",
+            constructionSupervision: "פיקוח בנייה"
+        },
+        // Projects
+        projects: {
+            allProjects: "כל הפרויקטים",
+            residential: "מגורים",
+            commercial: "מסחרי",
+            office: "משרד",
+            hospitality: "אירוח",
+            medical: "עיצוב רפואי",
+            corporate: "תאגידי",
+            viewProject: "צפה בפרויקט",
+            recentWorks: "עבודות אחרונות"
+        },
+        // Contact
+        contact: {
+            title: "צור קשר",
+            subtitle: "בואו ניצור משהו יוצא דופן ביחד",
+            phone: "טלפון",
+            email: "אימייל",
+            website: "אתר אינטרנט",
+            call: "התקשר אלינו",
+            message: "ההודעה שלך",
+            formName: "השם שלך",
+            formEmail: "האימייל שלך",
+            formPhone: "מספר טלפון",
+            formSubject: "נושא",
+            formMessage: "ההודעה שלך",
+            formSubmit: "שלח הודעה",
+            formSending: "שולח...",
+            formSuccess: "תודה! ההודעה שלך נשלחה בהצלחה.",
+            formError: "מצטערים, אירעה שגיאה בשליחת ההודעה. אנא נסה שוב.",
+            send: "שלח הודעה"
+        },
+        // Stats
+        stats: {
+            yearsExperience: "שנות מצוינות",
+            projectsCompleted: "פרויקטים שהושלמו",
+            industryAwards: "פרסי תעשייה"
+        },
+        // Common
+        common: {
+            readMore: "קרא עוד",
+            exploreWork: "חקור את העבודה שלנו",
+            inquireProject: "בירור לגבי הפרויקט",
+            continueReading: "המשך לקרוא",
+            allRightsReserved: "כל הזכויות שמורות"
+        },
+        // Filters & Sorting
+        filters: {
+            allProjects: "כל הפרויקטים",
+            residential: "מגורים",
+            commercial: "מסחרי",
+            office: "משרדים",
+            medical: "רפואי",
+            corporate: "משרד תאגידי",
+            hospitality: "אירוח",
+            newestFirst: "החדשים ראשונים",
+            oldestFirst: "הישנים ראשונים",
+            byName: "לפי שם"
+        },
+        // Project specific data
+        projectData: {
+            // Project names
+            flaviaGarden: "דירת פלביה גארדן",
+            eliteClinic: "אליט קליניק",
+            apartmentK55: "דירה K55",
+            balevCorporation: "תאגיד בלב",
+            symphonyBreeze: "סימפוניית בריזה",
+            olivVillas: "וילות אוליב",
+            playgroundMall: "פלייגראונד גראנד מול",
+            chaykaDistrict: "רובע צ'איקה",
+            trakata: "טרקטה",
+            workDelMar: "וורק דל מאר",
+            gichevSped: "ג'יצ'ב ספד",
+            
+            // Categories
+            residential: "מגורים",
+            medical: "רפואי",
+            corporate: "משרד תאגידי",
+            hospitality: "אירוח",
+            commercial: "מסחרי",
+            // Project descriptions
+            flaviaGardenDesc: "מקלט מודרני המשלב אלגנטיות עם נוחות בלב ורנה.",
+            eliteClinicDesc: "מתקן רפואי חדיש שתוכנן לנוחות המטופלים ויעילות קלינית.",
+            apartmentK55Desc: "חלל מגורים עכשווי עם אסתטיקה מינימליסטית ופונקציונליות מקסימלית.",
+            balevCorporationDesc: "מטה תאגידי דינמי המשקף חדשנות ומקצועיות.",
+            symphonyBreezeDesc: "אלגנטיות חופית פוגשת תחכום עירוני בדירה הימית הזו.",
+            olivVillasDesc: "וילות נופש יוקרתיות שתוכננו למנוחה ונוחות מקסימליות.",
+            playgroundMallDesc: "מרכז בידור חדשני לילדים המביא שמחה למשפחות.",
+            chaykaDistrictDesc: "בית משפחתי חם המאזן קסם מסורתי עם נוחות מודרנית."
         }
+    },
+    zh: {
+        // Navigation
+        nav: {
+            home: "首页",
+            projects: "项目",
+            portfolio: "作品集",
+            about: "关于",
+            services: "服务",
+            contact: "联系",
+            insights: "洞察",
+            featured: "精选",
+            stories: "故事"
+        },
+        // Company Info
+        company: {
+            name: "Arteamo工作室",
+            tagline: "自2008年以来改造空间",
+            slogan: "创造激发灵感的空间",
+            mission: "我们相信每个空间都是表达思想和情感的地方。我们的使命是创造激发灵感并改变我们看世界方式的室内设计。",
+            luxuryTagline: "奢华室内设计",
+            journalTagline: "室内设计杂志"
+        },
+        // Page Title
+        pageTitle: "Arteamo工作室 - 室内设计作品集",
+        // About Section
+        about: {
+            title: "关于Arteamo工作室",
+            founded: "由Petya Petrova工程师于2008年创立，Arteamo工作室已成为室内设计领域的领先品牌之一。",
+            experience: "凭借在公共和私人项目方面的丰富经验，我们的工作室通过多个奖项获得认可，包括Ideal Standard举办的著名'年度浴室'比赛。",
+            awards: "奖项与认可",
+            award1: "2009年 - 3D浴室项目一等奖",
+            award1_link: "https://thebathroom.bg/archive/Banya-na-godinata-2009/",
+            award2: "2010年 - '和平与放松'项目三等奖",
+            award2_link: "https://thebathroom.bg/archive/Banya-na-godinata-2010/",
+            award3: "2013年 - Ideal Standard年度浴室奖'Jazz Standard'",
+            award3_link: "https://thebathroom.bg/archive/Banya-na-godinata-2013/"
+        },
+        // Services
+        services: {
+            title: "我们的服务",
+            interiorDesign: "室内设计",
+            interiorDesignDesc: "我们从您开始 - 您的愿望、生活方式和美学。我们的团队开发将前卫设计与功能性相结合的个性化概念。",
+            supervision: "项目监理",
+            supervisionDesc: "为确保我们的愿景毫无妥协地成为现实，我们提供作者监理服务。我们监督整个执行过程。",
+            consultation: "室内设计咨询",
+            spacePlanning: "空间规划与布局",
+            visualization: "3D可视化",
+            projectManagement: "项目管理",
+            materialSelection: "材料选择",
+            constructionSupervision: "施工监理"
+        },
+        // Projects
+        projects: {
+            allProjects: "所有项目",
+            residential: "住宅",
+            commercial: "商业",
+            office: "办公室",
+            hospitality: "酒店",
+            medical: "医疗设计",
+            corporate: "企业",
+            viewProject: "查看项目",
+            recentWorks: "最近作品"
+        },
+        // Contact
+        contact: {
+            title: "联系我们",
+            subtitle: "让我们一起创造非凡的东西",
+            phone: "电话",
+            email: "电子邮件",
+            website: "网站",
+            call: "致电我们",
+            message: "您的留言",
+            formName: "您的姓名",
+            formEmail: "您的电子邮件",
+            formPhone: "电话号码",
+            formSubject: "主题",
+            formMessage: "您的留言",
+            formSubmit: "发送消息",
+            formSending: "发送中...",
+            formSuccess: "谢谢！您的消息已成功发送。",
+            formError: "抱歉，发送消息时出错。请重试。",
+            send: "发送消息"
+        },
+        // Stats
+        stats: {
+            yearsExperience: "卓越年限",
+            projectsCompleted: "完成的项目",
+            industryAwards: "行业奖项"
+        },
+        // Common
+        common: {
+            readMore: "阅读更多",
+            exploreWork: "探索我们的作品",
+            inquireProject: "询问此项目",
+            continueReading: "继续阅读",
+            allRightsReserved: "版权所有"
+        },
+        // Filters & Sorting
+        filters: {
+            allProjects: "所有项目",
+            residential: "住宅",
+            commercial: "商业",
+            office: "办公室",
+            medical: "医疗",
+            corporate: "企业办公室",
+            hospitality: "酒店",
+            newestFirst: "最新优先",
+            oldestFirst: "最早优先",
+            byName: "按名称"
+        },
+        // Project specific data
+        projectData: {
+            // Project names
+            flaviaGarden: "Flavia Garden公寓",
+            eliteClinic: "精英诊所",
+            apartmentK55: "K55公寓",
+            balevCorporation: "Balev集团",
+            symphonyBreeze: "微风交响曲",
+            olivVillas: "奥利夫别墅",
+            playgroundMall: "游乐场大商场",
+            chaykaDistrict: "海鸥区",
+            trakata: "Trakata",
+            workDelMar: "德尔马工作室",
+            gichevSped: "Gichev Sped",
+            
+            // Categories
+            residential: "住宅",
+            medical: "医疗",
+            corporate: "企业办公室",
+            hospitality: "酒店",
+            commercial: "商业",
+            // Project descriptions
+            flaviaGardenDesc: "现代避风港，在瓦尔纳市中心将优雅与舒适融为一体。",
+            eliteClinicDesc: "最先进的医疗设施，专为患者舒适和临床效率而设计。",
+            apartmentK55Desc: "当代居住空间，具有极简主义美学和最大功能性。",
+            balevCorporationDesc: "充满活力的企业总部，体现创新和专业精神。",
+            symphonyBreezeDesc: "海滨优雅与都市精致在这个海景公寓中相遇。",
+            olivVillasDesc: "豪华度假别墅，专为最大程度的放松和舒适而设计。",
+            playgroundMallDesc: "创新的儿童娱乐中心，为家庭带来欢乐。",
+            chaykaDistrictDesc: "温馨的家庭住宅，平衡传统魅力与现代舒适。"
+        }
+    }
+
     }
 };
 
