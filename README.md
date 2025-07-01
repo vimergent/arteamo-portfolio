@@ -1,29 +1,15 @@
-# Studio Arteamo Portfolio Showcase
+# Studio Arteamo Portfolio
 
-A collection of 5 unique website designs for Studio Arteamo, a luxury interior design studio established in 2008.
+The production website for Studio Arteamo, a luxury interior design studio established in 2008.
 
 ## 🌐 Live Demo
-Visit: [Your Netlify URL will be here]
+Visit: [studio-arteamo.netlify.app](https://studio-arteamo.netlify.app)
 
-## 🎨 Website Versions
-
-### 1. Modern Minimalist
-Clean, sophisticated design with focus on content and typography.
-
-### 2. Dark Luxury
-Sophisticated black and gold theme with premium aesthetics.
-
-### 3. Magazine Editorial
-Editorial-inspired layout with asymmetric grids and storytelling approach.
-
-### 4. Interactive Grid
-Dynamic masonry layout with advanced filtering and smooth animations.
-
-### 5. Ultra Fancy 3D (Coming Soon)
-Mind-blowing experience with WebGL and cutting-edge animations.
+## 🎨 Current Design
+**Modern Minimalist** - A clean, sophisticated design with focus on content, typography, and showcasing the portfolio projects beautifully.
 
 ## 🌍 Multi-Language Support
-All websites support 4 languages:
+The website supports 4 languages:
 - 🇧🇬 Bulgarian (Original)
 - 🇬🇧 English
 - 🇷🇺 Russian
@@ -31,16 +17,31 @@ All websites support 4 languages:
 
 ## 📁 Project Structure
 ```
-├── index.html              # Landing page
-├── translations.js         # Language translations
-├── language-switcher.js    # Language switching functionality
-├── website1-minimalist/    # Minimalist portfolio
-├── website2-dark-luxury/   # Dark luxury theme
-├── website3-magazine/      # Magazine style
-├── website4-interactive/   # Interactive grid (in progress)
-├── website5-fancy/         # 3D fancy (in progress)
-└── [Project Folders]       # Interior design project images
+├── index.html                 # Landing page
+├── website1-minimalist/       # Main portfolio website
+│   ├── index.html            # Homepage
+│   ├── styles.css            # Main styles
+│   ├── script.js             # Core functionality
+│   └── admin/                # CMS admin panel
+├── translations.js            # Language translations
+├── language-switcher-v2.js    # Language switching functionality
+├── performance-optimizer.js   # Performance optimizations
+├── mobile-optimizations.css   # Mobile responsive enhancements
+└── [Project Folders]          # Interior design project images
 ```
+
+## 🏆 Portfolio Projects
+- Apartament Flavia Garden 2024
+- Apartament K55_2021
+- Apartament Кв. Чайка, Варна_2017
+- Apartament Симфония - Бриз, Варна_ 2019
+- Apartament Траката, Варна_2021
+- Balev Corporation 2020
+- Elite Clinic 2021
+- Gichev sped 2019
+- Oliv vilas sv.Vlas 2019
+- Playground Grand Mall Varna 2018
+- Work Del Mar 2022
 
 ## 🚀 Deployment
 This project is configured for Netlify deployment with automatic builds from GitHub.
@@ -48,7 +49,6 @@ This project is configured for Netlify deployment with automatic builds from Git
 ## 📧 Contact
 - Phone: +359 897 983 127
 - Email: studio@arteamo.net
-- Website: www.arteamo.net
 
----
-© 2024 Studio Arteamo. All rights reserved.
+## 📝 Note
+Alternative design variations (websites 2-15) are preserved in the GitHub repository history for future reference but are not included in the production deployment.
