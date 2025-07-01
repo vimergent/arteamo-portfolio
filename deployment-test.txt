@@ -1,0 +1,3 @@
+Deployment Test - July 1, 2025
+This file verifies the latest deployment includes Hebrew and Chinese language support.
+Timestamp: 16:45 UTC
