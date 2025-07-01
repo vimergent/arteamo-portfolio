@@ -228,32 +228,127 @@
             });
         }
 
-        // Auto-refresh gallery every 10 seconds
-        function autoRefreshGallery() {
-            const gallery = document.getElementById('randomGallery');
-            
-            // Fade out
-            gallery.style.opacity = '0';
-            gallery.style.transition = 'opacity 0.5s ease';
-            
-            setTimeout(() => {
-                // Clear and recreate
-                gallery.innerHTML = '';
-                createRandomGallery();
-                
-                // Fade in
-                setTimeout(() => {
-                    gallery.style.opacity = '1';
-                }, 100);
-            }, 500);
+        // Preload images to prevent blank spaces
+        function preloadImages(images) {
+            return Promise.all(images.map(imageData => {
+                return new Promise((resolve) => {
+                    const img = new Image();
+                    img.onload = () => resolve(imageData);
+                    img.onerror = () => resolve(imageData); // Still resolve on error
+                    img.src = imageData.src;
+                });
+            }));
         }
 
-        // Initialize gallery when DOM is loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            createRandomGallery();
+        // Create gallery with preloaded images
+        async function createGalleryWithImages(container, images) {
+            // Wait for images to preload
+            await preloadImages(images);
             
-            // Auto-refresh every 10 seconds
-            setInterval(autoRefreshGallery, 10000);
+            images.forEach((imageData, index) => {
+                const item = document.createElement('div');
+                item.className = 'random-gallery-item';
+                item.style.setProperty('--item-index', index);
+                
+                const img = document.createElement('img');
+                img.src = imageData.src;
+                img.alt = imageData.projectName;
+                img.loading = 'eager'; // Changed from lazy to eager for preloaded images
+                img.decoding = 'async';
+                
+                // Add loaded class when image loads
+                img.onload = () => {
+                    item.classList.add('loaded');
+                };
+                
+                const overlay = document.createElement('div');
+                overlay.className = 'gallery-item-overlay';
+                
+                const title = document.createElement('div');
+                title.className = 'gallery-item-title';
+                title.textContent = imageData.projectName;
+                
+                overlay.appendChild(title);
+                item.appendChild(img);
+                item.appendChild(overlay);
+                
+                // Click handler
+                item.addEventListener('click', () => {
+                    openProjectGallery(imageData.projectFolder, imageData.projectName);
+                });
+                
+                container.appendChild(item);
+            });
+        }
+
+        // Seamless crossfade refresh
+        let isRefreshing = false;
+        let userInteracting = false;
+        let lastInteraction = Date.now();
+        
+        async function autoRefreshGallery() {
+            // Skip if already refreshing or user recently interacted
+            if (isRefreshing || (Date.now() - lastInteraction < 2000)) {
+                return;
+            }
+            
+            isRefreshing = true;
+            const gallery = document.getElementById('randomGallery');
+            const randomImages = getRandomImages(12);
+            
+            // Create a new container for seamless transition
+            const newGallery = document.createElement('div');
+            newGallery.id = 'randomGalleryNew';
+            newGallery.className = 'random-gallery';
+            newGallery.style.position = 'absolute';
+            newGallery.style.top = '0';
+            newGallery.style.left = '0';
+            newGallery.style.width = '100%';
+            newGallery.style.opacity = '0';
+            newGallery.style.transition = 'opacity 0.8s ease';
+            
+            // Insert new gallery
+            gallery.parentNode.style.position = 'relative';
+            gallery.parentNode.appendChild(newGallery);
+            
+            // Create new gallery content
+            await createGalleryWithImages(newGallery, randomImages);
+            
+            // Trigger crossfade
+            requestAnimationFrame(() => {
+                gallery.style.transition = 'opacity 0.8s ease';
+                gallery.style.opacity = '0';
+                newGallery.style.opacity = '1';
+                
+                // Cleanup after transition
+                setTimeout(() => {
+                    gallery.remove();
+                    newGallery.id = 'randomGallery';
+                    newGallery.style.position = 'static';
+                    isRefreshing = false;
+                }, 800);
+            });
+        }
+        
+        // Track user interaction
+        document.addEventListener('mousemove', () => {
+            lastInteraction = Date.now();
+        });
+        
+        document.addEventListener('touchstart', () => {
+            lastInteraction = Date.now();
+        });
+
+        // Initialize gallery when DOM is loaded
+        document.addEventListener('DOMContentLoaded', async () => {
+            const gallery = document.getElementById('randomGallery');
+            const initialImages = getRandomImages(12);
+            await createGalleryWithImages(gallery, initialImages);
+            
+            // Auto-refresh every 10 seconds with smart timing
+            setInterval(() => {
+                autoRefreshGallery();
+            }, 10000);
         });
     </script>
 </body>

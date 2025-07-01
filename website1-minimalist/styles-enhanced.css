@@ -4,6 +4,8 @@
 .random-gallery-container {
     margin-top: 3rem;
     padding: 2rem 0;
+    position: relative;
+    min-height: 400px; /* Prevent collapse during transitions */
 }
 
 .random-gallery {
@@ -12,6 +14,7 @@
     gap: 1rem;
     max-width: 1200px;
     margin: 0 auto;
+    will-change: opacity; /* Optimize transitions */
 }
 
 .random-gallery-item {
@@ -22,6 +25,25 @@
     aspect-ratio: 4/3;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Skeleton loading effect */
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s ease-in-out infinite;
+}
+
+/* Remove loading animation once image loads */
+.random-gallery-item.loaded {
+    animation: none;
+    background: #f0f0f0;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
 }
 
 .random-gallery-item img {
@@ -90,13 +112,28 @@
     .random-gallery-container {
         margin-top: 2rem;
         padding: 1rem 0;
+        min-height: 600px; /* Larger min-height for mobile */
+    }
+    
+    .random-gallery-item {
+        aspect-ratio: 1; /* Square aspect ratio on mobile for better space usage */
     }
 }
 
 @media (max-width: 480px) {
     .random-gallery {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr); /* Keep 2 columns even on small mobile */
+        gap: 0.5rem;
+    }
+    
+    .random-gallery-container {
+        min-height: 500px;
+        padding: 0.75rem 0;
+    }
+    
+    .gallery-item-title {
+        font-size: 0.75rem;
+        padding: 0.5rem;
     }
 }
 
