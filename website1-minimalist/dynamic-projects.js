@@ -15,8 +15,14 @@ const projectManager = {
     // Load projects from project-config.js
     loadProjects() {
         const projectsGrid = document.querySelector('.projects-grid');
-        if (!projectsGrid || typeof projectConfig === 'undefined') {
-            console.error('Projects grid or project config not found');
+        if (!projectsGrid) {
+            console.error('Projects grid not found');
+            return;
+        }
+        
+        if (typeof projectConfig === 'undefined') {
+            console.error('Project config not found, retrying in 500ms...');
+            setTimeout(() => this.loadProjects(), 500);
             return;
         }
 
@@ -25,6 +31,8 @@ const projectManager = {
 
         // Get current language
         const currentLang = localStorage.getItem('selectedLanguage') || 'en';
+
+        console.log('Loading projects:', Object.keys(projectConfig).length);
 
         // Convert projectConfig to array and render
         Object.entries(projectConfig).forEach(([folderName, projectData]) => {
@@ -49,21 +57,26 @@ const projectManager = {
         const categoryKey = this.getCategoryTranslationKey(projectData.category);
         const categoryName = window.translations?.[lang]?.projects?.[categoryKey] || projectData.category;
 
+        // Build the HTML with proper structure
+        const projectName = projectData.name?.[lang] || projectData.name?.en || folderName;
+        const projectDesc = projectData.description?.[lang] || projectData.description?.en || '';
+        const coverImage = projectData.coverImage || (projectData.images && projectData.images[0]) || 'placeholder.jpg';
+        
         card.innerHTML = `
             <div class="project-image">
-                <img src="../${folderName}/${projectData.coverImage || 'placeholder.jpg'}" 
-                     alt="${projectData.name[lang] || projectData.name.en}"
+                <img src="../${folderName}/${coverImage}" 
+                     alt="${projectName}"
                      onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect width=%22400%22 height=%22300%22 fill=%22%23f8f8f8%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-family=%22Inter%22%3ENo Image%3C/text%3E%3C/svg%3E'">
                 <div class="project-overlay">
-                    <h3 data-translate="projects.viewProject">${window.translations?.[lang]?.projects?.viewProject || 'View Project'}</h3>
+                    <h3>${window.translations?.[lang]?.projects?.viewProject || 'View Project'}</h3>
                 </div>
             </div>
             <div class="project-info">
-                <h3>${projectData.name[lang] || projectData.name.en}</h3>
+                <h3>${projectName}</h3>
                 <p class="project-meta">
-                    <span>${categoryName}</span> • ${projectData.year} • ${projectData.area || ''}
+                    <span>${categoryName}</span> • ${projectData.year || '2024'} • ${projectData.area || ''}
                 </p>
-                <p class="project-desc">${projectData.description?.[lang] || projectData.description?.en || ''}</p>
+                <p class="project-desc">${projectDesc}</p>
             </div>
         `;
 
