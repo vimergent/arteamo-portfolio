@@ -80,44 +80,59 @@ class ContactForm {
                 display: block;
                 margin-bottom: 0.5rem;
                 font-weight: 500;
-                color: var(--text-primary, #333);
+                color: rgba(255, 255, 255, 0.95);
+                font-size: 0.95rem;
+                letter-spacing: 0.5px;
             }
             
             .form-group input,
             .form-group textarea {
                 width: 100%;
-                padding: 0.75rem;
-                border: 1px solid var(--border-color, #e0e0e0);
-                border-radius: 4px;
+                padding: 0.875rem 1rem;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                border-radius: 6px;
                 font-size: 1rem;
                 font-family: inherit;
-                transition: border-color 0.3s, box-shadow 0.3s;
+                transition: all 0.3s ease;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                color: white;
+            }
+            
+            .form-group input::placeholder,
+            .form-group textarea::placeholder {
+                color: rgba(255, 255, 255, 0.5);
             }
             
             .form-group input:focus,
             .form-group textarea:focus {
                 outline: none;
-                border-color: var(--accent-color, #000);
-                box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+                border-color: var(--premium-gold, #d4af37);
+                box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+                background: rgba(255, 255, 255, 0.15);
             }
             
             .submit-btn {
-                background: var(--primary-color, #000);
+                background: rgba(255, 255, 255, 0.2);
                 color: white;
-                border: none;
-                padding: 0.875rem 2rem;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                padding: 0.875rem 2.5rem;
                 font-size: 1rem;
                 font-weight: 500;
                 cursor: pointer;
-                transition: all 0.3s;
+                transition: all 0.3s ease;
                 text-transform: uppercase;
-                letter-spacing: 1px;
+                letter-spacing: 1.5px;
+                backdrop-filter: blur(10px);
+                border-radius: 6px;
             }
             
             .submit-btn:hover {
-                background: var(--accent-color, #333);
+                background: var(--premium-gold, #d4af37);
+                border-color: var(--premium-gold, #d4af37);
+                color: #1a1a1a;
                 transform: translateY(-2px);
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
             }
             
             .submit-btn:disabled {
