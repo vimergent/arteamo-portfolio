@@ -276,7 +276,7 @@ const adminApp = {
         grid.innerHTML = filteredProjects.map(project => `
             <div class="project-admin-card">
                 <div class="project-admin-image">
-                    <img src="../${project.folder}/${project.coverImage}" 
+                    <img src="../../${project.folder}/${project.coverImage}" 
                          alt="${project.name.en}"
                          onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect width=%22400%22 height=%22300%22 fill=%22%23f8f8f8%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-family=%22Inter%22%3ENo Image%3C/text%3E%3C/svg%3E'">
                 </div>
@@ -312,7 +312,7 @@ const adminApp = {
         const list = document.getElementById('imageList');
         list.innerHTML = images.map((img, index) => `
             <div class="image-item" data-image="${img}">
-                <img src="../${this.state.currentProject?.folder || 'temp'}/${img}" 
+                <img src="../../${this.state.currentProject?.folder || 'temp'}/${img}" 
                      alt="${img}"
                      onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22150%22 height=%22150%22%3E%3Crect width=%22150%22 height=%22150%22 fill=%22%23f8f8f8%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-family=%22Inter%22 font-size=%2212%22%3E${img}%3C/text%3E%3C/svg%3E'">
                 <button class="image-item-remove" onclick="adminApp.removeImage(${index})">×</button>
