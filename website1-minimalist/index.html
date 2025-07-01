@@ -173,9 +173,13 @@
             
             // Collect all images with project info
             galleryData.forEach(project => {
-                project.images.forEach(image => {
+                // Only take first 2 images per project for faster loading
+                project.images.slice(0, 2).forEach(image => {
+                    // Simple path without double encoding
+                    const imagePath = `../../${project.folder}/${image}`;
+                    console.log('Generated path:', imagePath);
                     allImages.push({
-                        src: `../../${encodeImagePath(project.folder)}/${encodeImagePath(image)}`,
+                        src: imagePath,
                         projectName: project.name,
                         projectFolder: project.folder
                     });
@@ -228,22 +232,8 @@
             });
         }
 
-        // Preload images to prevent blank spaces
-        function preloadImages(images) {
-            return Promise.all(images.map(imageData => {
-                return new Promise((resolve) => {
-                    const img = new Image();
-                    img.onload = () => resolve(imageData);
-                    img.onerror = () => resolve(imageData); // Still resolve on error
-                    img.src = imageData.src;
-                });
-            }));
-        }
-
-        // Create gallery with preloaded images
-        async function createGalleryWithImages(container, images) {
-            // Wait for images to preload
-            await preloadImages(images);
+        // Create gallery quickly without preloading
+        function createGalleryWithImages(container, images) {
             
             images.forEach((imageData, index) => {
                 const item = document.createElement('div');
@@ -259,6 +249,13 @@
                 // Add loaded class when image loads
                 img.onload = () => {
                     item.classList.add('loaded');
+                    console.log('✅ Image loaded:', imageData.src);
+                };
+                
+                // Log errors
+                img.onerror = () => {
+                    console.error('❌ Image failed to load:', imageData.src);
+                    console.error('Project:', imageData.projectName);
                 };
                 
                 const overlay = document.createElement('div');
@@ -286,7 +283,7 @@
         let userInteracting = false;
         let lastInteraction = Date.now();
         
-        async function autoRefreshGallery() {
+        function autoRefreshGallery() {
             // Skip if already refreshing or user recently interacted
             if (isRefreshing || (Date.now() - lastInteraction < 2000)) {
                 return;
@@ -312,7 +309,7 @@
             gallery.parentNode.appendChild(newGallery);
             
             // Create new gallery content
-            await createGalleryWithImages(newGallery, randomImages);
+            createGalleryWithImages(newGallery, randomImages);
             
             // Trigger crossfade
             requestAnimationFrame(() => {
@@ -340,10 +337,10 @@
         });
 
         // Initialize gallery when DOM is loaded
-        document.addEventListener('DOMContentLoaded', async () => {
+        document.addEventListener('DOMContentLoaded', () => {
             const gallery = document.getElementById('randomGallery');
             const initialImages = getRandomImages(12);
-            await createGalleryWithImages(gallery, initialImages);
+            createGalleryWithImages(gallery, initialImages);
             
             // Auto-refresh every 10 seconds with smart timing
             setInterval(() => {
