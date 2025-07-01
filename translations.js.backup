@@ -1799,6 +1799,143 @@ const translations = {
             form_email: "Your Email"
         }
     },
+    bg: {
+        // Navigation
+        nav: {
+            home: "Начало",
+            projects: "Проекти",
+            portfolio: "Портфолио",
+            about: "За нас",
+            services: "Услуги",
+            contact: "Контакти",
+            insights: "Прозрения",
+            featured: "Избрани",
+            stories: "Истории"
+        },
+        // Company Info
+        company: {
+            name: "Студио Артеамо",
+            tagline: "Преобразяваме пространства от 2008",
+            slogan: "Създаваме пространства, които вдъхновяват",
+            mission: "Вярваме, че всяко пространство е място за изразяване на идеи и емоции. Нашата мисия е да създаваме интериори, които вдъхновяват и променят начина, по който виждаме света.",
+            luxuryTagline: "Луксозен интериорен дизайн",
+            journalTagline: "Списание за интериорен дизайн"
+        },
+        // Page Title
+        pageTitle: "Студио Артеамо - Портфолио за интериорен дизайн",
+        // About Section
+        about: {
+            title: "За Студио Артеамо",
+            founded: "Студио Артеамо е основано през 2008 година от инж. Петя Петрова и е сред водещите имена в интериорния дизайн.",
+            experience: "Студиото е с богат опит в реализацията на множество обществени и частни проекти. Със своята креативност и професионализъм, студиото и неговата основателка са удостоени с признание в престижния конкурс \"Баня на годината\", организиран от Ideal Standard.",
+            awards: "Награди и признание",
+            award1: "2009 - Първо място в категория '3D проект на баня'",
+            award2: "2010 - Трета награда за проекта 'Спокойствие и релакс'",
+            award3: "2013 - Ideal Standard Баня на годината за проекта 'Jazz Standard'",
+            award1_link: "https://thebathroom.bg/archive/Banya-na-godinata-2009/",
+            award2_link: "https://thebathroom.bg/archive/Banya-na-godinata-2010/",
+            award3_link: "https://thebathroom.bg/archive/Banya-na-godinata-2013/"
+        },
+        // Services
+        services: {
+            title: "Нашите услуги",
+            interiorDesign: "Интериорно проектиране",
+            interiorDesignDesc: "Започваме с вас – вашите желания, начин на живот и естетика. Нашият екип разработва персонализирани концепции, които съчетават авангарден дизайн с функционалност.",
+            supervision: "Надзор",
+            supervisionDesc: "За да гарантираме, че визията ни се превръща в реалност без компромиси, предлагаме услугата авторски надзор. Наблюдаваме целия процес на изпълнение.",
+            consultation: "Консултация за интериорен дизайн",
+            spacePlanning: "Планиране на пространството",
+            visualization: "3D визуализация",
+            projectManagement: "Управление на проекти",
+            materialSelection: "Избор на материали",
+            constructionSupervision: "Строителен надзор"
+        },
+        // Projects
+        projects: {
+            allProjects: "Всички проекти",
+            residential: "Жилищни",
+            commercial: "Търговски",
+            office: "Офиси",
+            hospitality: "Хотелиерство",
+            medical: "Медицински дизайн",
+            corporate: "Корпоративни",
+            viewProject: "Виж проекта",
+            recentWorks: "Последни проекти"
+        },
+        // Contact
+        contact: {
+            title: "Свържете се с нас",
+            subtitle: "Нека създадем нещо изключително заедно",
+            phone: "Телефон",
+            email: "Имейл",
+            website: "Уебсайт",
+            call: "Обадете се",
+            message: "Вашето съобщение",
+            send: "Изпрати съобщение",
+            formName: "Вашето име",
+            formEmail: "Вашият имейл",
+            formPhone: "Телефонен номер",
+            formSubject: "Тема",
+            formMessage: "Вашето съобщение",
+            formSubmit: "Изпрати съобщение",
+            formSending: "Изпращане...",
+            formSuccess: "Благодарим ви! Вашето съобщение беше изпратено успешно.",
+            formError: "Съжаляваме, възникна грешка при изпращането на съобщението. Моля, опитайте отново."
+        },
+        // Stats
+        stats: {
+            yearsExperience: "Години опит",
+            projectsCompleted: "Завършени проекти",
+            industryAwards: "Индустриални награди"
+        },
+        // Common
+        common: {
+            readMore: "Прочети още",
+            exploreWork: "Разгледайте нашата работа",
+            inquireProject: "Запитване за този проект",
+            continueReading: "Продължи четенето",
+            allRightsReserved: "Всички права запазени"
+        },
+        // Filters & Sorting
+        filters: {
+            allProjects: "Всички проекти",
+            residential: "Жилищни",
+            commercial: "Търговски",
+            office: "Офиси",
+            medical: "Медицински",
+            corporate: "Корпоративни офиси",
+            hospitality: "Хотелиерство",
+            newestFirst: "Най-нови първо",
+            oldestFirst: "Най-стари първо",
+            byName: "По име"
+        },
+        // Project specific data
+        projectData: {
+            // Project names
+            flaviaGarden: "Апартамент Флавия Гардън",
+            eliteClinic: "Елит Клиник",
+            apartmentK55: "Апартамент K55",
+            balevCorporation: "Балев Корпорация",
+            symphonyBreeze: "Симфония Бриз",
+            olivVillas: "Олив Вилас",
+            playgroundMall: "Детска площадка Гранд Мол",
+            chaykaDistrict: "Квартал Чайка",
+            // Project types
+            residential: "Жилищен",
+            medical: "Медицински",
+            corporate: "Корпоративен офис",
+            hospitality: "Хотелиерство",
+            commercial: "Търговски",
+            // Project descriptions
+            flaviaGardenDesc: "Модерно убежище, съчетаващо елегантност с комфорт в сърцето на Варна.",
+            eliteClinicDesc: "Най-съвременно медицинско съоръжение, проектирано за комфорт на пациентите и клинична ефективност.",
+            apartmentK55Desc: "Съвременно жилищно пространство с минималистична естетика и максимална функционалност.",
+            balevCorporationDesc: "Динамична корпоративна централа, отразяваща иновации и професионализъм.",
+            symphonyBreezeDesc: "Крайбрежна елегантност среща градска изтънченост в този морски апартамент.",
+            olivVillasDesc: "Луксозни ваканционни вили, проектирани за максимална релаксация и комфорт.",
+            playgroundMallDesc: "Иновативен детски развлекателен център, носещ радост на семействата.",
+            chaykaDistrictDesc: "Топъл семеен дом, балансиращ традиционен чар със съвременно удобство."
+        },
     he: {
         // Navigation
         nav: {

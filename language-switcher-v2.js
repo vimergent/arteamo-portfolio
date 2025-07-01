@@ -1,7 +1,7 @@
 // Improved Language Switcher Component
 class LanguageSwitcher {
     constructor() {
-        this.currentLang = localStorage.getItem('language') || 'bg';
+        this.currentLang = localStorage.getItem('selectedLanguage') || localStorage.getItem('language') || 'bg';
         // Wait for DOM and translations to load
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', () => this.init());
@@ -186,6 +186,7 @@ class LanguageSwitcher {
     switchLanguage(lang) {
         this.currentLang = lang;
         localStorage.setItem('language', lang);
+        localStorage.setItem('selectedLanguage', lang);
         
         // Update the existing selector if it exists
         const existingSelector = document.getElementById('language-selector');
