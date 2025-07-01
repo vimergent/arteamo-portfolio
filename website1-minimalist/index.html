@@ -175,8 +175,8 @@
             galleryData.forEach(project => {
                 // Only take first 2 images per project for faster loading
                 project.images.slice(0, 2).forEach(image => {
-                    // Simple path without double encoding
-                    const imagePath = `../../${project.folder}/${image}`;
+                    // Use projects symlink to access images
+                    const imagePath = `../projects/${project.folder}/${image}`;
                     console.log('Generated path:', imagePath);
                     allImages.push({
                         src: imagePath,
