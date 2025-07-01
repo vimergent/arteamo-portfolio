@@ -99,8 +99,8 @@ const adminApp = {
 
     async validatePassword(password) {
         // In production, this should validate against a hashed password
-        // For now, using a simple check - CHANGE THIS IN PRODUCTION
-        const validPassword = 'admin123';
+        // Updated with secure password
+        const validPassword = 'kNl55zUPC(yH';
         
         // Simulate processing time to prevent timing attacks
         await new Promise(resolve => setTimeout(resolve, 300));

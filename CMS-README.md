@@ -15,14 +15,14 @@ A lightweight, static-first Content Management System for managing the Studio Ar
 ## Quick Start
 
 1. Open `cms.html` in your web browser
-2. Login with the default password: `admin123`
+2. Login with your secure password
 3. Start managing your projects!
 
-## Default Credentials
+## Authentication
 
-- **Password**: `admin123`
+- **Password**: Set in admin.js
 
-⚠️ **Important**: Change the default password in the code before deployment!
+⚠️ **Important**: The password has been updated from the default. Keep it secure!
 
 ## Usage Guide
 
@@ -118,9 +118,9 @@ const projectConfig = {
 
 ### Changing Password
 
-Edit line in `cms.html`:
+Edit the `validatePassword` function in `admin.js` or `admin/admin.js`:
 ```javascript
-const validPassword = 'admin123'; // Change this!
+const validPassword = 'your-new-password';
 ```
 
 ### Adding Categories
