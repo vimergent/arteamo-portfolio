@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-translate="pageTitle">Studio Arteamo - Interior Design Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles-enhanced.css">
+    <link rel="stylesheet" href="../mobile-optimizations.css">
+    <script src="../performance-optimizer.js" defer></script>
 </head>
 <body>
     <nav class="navbar">
@@ -129,14 +133,14 @@
         </div>
     </footer>
 
-    <script src="font-tester.js"></script>
-    <script src="script-enhanced.js"></script>
-    <script src="../translations.js"></script>
-    <script src="../language-switcher-v2.js"></script>
-    <script src="../project-config.js"></script>
+    <script src="font-tester.min.js"></script>
+    <script src="script-enhanced.min.js"></script>
+    <script src="../translations.min.js"></script>
+    <script src="../language-switcher-v2.min.js"></script>
+    <script src="../project-config.min.js"></script>
     <script src="../awards-handler.js"></script>
     <script src="../contact-form.js"></script>
-    <script src="dynamic-projects.js"></script>
+    <script src="dynamic-projects.min.js"></script>
     <script>
         function openProjectGallery(projectFolder, projectName) {
             const currentPath = window.location.pathname;
@@ -191,6 +195,7 @@
                 img.src = imageData.src;
                 img.alt = imageData.projectName;
                 img.loading = 'lazy';
+                img.decoding = 'async';
                 
                 const overlay = document.createElement('div');
                 overlay.className = 'gallery-item-overlay';
