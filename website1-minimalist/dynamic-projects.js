@@ -1,6 +1,11 @@
 // Dynamic Project Loading for Website1-Minimalist
 // This script replaces hardcoded projects with dynamic content from project-config.js
 
+// Custom encoding function that properly encodes parentheses
+function encodeImagePath(path) {
+    return encodeURIComponent(path).replace(/\(/g, '%28').replace(/\)/g, '%29');
+}
+
 const projectManager = {
     // Initialize dynamic projects
     init() {
@@ -64,10 +69,8 @@ const projectManager = {
         
         card.innerHTML = `
             <div class="project-image">
-                <img src="../${folderName}/${coverImage}" 
+                <img src="../${encodeImagePath(folderName)}/${encodeImagePath(coverImage)}" 
                      alt="${projectName}"
-                     loading="lazy"
-                     decoding="async"
                      onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect width=%22400%22 height=%22300%22 fill=%22%23f8f8f8%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-family=%22Inter%22%3ENo Image%3C/text%3E%3C/svg%3E'">
                 <div class="project-overlay">
                     <h3>${window.translations?.[lang]?.projects?.viewProject || 'View Project'}</h3>

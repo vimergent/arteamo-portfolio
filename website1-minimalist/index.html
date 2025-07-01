@@ -6,13 +6,14 @@
     <meta name="version" content="1.2.0">
     <meta name="deployment-date" content="2025-07-01">
     <title data-translate="pageTitle">Studio Arteamo - Interior Design Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text x='0' y='14' font-size='16'>🏠</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles-enhanced.css">
     <link rel="stylesheet" href="../mobile-optimizations.css">
     <script src="../performance-optimizer.js" defer></script>
-    <script src="../fix-image-paths-simple.js" defer></script>
+    <!-- <script src="../fix-image-paths-simple.js" defer></script> -->
 </head>
 <body>
     <nav class="navbar">
@@ -147,6 +148,11 @@
     <script src="../contact-form.js"></script>
     <script src="dynamic-projects.js"></script>
     <script>
+        // Custom encoding function that properly encodes parentheses
+        function encodeImagePath(path) {
+            return encodeURIComponent(path).replace(/\(/g, '%28').replace(/\)/g, '%29');
+        }
+        
         function openProjectGallery(projectFolder, projectName) {
             const currentPath = window.location.pathname;
             const fromPath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
@@ -169,7 +175,7 @@
             galleryData.forEach(project => {
                 project.images.forEach(image => {
                     allImages.push({
-                        src: `../${project.folder}/${image}`,
+                        src: `../${encodeImagePath(project.folder)}/${encodeImagePath(image)}`,
                         projectName: project.name,
                         projectFolder: project.folder
                     });
