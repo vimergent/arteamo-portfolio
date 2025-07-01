@@ -921,8 +921,11 @@ class FontTester {
 }
 
 // Initialize font tester when DOM is ready
+// DISABLED FOR NOW - Uncomment below to enable the font tester
+/*
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => new FontTester());
 } else {
     new FontTester();
 }
+*/

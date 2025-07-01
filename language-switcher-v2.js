@@ -194,6 +194,9 @@ class LanguageSwitcher {
         }
         
         this.applyTranslations();
+        
+        // Dispatch custom event for other components
+        document.dispatchEvent(new CustomEvent('languageChanged', { detail: { language: lang } }));
     }
 
     applyTranslations() {

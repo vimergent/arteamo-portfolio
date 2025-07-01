@@ -40,6 +40,13 @@
         <div class="hero-content">
             <h2 class="hero-title" data-translate="company.slogan">Creating Spaces That Inspire</h2>
             <p class="hero-subtitle" data-translate="company.mission">We believe that every space is a place for expressing ideas and emotions. Our mission is to create interiors that inspire and change the way we see the world.</p>
+            
+            <!-- Automatic Random Gallery -->
+            <div class="random-gallery-container">
+                <div class="random-gallery" id="randomGallery">
+                    <!-- Images will be dynamically inserted here -->
+                </div>
+            </div>
         </div>
     </section>
 
@@ -228,11 +235,13 @@
                 <p data-translate="about.experience">With extensive experience in both public and private projects, our studio has earned recognition through multiple awards including the prestigious "Bathroom of the Year" competition by Ideal Standard.</p>
                 <div class="awards">
                     <h3 data-translate="about.awards">Awards & Recognition</h3>
-                    <ul>
-                        <li data-translate="about.award1">2009 - First Place, 3D Bathroom Project</li>
-                        <li data-translate="about.award2">2010 - Third Prize for "Peace and Relaxation" Project</li>
-                        <li data-translate="about.award3">2013 - Ideal Standard Bathroom of the Year for "Jazz Standard"</li>
-                    </ul>
+                    <div data-awards="true">
+                        <ul>
+                            <li data-translate="about.award1">2009 - First Place, 3D Bathroom Project</li>
+                            <li data-translate="about.award2">2010 - Third Prize for "Peace and Relaxation" Project</li>
+                            <li data-translate="about.award3">2013 - Ideal Standard Bathroom of the Year for "Jazz Standard"</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="about-image">
@@ -260,19 +269,9 @@
     <section id="contact" class="contact">
         <div class="contact-container">
             <h2 class="serif" data-translate="contact.title">Get In Touch</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3 data-translate="contact.phone">Phone</h3>
-                    <p>+359 897 983 127</p>
-                </div>
-                <div class="contact-item">
-                    <h3 data-translate="contact.email">Email</h3>
-                    <p>studio@arteamo.net</p>
-                </div>
-                <div class="contact-item">
-                    <h3 data-translate="contact.website">Website</h3>
-                    <p>www.arteamo.net</p>
-                </div>
+            <p class="contact-subtitle" data-translate="contact.subtitle">Let's create something extraordinary together</p>
+            <div id="contactFormContainer">
+                <!-- Contact form will be dynamically inserted here -->
             </div>
         </div>
     </section>
@@ -287,12 +286,111 @@
     <script src="script-enhanced.js"></script>
     <script src="../translations.js"></script>
     <script src="../language-switcher-v2.js"></script>
+    <script src="../project-config.js"></script>
+    <script src="../awards-handler.js"></script>
+    <script src="../contact-form.js"></script>
     <script>
         function openProjectGallery(projectFolder, projectName) {
             const currentPath = window.location.pathname;
             const fromPath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
             window.location.href = `../gallery-premium.html?project=${encodeURIComponent(projectFolder)}&name=${encodeURIComponent(projectName)}&from=${encodeURIComponent(fromPath)}`;
         }
+
+        // Get gallery data from centralized configuration
+        const currentLang = localStorage.getItem('selectedLanguage') || 'en';
+        const galleryData = Object.entries(projectConfig).map(([folder, config]) => ({
+            folder: folder,
+            name: config.name[currentLang] || config.name.en,
+            images: config.images.slice(0, 5) // Take first 5 images for random gallery
+        }));
+
+        // Function to get random images
+        function getRandomImages(count = 12) {
+            const allImages = [];
+            
+            // Collect all images with project info
+            galleryData.forEach(project => {
+                project.images.forEach(image => {
+                    allImages.push({
+                        src: `../${project.folder}/${image}`,
+                        projectName: project.name,
+                        projectFolder: project.folder
+                    });
+                });
+            });
+            
+            // Shuffle array
+            for (let i = allImages.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [allImages[i], allImages[j]] = [allImages[j], allImages[i]];
+            }
+            
+            // Return requested number of images
+            return allImages.slice(0, count);
+        }
+
+        // Function to create gallery
+        function createRandomGallery() {
+            const gallery = document.getElementById('randomGallery');
+            const randomImages = getRandomImages(12);
+            
+            randomImages.forEach((imageData, index) => {
+                const item = document.createElement('div');
+                item.className = 'random-gallery-item';
+                item.style.setProperty('--item-index', index);
+                
+                const img = document.createElement('img');
+                img.src = imageData.src;
+                img.alt = imageData.projectName;
+                img.loading = 'lazy';
+                
+                const overlay = document.createElement('div');
+                overlay.className = 'gallery-item-overlay';
+                
+                const title = document.createElement('div');
+                title.className = 'gallery-item-title';
+                title.textContent = imageData.projectName;
+                
+                overlay.appendChild(title);
+                item.appendChild(img);
+                item.appendChild(overlay);
+                
+                // Click handler
+                item.addEventListener('click', () => {
+                    openProjectGallery(imageData.projectFolder, imageData.projectName);
+                });
+                
+                gallery.appendChild(item);
+            });
+        }
+
+        // Auto-refresh gallery every 10 seconds
+        function autoRefreshGallery() {
+            const gallery = document.getElementById('randomGallery');
+            
+            // Fade out
+            gallery.style.opacity = '0';
+            gallery.style.transition = 'opacity 0.5s ease';
+            
+            setTimeout(() => {
+                // Clear and recreate
+                gallery.innerHTML = '';
+                createRandomGallery();
+                
+                // Fade in
+                setTimeout(() => {
+                    gallery.style.opacity = '1';
+                }, 100);
+            }, 500);
+        }
+
+        // Initialize gallery when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            createRandomGallery();
+            
+            // Auto-refresh every 10 seconds
+            setInterval(autoRefreshGallery, 10000);
+        });
     </script>
 </body>
 </html>

@@ -26,13 +26,16 @@ const translations = {
         pageTitle: "Studio Arteamo - Interior Design Portfolio",
         // About Section
         about: {
-            title: "About Studio",
+            title: "About Studio Arteamo",
             founded: "Founded in 2008 by Eng. Petya Petrova, Studio Arteamo has become one of the leading names in interior design.",
             experience: "With extensive experience in both public and private projects, our studio has earned recognition through multiple awards including the prestigious 'Bathroom of the Year' competition by Ideal Standard.",
             awards: "Awards & Recognition",
             award1: "2009 - First Place, 3D Bathroom Project",
+            award1_link: "https://thebathroom.bg/archive/Banya-na-godinata-2009/",
             award2: "2010 - Third Prize for 'Peace and Relaxation' Project",
-            award3: "2013 - Ideal Standard Bathroom of the Year for 'Jazz Standard'"
+            award2_link: "https://thebathroom.bg/archive/Banya-na-godinata-2010/",
+            award3: "2013 - Ideal Standard Bathroom of the Year for 'Jazz Standard'",
+            award3_link: "https://thebathroom.bg/archive/Banya-na-godinata-2013/"
         },
         // Services
         services: {
@@ -69,6 +72,15 @@ const translations = {
             website: "Website",
             call: "Call Us",
             message: "Your Message",
+            formName: "Your Name",
+            formEmail: "Your Email",
+            formPhone: "Phone Number",
+            formSubject: "Subject",
+            formMessage: "Your Message",
+            formSubmit: "Send Message",
+            formSending: "Sending...",
+            formSuccess: "Thank you! Your message has been sent successfully.",
+            formError: "Sorry, there was an error sending your message. Please try again.",
             send: "Send Message"
         },
         // Stats
@@ -461,13 +473,16 @@ const translations = {
         pageTitle: "Студио Артеамо - Портфолио за интериорен дизайн",
         // About Section
         about: {
-            title: "За студиото",
+            title: "За Студио Артеамо",
             founded: "Студио Артеамо е основано през 2008 година от инж. Петя Петрова и е сред водещите имена в интериорния дизайн.",
             experience: "Студиото е с богат опит в реализацията на множество обществени и частни проекти. Със своята креативност и професионализъм, студиото и неговата основателка са удостоени с признание в престижния конкурс \"Баня на годината\", организиран от Ideal Standard.",
             awards: "Награди и признание",
             award1: "2009 - Първо място в категория '3D проект на баня'",
             award2: "2010 - Трета награда за проекта 'Спокойствие и релакс'",
-            award3: "2013 - Ideal Standard Баня на годината за проекта 'Jazz Standard'"
+            award3: "2013 - Ideal Standard Баня на годината за проекта 'Jazz Standard'",
+            award1_link: "https://thebathroom.bg/archive/Banya-na-godinata-2009/",
+            award2_link: "https://thebathroom.bg/archive/Banya-na-godinata-2010/",
+            award3_link: "https://thebathroom.bg/archive/Banya-na-godinata-2013/"
         },
         // Services
         services: {
@@ -896,13 +911,16 @@ const translations = {
         pageTitle: "Студия Артеамо - Портфолио дизайна интерьера",
         // About Section
         about: {
-            title: "О студии",
+            title: "О Студио Артеамо",
             founded: "Основанная в 2008 году инженером Петей Петровой, Студия Артеамо стала одним из ведущих имен в дизайне интерьера.",
             experience: "С богатым опытом реализации множества общественных и частных проектов, наша студия заслужила признание через множество наград, включая престижный конкурс 'Ванная года' от Ideal Standard.",
             awards: "Награды и признание",
             award1: "2009 - Первое место, 3D проект ванной",
             award2: "2010 - Третий приз за проект 'Покой и релаксация'",
-            award3: "2013 - Ideal Standard Ванная года за 'Jazz Standard'"
+            award3: "2013 - Ideal Standard Ванная года за 'Jazz Standard'",
+            award1_link: "https://thebathroom.bg/archive/Banya-na-godinata-2009/",
+            award2_link: "https://thebathroom.bg/archive/Banya-na-godinata-2010/",
+            award3_link: "https://thebathroom.bg/archive/Banya-na-godinata-2013/"
         },
         // Services
         services: {
@@ -1331,13 +1349,16 @@ const translations = {
         pageTitle: "Estudio Arteamo - Portafolio de Diseño de Interiores",
         // About Section
         about: {
-            title: "Sobre el estudio",
+            title: "Sobre Studio Arteamo",
             founded: "Fundado en 2008 por la Ing. Petya Petrova, Estudio Arteamo se ha convertido en uno de los nombres líderes en diseño de interiores.",
             experience: "Con amplia experiencia en proyectos públicos y privados, nuestro estudio ha ganado reconocimiento a través de múltiples premios, incluyendo el prestigioso concurso 'Baño del Año' de Ideal Standard.",
             awards: "Premios y reconocimientos",
             award1: "2009 - Primer lugar, Proyecto de baño 3D",
             award2: "2010 - Tercer premio por el proyecto 'Paz y relajación'",
-            award3: "2013 - Baño del año Ideal Standard por 'Jazz Standard'"
+            award3: "2013 - Baño del año Ideal Standard por 'Jazz Standard'",
+            award1_link: "https://thebathroom.bg/archive/Banya-na-godinata-2009/",
+            award2_link: "https://thebathroom.bg/archive/Banya-na-godinata-2010/",
+            award3_link: "https://thebathroom.bg/archive/Banya-na-godinata-2013/"
         },
         // Services
         services: {
@@ -1777,13 +1798,16 @@ const translations = {
         pageTitle: "Студио Артеамо - Портфолио за интериорен дизайн",
         // About Section
         about: {
-            title: "За студиото",
+            title: "За Студио Артеамо",
             founded: "Студио Артеамо е основано през 2008 година от инж. Петя Петрова и е сред водещите имена в интериорния дизайн.",
             experience: "Студиото е с богат опит в реализацията на множество обществени и частни проекти. Със своята креативност и професионализъм, студиото и неговата основателка са удостоени с признание в престижния конкурс \"Баня на годината\", организиран от Ideal Standard.",
             awards: "Награди и признание",
             award1: "2009 - Първо място в категория '3D проект на баня'",
             award2: "2010 - Трета награда за проекта 'Спокойствие и релакс'",
-            award3: "2013 - Ideal Standard Баня на годината за проекта 'Jazz Standard'"
+            award3: "2013 - Ideal Standard Баня на годината за проекта 'Jazz Standard'",
+            award1_link: "https://thebathroom.bg/archive/Banya-na-godinata-2009/",
+            award2_link: "https://thebathroom.bg/archive/Banya-na-godinata-2010/",
+            award3_link: "https://thebathroom.bg/archive/Banya-na-godinata-2013/"
         },
         // Services
         services: {
