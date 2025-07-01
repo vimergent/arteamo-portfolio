@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Arteamo | Luxury Interior Design</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../mobile-optimizations.css">
     <script src="../translations.js"></script>
     <script src="../language-switcher-v2.js"></script>
+    <script src="../performance-optimizer.js" defer></script>
 </head>
 <body>
     <div class="page-loader">
@@ -48,10 +52,11 @@
                     <span class="nav-line"></span>
                 </a>
             </div>
-            <div class="menu-toggle">
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
                 <span></span>
                 <span></span>
-            </div>
+                <span></span>
+            </button>
         </div>
     </nav>
 
