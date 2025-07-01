@@ -1,0 +1,12 @@
+# Studio Arteamo Website1-Minimalist
+# Robots.txt
+
+User-agent: *
+Allow: /
+
+# Hide admin area from search engines
+User-agent: *
+Disallow: /admin/
+
+# Sitemap location (if you have one)
+# Sitemap: https://yourdomain.com/sitemap.xml
