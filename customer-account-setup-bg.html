@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инструкции за създаване на акаунти - Studio Arteamo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+            min-height: 100vh;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+        
+        h2 {
+            color: #34495e;
+            font-size: 22px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        h3 {
+            color: #34495e;
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .step {
+            background: #ecf0f1;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .important {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .important::before {
+            content: "⚠️ ВАЖНО: ";
+            font-weight: bold;
+            color: #856404;
+        }
+        
+        .highlight {
+            background: #e3f2fd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #e83e8c;
+        }
+        
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .checklist li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .checklist li::before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+        }
+        
+        .email-template {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        
+        .button-example {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+            color: #7f8c8d;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                max-width: 100%;
+                padding: 20px;
+            }
+            .step {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Инструкции за създаване на необходимите акаунти</h1>
+        <p class="subtitle">Studio Arteamo - Подготовка за прехвърляне на уебсайта</p>
+        
+        <h2>Общ преглед</h2>
+        <p>За да поемете пълен контрол над вашия уебсайт, ще трябва да създадете безплатни акаунти в следните услуги:</p>
+        
+        <ul class="checklist">
+            <li>Netlify - хостинг на уебсайта (безплатен)</li>
+            <li>GitHub - съхранение на кода (опционален, но препоръчителен)</li>
+            <li>Услуга за контакт форма (ако не използвате Netlify Forms)</li>
+        </ul>
+        
+        <h2>1. Създаване на Netlify акаунт</h2>
+        
+        <p><strong>Netlify</strong> е платформата, където е хостнат вашият уебсайт. Безплатният план е напълно достатъчен за вашите нужди.</p>
+        
+        <h3>Стъпки за регистрация:</h3>
+        
+        <div class="step">
+            <span class="step-number">1</span>
+            Отворете <code>https://app.netlify.com/signup</code>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">2</span>
+            Изберете метод за регистрация:
+            <ul style="margin-top: 10px; margin-left: 40px;">
+                <li>• <strong>Препоръчително:</strong> "Sign up with Email"</li>
+                <li>• Или използвайте GitHub акаунт (ако вече имате)</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">3</span>
+            При регистрация с имейл:
+            <ul style="margin-top: 10px; margin-left: 40px;">
+                <li>• Въведете имейл: <code>studio@arteamo.net</code></li>
+                <li>• Създайте сигурна парола</li>
+                <li>• Запишете паролата на сигурно място!</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">4</span>
+            Потвърдете имейла си:
+            <ul style="margin-top: 10px; margin-left: 40px;">
+                <li>• Проверете пощата си за имейл от Netlify</li>
+                <li>• Кликнете върху линка за потвърждение</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">5</span>
+            След потвърждение:
+            <ul style="margin-top: 10px; margin-left: 40px;">
+                <li>• Ще бъдете пренасочени към Netlify dashboard</li>
+                <li>• Може да ви попитат за име - въведете "Studio Arteamo"</li>
+                <li>• Пропуснете всички стъпки за "Create new site"</li>
+            </ul>
+        </div>
+        
+        <div class="important">
+            Не създавайте нов сайт! Аз ще прехвърля съществуващия сайт към вашия акаунт.
+        </div>
+        
+        <h2>2. Създаване на GitHub акаунт (Препоръчително)</h2>
+        
+        <p><strong>GitHub</strong> съхранява изходния код на вашия сайт и позволява проследяване на промените.</p>
+        
+        <h3>Стъпки за регистрация:</h3>
+        
+        <div class="step">
+            <span class="step-number">1</span>
+            Отворете <code>https://github.com/signup</code>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">2</span>
+            Въведете вашия имейл: <code>studio@arteamo.net</code>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">3</span>
+            Създайте парола:
+            <ul style="margin-top: 10px; margin-left: 40px;">
+                <li>• Минимум 15 символа или 8 символа с число и малка буква</li>
+                <li>• Запишете паролата!</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">4</span>
+            Изберете потребителско име:
+            <ul style="margin-top: 10px; margin-left: 40px;">
+                <li>• Предложение: <code>StudioArteamo</code></li>
+                <li>• Или: <code>arteamo-studio</code></li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">5</span>
+            Изпълнете проверката (puzzle/captcha)
+        </div>
+        
+        <div class="step">
+            <span class="step-number">6</span>
+            Потвърдете имейла:
+            <ul style="margin-top: 10px; margin-left: 40px;">
+                <li>• GitHub ще изпрати код на вашия имейл</li>
+                <li>• Въведете кода в сайта</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">7</span>
+            След регистрация:
+            <ul style="margin-top: 10px; margin-left: 40px;">
+                <li>• Пропуснете персонализацията</li>
+                <li>• Изберете "Free" план</li>
+            </ul>
+        </div>
+        
+        <h2>3. Важна информация за паролите</h2>
+        
+        <div class="important">
+            Съхранете всички пароли на сигурно място! Препоръчваме използването на мениджър на пароли или записване в защитен документ.
+        </div>
+        
+        <h3>Препоръки за сигурни пароли:</h3>
+        <ul style="margin-left: 20px;">
+            <li>• Минимум 12 символа</li>
+            <li>• Комбинация от главни и малки букви</li>
+            <li>• Включете числа и специални символи</li>
+            <li>• Не използвайте една и съща парола за различни услуги</li>
+        </ul>
+        
+        <h2>4. След създаване на акаунтите</h2>
+        
+        <p>Изпратете ми потвърждение на <span class="highlight">[вашият имейл]</span> със следната информация:</p>
+        
+        <div class="email-template">
+Тема: Акаунти създадени - Studio Arteamo
+
+Здравейте,
+
+Създадох необходимите акаунти:
+
+✓ Netlify акаунт
+  Email: studio@arteamo.net
+  Потвърден: Да
+
+✓ GitHub акаунт (ако е създаден)
+  Username: [вашето потребителско име]
+  Email: studio@arteamo.net
+
+Готов съм за прехвърлянето на сайта.
+
+Поздрави,
+[Вашето име]
+        </div>
+        
+        <h2>5. Какво следва?</h2>
+        
+        <p>След като получа потвърждението ви, ще извърша следните действия:</p>
+        
+        <ol style="margin-left: 20px;">
+            <li>Ще изпратя покана за прехвърляне на сайта към вашия Netlify акаунт</li>
+            <li>Ще добавя GitHub акаунта ви към хранилището с кода</li>
+            <li>Ще насроча обучение за администраторския панел</li>
+            <li>Ще предоставя пълна документация на български език</li>
+        </ol>
+        
+        <h2>6. Често задавани въпроси</h2>
+        
+        <h3>Защо са нужни тези акаунти?</h3>
+        <p><strong>Netlify:</strong> Това е хостинг платформата, където "живее" вашият сайт. Безплатният план включва всичко необходимо - хостинг, SSL сертификат, форми и др.</p>
+        <p><strong>GitHub:</strong> Съхранява кода на сайта и историята на промените. Позволява лесно възстановяване при проблеми.</p>
+        
+        <h3>Има ли месечни такси?</h3>
+        <p>Не! И двете услуги предлагат безплатни планове, които са напълно достатъчни за вашия сайт.</p>
+        
+        <h3>Мога ли да използвам друг имейл?</h3>
+        <p>Да, но препоръчваме да използвате основния си бизнес имейл за по-лесно управление.</p>
+        
+        <div class="footer">
+            <p>Документ подготвен за: <strong>Studio Arteamo</strong></p>
+            <p>Дата: <strong>2025</strong></p>
+        </div>
+    </div>
+</body>
+</html>
