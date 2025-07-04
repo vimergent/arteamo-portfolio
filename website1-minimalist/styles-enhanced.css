@@ -6,11 +6,13 @@
     padding: 2rem 0;
     position: relative;
     min-height: 400px; /* Prevent collapse during transitions */
+    z-index: 10; /* Ensure gallery is above background */
+    background: rgba(255, 255, 255, 0.95); /* Add slight background */
 }
 
 .random-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -21,37 +23,26 @@
     position: relative;
     overflow: hidden;
     border-radius: 4px;
-    background: #f0f0f0;
+    background: #f5f5f5;
     aspect-ratio: 4/3;
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    /* Skeleton loading effect */
-    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-    background-size: 200% 100%;
-    animation: loading 1.5s ease-in-out infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Remove loading animation once image loads */
+/* Ensure loaded items are visible */
 .random-gallery-item.loaded {
-    animation: none;
-    background: #f0f0f0;
+    background: white;
 }
 
-@keyframes loading {
-    0% {
-        background-position: 200% 0;
-    }
-    100% {
-        background-position: -200% 0;
-    }
-}
+/* Loading animation removed - was causing issues */
 
 .random-gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-    background-color: #f0f0f0;
+    opacity: 1 !important; /* Force visibility */
+    display: block;
 }
 
 .random-gallery-item:hover {
@@ -98,9 +89,11 @@
 }
 
 .random-gallery-item {
-    animation: galleryFadeIn 0.6s ease forwards;
+    /* Temporarily disable animation to debug */
+    /* animation: galleryFadeIn 0.6s ease forwards;
     animation-delay: calc(var(--item-index) * 0.05s);
-    opacity: 0;
+    opacity: 0; */
+    opacity: 1;
 }
 
 /* Responsive Gallery */
@@ -744,6 +737,123 @@ p {
     border-radius: 50%;
 }
 
+/* Video Container Styles */
+.video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--premium-charcoal);
+    box-shadow: var(--shadow-xl);
+}
+
+.about-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    transition: opacity var(--transition-base);
+    cursor: pointer;
+}
+
+.video-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.play-button {
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    border: none;
+    color: var(--premium-gold);
+    cursor: pointer;
+    transition: transform var(--transition-base);
+    padding: 0;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+}
+
+.play-button svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Video Controls */
+.video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--spacing-md);
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.video-container:hover .video-controls,
+.video-controls.visible {
+    opacity: 1;
+}
+
+.control-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: var(--font-size-lg);
+    padding: var(--spacing-xs);
+    transition: transform var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.control-btn:hover {
+    transform: scale(1.1);
+}
+
+.progress-bar {
+    flex: 1;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--premium-gold);
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.progress-bar:hover {
+    height: 6px;
+}
+
 /* Enhanced Services */
 .services {
     padding: 6rem var(--spacing-lg);
@@ -1153,6 +1263,26 @@ p {
     .services,
     .contact {
         padding: 4rem var(--spacing-md);
+    }
+    
+    /* Mobile Video Styles */
+    .video-container {
+        aspect-ratio: 16/9;
+    }
+    
+    .play-button {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .video-controls {
+        padding: var(--spacing-sm);
+    }
+    
+    .control-btn {
+        width: 35px;
+        height: 35px;
+        font-size: var(--font-size-base);
     }
 }
 

@@ -1,3 +1,57 @@
-# Netlify redirects file
-# Redirect to main landing page
-/home              /                    301
+# Redirects for Studio Arteamo
+
+# Force website1-minimalist to be the main site
+/website1-minimalist/* /:splat 301!
+/website1-minimalist / 301!
+
+# Serve website1-minimalist content from root
+/ /website1-minimalist/index.html 200
+/index.html /website1-minimalist/index.html 200
+
+# Static assets from website1-minimalist
+/*.css /website1-minimalist/:splat 200
+/*.js /website1-minimalist/:splat 200
+/*.jpg /website1-minimalist/:splat 200
+/*.png /website1-minimalist/:splat 200
+/*.webp /website1-minimalist/:splat 200
+/*.mp4 /website1-minimalist/:splat 200
+
+# Redirect old website variations to main site
+/website2-premium / 301
+/website3-dark / 301
+/website4-colorful / 301
+/website5-classic / 301
+/website6-modern / 301
+/website7-portfolio / 301
+/website8-showcase / 301
+/website9-gallery / 301
+/website10-creative / 301
+/website11-elegant / 301
+/website12-simple / 301
+/website13-professional / 301
+/website14-stylish / 301
+/website15-contemporary / 301
+
+# Clean URLs for sections
+/projects /#projects 200
+/about /#about 200
+/services /#services 200
+/contact /#contact 200
+
+# Admin panel
+/admin /website1-minimalist/admin/index.html 200
+/admin/* /website1-minimalist/admin/:splat 200
+
+# API endpoints
+/api/* /.netlify/functions/:splat 200
+
+# Language-specific URLs (preserve language in localStorage)
+/bg/* /website1-minimalist/index.html 200
+/en/* /website1-minimalist/index.html 200
+/ru/* /website1-minimalist/index.html 200
+/es/* /website1-minimalist/index.html 200
+/he/* /website1-minimalist/index.html 200
+/zh/* /website1-minimalist/index.html 200
+
+# Legacy redirect
+/home / 301

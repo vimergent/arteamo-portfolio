@@ -1,8 +1,30 @@
 {
+  "name": "studio-arteamo-portfolio",
+  "version": "2.0.0",
+  "description": "Studio Arteamo Interior Design Portfolio - Optimized for Netlify",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test-comprehensive.js",
+    "test:all": "node test-all-sites.js",
+    "test:accessibility": "node test-accessibility.js",
+    "test:performance": "node test-performance.js",
+    "minify": "node minify-assets.js",
+    "serve": "python3 serve.py"
+  },
   "dependencies": {
     "puppeteer": "^24.11.0"
   },
   "devDependencies": {
-    "@axe-core/puppeteer": "^4.10.2"
-  }
+    "@axe-core/puppeteer": "^4.10.2",
+    "@netlify/plugin-sitemap": "^0.8.1",
+    "@netlify/plugin-lighthouse": "^4.0.0",
+    "netlify-plugin-checklinks": "^4.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/studio-arteamo/portfolio"
+  },
+  "author": "Studio Arteamo",
+  "license": "UNLICENSED",
+  "private": true
 }

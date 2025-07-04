@@ -1,0 +1,33 @@
+# Studio Arteamo - Simplified 8-Second Video Prompt
+
+## MAIN VIDEO PROMPT (8 seconds):
+
+"Female hand sketching interior design on white paper. As she draws, a luxurious living room materializes around her. White marble, gold accents, ocean view. Camera pulls back. She looks up and says 'Creating spaces that inspire'. Elegant, high-end commercial style."
+
+---
+
+## SOUND EFFECT DESCRIPTION:
+
+"Pencil on paper sounds. Magical shimmer as room appears. Soft ambient music. Clear female voice."
+
+---
+
+## LIP SYNC CONTENT:
+
+**Line**: "Creating spaces that inspire"
+**Timing**: Said at 5-7 second mark
+**Delivery**: Confident, warm, professional
+**Voice**: Female, sophisticated, slight Bulgarian accent optional
+
+---
+
+## ALTERNATIVE SIMPLE PROMPTS:
+
+**Version 1:**
+"Woman's hand drawing floor plan. Sketch transforms into real luxury apartment. She says 'Creating spaces that inspire'. High-end style."
+
+**Version 2:**
+"Close-up hand sketching. Elegant room fades in behind. Female designer looks at camera: 'Creating spaces that inspire'. Premium quality."
+
+**Version 3:**
+"Designer hand draws line. Luxury beachfront interior appears. Woman's voice: 'Creating spaces that inspire'. Cinematic lighting."

@@ -1,57 +1,63 @@
 {
-  "timestamp": "2025-07-01T18:30:42.404Z",
+  "timestamp": "2025-07-04T13:28:23.295Z",
   "loadingMetrics": {
-    "totalLoadTime": "1401ms",
-    "domContentLoaded": "331ms",
-    "pageLoadComplete": "617ms",
-    "firstPaint": "360ms",
-    "firstContentfulPaint": "360ms"
+    "totalLoadTime": "1716ms",
+    "domContentLoaded": "592ms",
+    "pageLoadComplete": "1087ms",
+    "firstPaint": "1152ms",
+    "firstContentfulPaint": "1152ms"
   },
   "browserMetrics": {
-    "jsHeapUsedSize": "1.55MB",
+    "jsHeapUsedSize": "1.56MB",
     "jsHeapTotalSize": "2.50MB",
     "documents": 9,
     "frames": 4,
-    "layoutDuration": "73ms",
-    "scriptDuration": "54ms"
+    "layoutDuration": "180ms",
+    "scriptDuration": "198ms"
   },
   "resources": {
-    "total": 1,
+    "total": 2,
     "byType": {
-      "link": 1
+      "link": 2
     },
-    "largest": []
+    "largest": [
+      {
+        "name": "css2?family=Inter:wght@300;600;700&family=Playfair+Display:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;600&display=swap",
+        "size": "1.26KB",
+        "type": "link",
+        "duration": "83ms"
+      },
+      {
+        "name": "css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap",
+        "size": "1.03KB",
+        "type": "link",
+        "duration": "78ms"
+      }
+    ]
   },
   "renderBlockingResources": {
     "stylesheets": [
-      "file:///root/Interiori/websites/website1-minimalist/styles-enhanced.css",
-      "file:///root/Interiori/websites/mobile-optimizations.css"
+      "https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&family=Playfair+Display:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;600&display=swap",
+      "file:///root/Interiori/websites/website1-minimalist/styles-enhanced.min.css",
+      "file:///root/Interiori/websites/mobile-optimizations.min.css"
     ],
-    "scripts": [
-      "file:///root/Interiori/websites/website1-minimalist/font-tester.js",
-      "file:///root/Interiori/websites/website1-minimalist/script-enhanced.js",
-      "file:///root/Interiori/websites/translations.js",
-      "file:///root/Interiori/websites/language-switcher-v2.js",
-      "file:///root/Interiori/websites/project-config.js",
-      "file:///root/Interiori/websites/awards-handler.js",
-      "file:///root/Interiori/websites/contact-form.js",
-      "file:///root/Interiori/websites/website1-minimalist/dynamic-projects.js"
-    ]
+    "scripts": []
   },
   "optimizationStatus": {
     "imageOptimization": {
-      "total": 23,
-      "lazyLoaded": 12,
-      "percentage": "52.2%"
+      "total": 17,
+      "lazyLoaded": 3,
+      "percentage": "17.6%"
     },
     "scriptOptimization": {
       "total": 10,
       "async": 0,
-      "defer": 1,
-      "optimized": 1
+      "defer": 10,
+      "optimized": 10
     },
     "minification": {
-      "cssMinified": 0,
+      "cssMinified": 2,
       "jsMinified": 0
     }
   }

@@ -1,0 +1,31 @@
+# Robots.txt for Studio Arteamo
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin area
+Disallow: /admin/
+Disallow: /website1-minimalist/admin/
+
+# Disallow old website variations (redirected to main site)
+Disallow: /website2-premium/
+Disallow: /website3-dark/
+Disallow: /website4-colorful/
+Disallow: /website5-classic/
+Disallow: /website6-modern/
+Disallow: /website7-portfolio/
+Disallow: /website8-showcase/
+Disallow: /website9-gallery/
+Disallow: /website10-creative/
+Disallow: /website11-elegant/
+Disallow: /website12-simple/
+Disallow: /website13-professional/
+Disallow: /website14-stylish/
+Disallow: /website15-contemporary/
+
+# Sitemap location
+Sitemap: https://studio-arteamo.netlify.app/sitemap.xml
+
+# Crawl delay (optional, in seconds)
+Crawl-delay: 1

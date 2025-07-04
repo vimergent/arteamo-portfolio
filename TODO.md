@@ -10,6 +10,9 @@ Last Updated: 2025-06-28
 None remaining - all high priority tasks completed!
 
 ### 🟡 Medium Priority  
+- [ ] Create custom poster frame from ArteamoAd.mp4 medium
+- [ ] Optimize video loading performance high
+- [ ] Review and implement items from TODO_2025-07-03.md high
 - [ ] Update deployment documentation for new sites
 - [x] Test all completed websites with test suite (Completed: 2025-06-28)
   - Found minor issues: Missing favicon.ico (non-critical)

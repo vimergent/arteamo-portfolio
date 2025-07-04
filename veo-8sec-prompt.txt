@@ -1,0 +1,84 @@
+# Studio Arteamo - 8 Second Designer Video for Google Veo 3
+
+## FAST MODE VIDEO PROMPT (8 seconds):
+
+"Elegant female interior designer in chic black outfit examining fabric swatches in luxurious beachfront penthouse. Golden hour sunlight streams through floor-to-ceiling windows showing ocean waves. She holds up translucent curtain sample against window, smiling confidently. Camera slowly pushes in as she turns to reveal completed luxury living room behind her - white marble floors, gold accents, designer furniture. She gestures proudly at the space. Cinematic shallow depth of field. Warm lighting. 4K quality. Professional commercial aesthetic."
+
+---
+
+## SOUND EFFECT DESCRIPTION:
+
+"0-1s: Soft ocean waves and seagulls in distance
+1-2s: Fabric rustling as designer handles swatches  
+2-3s: Gentle footsteps on marble floor (high heels)
+3-4s: Subtle swoosh as curtain fabric moves
+4-5s: Ambient room tone with faint sea breeze
+5-6s: Light chime as sunlight hits crystal decor
+6-7s: Satisfied exhale/subtle "mmm" of approval
+7-8s: Gentle music swell with ocean ambience fade"
+
+---
+
+## LIP SYNC CONTENT (if designer speaks):
+
+**Option 1 - English (Bulgarian accent):**
+"This view deserves perfection" (said at 4-5 second mark)
+
+**Option 2 - Bulgarian:**
+"Съвършен дизайн" (Perfect design) (said at 5-6 second mark)
+
+**Option 3 - Thoughtful reaction:**
+"Beautiful..." (whispered at 3-4 second mark while touching fabric)
+
+**Option 4 - Client presentation:**
+"Your dream home awaits" (confident delivery at 4-6 second mark)
+
+---
+
+## ALTERNATIVE FAST MODE PROMPTS:
+
+### Version 1 - Design Process Focus:
+"Female interior designer sketching on tablet, beachfront condo behind her. Split screen shows her design coming to life in real-time. She looks up satisfied as room transforms. Golden hour lighting. 8 seconds."
+
+### Version 2 - Before/After:
+"Female designer waves hand like magic wand. Empty beachfront room instantly transforms into luxury space with gold and white decor. She spins gracefully admiring her work. Ocean view windows. Cinematic quality."
+
+### Version 3 - Material Selection:
+"Close-up of female designer's hands selecting between marble samples. Pull back reveals her in stunning completed beachfront bathroom. She places final gold fixture. Smile of satisfaction. Natural lighting."
+
+---
+
+## VISUAL DETAILS FOR VEO 3:
+
+**Designer Appearance:**
+- Age: 35-45, confident and sophisticated
+- Hair: Elegant updo or sleek ponytail
+- Outfit: Black designer dress or pantsuit
+- Accessories: Minimal gold jewelry, designer glasses (optional)
+- Expression: Confident, creative, satisfied
+
+**Environment:**
+- Modern beachfront condo in Varna
+- Floor-to-ceiling windows with Black Sea view
+- White/beige base with gold accents
+- Natural textures: marble, wood, linen
+- Fresh flowers in designer vase
+- Afternoon golden hour lighting
+
+**Camera Movement:**
+- Smooth push-in or orbit
+- Shallow depth of field (f/2.8)
+- Eye-level angle
+- No handheld shake
+- Professional commercial feel
+
+---
+
+## FAST MODE OPTIMIZATION TIPS:
+
+1. Front-load key visuals (designer + space in first 2 seconds)
+2. One continuous camera movement (no cuts)
+3. Clear focal point (the designer)
+4. Strong lighting contrast
+5. Visible transformation or reveal
+6. End on satisfying composition
