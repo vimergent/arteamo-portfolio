@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Gallery - Studio Arteamo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        /* Gallery Header */
+        .gallery-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 20px 40px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transform: translateY(-100%);
+            animation: slideDown 0.8s ease-out 0.3s forwards;
+        }
+        
+        .back-button {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .gallery-title {
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.5s forwards;
+        }
+        
+        .gallery-counter {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.7s forwards;
+        }
+        
+        /* Main Gallery */
+        .gallery-main {
+            padding-top: 120px;
+            min-height: 100vh;
+        }
+        
+        /* Hero Image Section */
+        .hero-section {
+            height: 80vh;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 60px;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transform: scale(1.1);
+            animation: heroReveal 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 60px 40px 40px;
+            transform: translateY(100%);
+            animation: slideUp 1s ease-out 1s forwards;
+        }
+        
+        .hero-title {
+            font-size: 48px;
+            font-weight: 200;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+        
+        .hero-subtitle {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+        }
+        
+        /* Gallery Grid */
+        .gallery-grid {
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            border-radius: 16px;
+            cursor: pointer;
+            background: #111;
+            opacity: 0;
+            transform: translateY(60px);
+            animation: itemReveal 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        
+        .gallery-item:nth-child(1) { animation-delay: 0.1s; }
+        .gallery-item:nth-child(2) { animation-delay: 0.2s; }
+        .gallery-item:nth-child(3) { animation-delay: 0.3s; }
+        .gallery-item:nth-child(4) { animation-delay: 0.4s; }
+        .gallery-item:nth-child(5) { animation-delay: 0.5s; }
+        .gallery-item:nth-child(6) { animation-delay: 0.6s; }
+        .gallery-item:nth-child(7) { animation-delay: 0.7s; }
+        .gallery-item:nth-child(8) { animation-delay: 0.8s; }
+        .gallery-item:nth-child(9) { animation-delay: 0.9s; }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-item-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .gallery-item:hover .gallery-item-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-item-number {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            transform: translateY(-10px);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .gallery-item:hover .gallery-item-number {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        /* Advanced Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            backdrop-filter: blur(0px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .lightbox.active {
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+        }
+        
+        .lightbox-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            transform: scale(0.8) translateY(60px);
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .lightbox.active .lightbox-content {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+        
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: -60px;
+            right: 0;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+        }
+        
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            opacity: 0.7;
+        }
+        
+        .lightbox-nav:hover {
+            background: rgba(255, 255, 255, 0.2);
+            opacity: 1;
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .lightbox-prev {
+            left: -80px;
+        }
+        
+        .lightbox-next {
+            right: -80px;
+        }
+        
+        .lightbox-info {
+            position: absolute;
+            bottom: -80px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+        }
+        
+        /* Loading Animation */
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin: 100px auto;
+        }
+        
+        /* Animations */
+        @keyframes slideDown {
+            to { transform: translateY(0); }
+        }
+        
+        @keyframes fadeInUp {
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+        
+        @keyframes heroReveal {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes slideUp {
+            to { transform: translateY(0); }
+        }
+        
+        @keyframes itemReveal {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .gallery-header {
+                padding: 15px 20px;
+            }
+            
+            .gallery-title {
+                font-size: 18px;
+            }
+            
+            .hero-section {
+                height: 60vh;
+            }
+            
+            .hero-title {
+                font-size: 32px;
+            }
+            
+            .gallery-grid {
+                padding: 0 20px;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .lightbox-nav {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+            
+            .lightbox-prev {
+                left: 10px;
+            }
+            
+            .lightbox-next {
+                right: 10px;
+            }
+        }
+        
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #111;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <header class="gallery-header">
+        <a href="#" class="back-button" onclick="history.back()">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            <span>Back to Portfolio</span>
+        </a>
+        <h1 class="gallery-title" id="gallery-title">Project Gallery</h1>
+        <div class="gallery-counter" id="gallery-counter">Loading...</div>
+    </header>
+    
+    <main class="gallery-main">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <img id="hero-image" class="hero-image" src="" alt="">
+            <div class="hero-overlay">
+                <h2 class="hero-title" id="hero-title">Project Name</h2>
+                <p class="hero-subtitle" id="hero-subtitle">Discover the stunning details and craftsmanship of this exceptional interior design project.</p>
+            </div>
+        </section>
+        
+        <!-- Gallery Grid -->
+        <section class="gallery-grid" id="gallery-grid">
+            <div class="loading-spinner"></div>
+        </section>
+    </main>
+    
+    <!-- Advanced Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">‹</button>
+            <img src="" alt="" class="lightbox-image" id="lightbox-image">
+            <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">›</button>
+            <div class="lightbox-info" id="lightbox-info">1 / 10</div>
+        </div>
+    </div>
+    
+    <script>
+        let currentImageIndex = 0;
+        let projectImages = [];
+        let isLightboxOpen = false;
+        
+        // Enhanced project data with more details
+        const projectData = {
+            'Apartament Flavia Garden 2024': {
+                name: 'Flavia Garden Residence',
+                subtitle: 'A modern sanctuary combining elegance with comfort in the heart of Varna.',
+                images: ['cam01.jpg', 'cam02.jpg', 'cam03.jpg', 'cam04.jpg', 'cam05.jpg', 'cam06.jpg', 'cam07.jpg', 'cam08.jpg', 'cam09.jpg', 'cam010.jpg']
+            },
+            'Elite Clinic 2021': {
+                name: 'Elite Medical Clinic',
+                subtitle: 'A state-of-the-art medical facility designed for patient comfort and clinical efficiency.',
+                images: ['Cam01.jpg', 'Cam02.jpg', 'Cam03.jpg', 'Cam04.jpg', 'Cam05.jpg', 'Cam06.jpg', 'Cam07.jpg', 'Cam08.jpg', 'Cam09.jpg', 'Cam010.jpg']
+            },
+            'Apartament K55_2021': {
+                name: 'K55 Contemporary Living',
+                subtitle: 'Contemporary living space with minimalist aesthetics and maximum functionality.',
+                images: ['Vladi (1).jpg', 'Vladi (2).jpg', 'Vladi (3).jpg', 'Vladi (4).jpg', 'Vladi (5).jpg', 'Vladi (6).jpg', 'Vladi (7).jpg', 'Vladi (8).jpg']
+            },
+            'Balev Corporation 2020': {
+                name: 'Balev Corporate Headquarters',
+                subtitle: 'A dynamic corporate headquarters reflecting innovation and professionalism.',
+                images: ['Balev (1).jpg', 'Balev (2).jpg', 'Balev (3).jpg', 'Balev (4).jpg', 'Balev (5).jpg', 'Balev (6).jpg', 'Balev (7).jpg', 'Balev (8).jpg']
+            },
+            'Apartament Симфония - Бриз, Варна_ 2019': {
+                name: 'Symphony Breeze Residence',
+                subtitle: 'Coastal elegance meets urban sophistication in this seaside apartment.',
+                images: ['Alex (1).jpg', 'Alex (2).jpg', 'Alex (3).jpg', 'Alex (4).jpg', 'Alex (5).jpg', 'Alex (6).jpg', 'Alex (7).jpg', 'Alex (8).jpg', 'Alex (9).jpg', 'Alex (10).jpg', 'Alex (11).jpg', 'Alex (12).jpg']
+            },
+            'Oliv vilas sv.Vlas 2019': {
+                name: 'Oliv Villas Resort',
+                subtitle: 'Luxury vacation homes designed for ultimate relaxation and coastal living.',
+                images: ['1O.V..jpg', '2O.V..jpg', '3O.V..jpg', '4O.V..jpg', '5O.V..jpg', '6O.V..jpg', '7O.V..jpg', '8O.V..jpg']
+            }
+        };
+        
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectFolder = urlParams.get('project');
+        const projectName = urlParams.get('name') || 'Project Gallery';
+        const websiteOrigin = urlParams.get('from') || '../';
+        
+        // Initialize gallery
+        async function initGallery() {
+            if (!projectFolder || !projectData[projectFolder]) {
+                document.getElementById('gallery-grid').innerHTML = '<p style="text-align: center; padding: 100px;">Project not found</p>';
+                return;
+            }
+            
+            const project = projectData[projectFolder];
+            projectImages = project.images.map(img => `../${projectFolder}/${img}`);
+            
+            // Update header info
+            document.getElementById('gallery-title').textContent = project.name;
+            document.getElementById('gallery-counter').textContent = `${projectImages.length} images`;
+            document.title = `${project.name} - Studio Arteamo`;
+            
+            // Update hero section
+            const heroImage = document.getElementById('hero-image');
+            const heroTitle = document.getElementById('hero-title');
+            const heroSubtitle = document.getElementById('hero-subtitle');
+            
+            heroImage.src = projectImages[0];
+            heroTitle.textContent = project.name;
+            heroSubtitle.textContent = project.subtitle;
+            
+            // Build gallery grid
+            buildGalleryGrid();
+            
+            // Update back button
+            document.querySelector('.back-button').href = websiteOrigin;
+        }
+        
+        function buildGalleryGrid() {
+            const galleryGrid = document.getElementById('gallery-grid');
+            galleryGrid.innerHTML = '';
+            
+            projectImages.forEach((imagePath, index) => {
+                const item = document.createElement('div');
+                item.className = 'gallery-item';
+                item.onclick = () => openLightbox(index);
+                
+                const img = document.createElement('img');
+                img.src = imagePath;
+                img.alt = `Gallery image ${index + 1}`;
+                img.loading = 'lazy';
+                
+                const overlay = document.createElement('div');
+                overlay.className = 'gallery-item-overlay';
+                
+                const number = document.createElement('div');
+                number.className = 'gallery-item-number';
+                number.textContent = `${index + 1} / ${projectImages.length}`;
+                
+                item.appendChild(img);
+                item.appendChild(overlay);
+                item.appendChild(number);
+                galleryGrid.appendChild(item);
+            });
+        }
+        
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const lightboxInfo = document.getElementById('lightbox-info');
+            
+            lightboxImage.src = projectImages[index];
+            lightboxInfo.textContent = `${index + 1} / ${projectImages.length}`;
+            
+            lightbox.style.display = 'flex';
+            requestAnimationFrame(() => {
+                lightbox.classList.add('active');
+            });
+            
+            isLightboxOpen = true;
+            document.body.style.overflow = 'hidden';
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', handleKeyPress);
+        }
+        
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            
+            setTimeout(() => {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 600);
+            
+            isLightboxOpen = false;
+            document.removeEventListener('keydown', handleKeyPress);
+        }
+        
+        function navigateLightbox(direction) {
+            currentImageIndex += direction;
+            
+            if (currentImageIndex < 0) {
+                currentImageIndex = projectImages.length - 1;
+            } else if (currentImageIndex >= projectImages.length) {
+                currentImageIndex = 0;
+            }
+            
+            const lightboxImage = document.getElementById('lightbox-image');
+            const lightboxInfo = document.getElementById('lightbox-info');
+            
+            // Smooth transition
+            lightboxImage.style.opacity = '0';
+            lightboxImage.style.transform = 'scale(0.9)';
+            
+            setTimeout(() => {
+                lightboxImage.src = projectImages[currentImageIndex];
+                lightboxInfo.textContent = `${currentImageIndex + 1} / ${projectImages.length}`;
+                lightboxImage.style.opacity = '1';
+                lightboxImage.style.transform = 'scale(1)';
+            }, 200);
+        }
+        
+        function handleKeyPress(e) {
+            if (!isLightboxOpen) return;
+            
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') navigateLightbox(-1);
+            if (e.key === 'ArrowRight') navigateLightbox(1);
+        }
+        
+        // Click outside to close lightbox
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox') {
+                closeLightbox();
+            }
+        });
+        
+        // Smooth image loading
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add smooth transition to lightbox image
+            const lightboxImage = document.getElementById('lightbox-image');
+            lightboxImage.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+        });
+        
+        // Initialize when page loads
+        initGallery();
+        
+        // Add smooth scroll to top when opening gallery
+        window.addEventListener('load', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

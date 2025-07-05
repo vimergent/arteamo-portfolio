@@ -1,0 +1,93 @@
+<!-- Netlify Forms Implementation for Studio Arteamo -->
+<!-- 
+To use this with Netlify Forms:
+1. Add this form to your page
+2. Netlify will automatically detect the form
+3. Configure email notifications in Netlify dashboard to send to:
+   - studio@arteamo.net
+   - petyaem@abv.bg
+-->
+
+<form name="contact" method="POST" data-netlify="true" class="contact-form">
+    <input type="hidden" name="form-name" value="contact">
+    
+    <div class="form-group">
+        <label for="name">Your Name *</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="email">Your Email *</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone">
+    </div>
+    
+    <div class="form-group">
+        <label for="subject">Subject *</label>
+        <input type="text" id="subject" name="subject" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="message">Your Message *</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    
+    <div class="form-group">
+        <button type="submit" class="submit-btn">Send Message</button>
+    </div>
+</form>
+
+<!-- 
+Netlify Forms Configuration:
+1. Go to your Netlify dashboard
+2. Navigate to Forms > Settings
+3. Add email notifications for:
+   - studio@arteamo.net
+   - petyaem@abv.bg
+4. Customize the notification template if needed
+-->
+
+<style>
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background: #333;
+}
+</style>

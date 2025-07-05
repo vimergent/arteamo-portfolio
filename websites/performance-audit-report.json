@@ -1,0 +1,64 @@
+{
+  "timestamp": "2025-07-04T13:28:23.295Z",
+  "loadingMetrics": {
+    "totalLoadTime": "1716ms",
+    "domContentLoaded": "592ms",
+    "pageLoadComplete": "1087ms",
+    "firstPaint": "1152ms",
+    "firstContentfulPaint": "1152ms"
+  },
+  "browserMetrics": {
+    "jsHeapUsedSize": "1.56MB",
+    "jsHeapTotalSize": "2.50MB",
+    "documents": 9,
+    "frames": 4,
+    "layoutDuration": "180ms",
+    "scriptDuration": "198ms"
+  },
+  "resources": {
+    "total": 2,
+    "byType": {
+      "link": 2
+    },
+    "largest": [
+      {
+        "name": "css2?family=Inter:wght@300;600;700&family=Playfair+Display:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;600&display=swap",
+        "size": "1.26KB",
+        "type": "link",
+        "duration": "83ms"
+      },
+      {
+        "name": "css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap",
+        "size": "1.03KB",
+        "type": "link",
+        "duration": "78ms"
+      }
+    ]
+  },
+  "renderBlockingResources": {
+    "stylesheets": [
+      "https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&family=Playfair+Display:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;600&display=swap",
+      "file:///root/Interiori/websites/website1-minimalist/styles-enhanced.min.css",
+      "file:///root/Interiori/websites/mobile-optimizations.min.css"
+    ],
+    "scripts": []
+  },
+  "optimizationStatus": {
+    "imageOptimization": {
+      "total": 17,
+      "lazyLoaded": 3,
+      "percentage": "17.6%"
+    },
+    "scriptOptimization": {
+      "total": 10,
+      "async": 0,
+      "defer": 10,
+      "optimized": 10
+    },
+    "minification": {
+      "cssMinified": 2,
+      "jsMinified": 0
+    }
+  }
+}

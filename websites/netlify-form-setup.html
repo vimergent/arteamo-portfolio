@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Netlify Forms Setup - Studio Arteamo</title>
+</head>
+<body>
+    <!-- Basic Netlify Form -->
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <!-- Honeypot field for spam protection -->
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none">
+            <label>Don't fill this out: <input name="bot-field"></label>
+        </p>
+        
+        <!-- Form fields -->
+        <input type="text" name="name" required>
+        <input type="email" name="email" required>
+        <input type="tel" name="phone">
+        <input type="text" name="subject" required>
+        <textarea name="message" required></textarea>
+        
+        <button type="submit">Send</button>
+    </form>
+
+    <!-- Advanced Netlify Form with AJAX -->
+    <script>
+    // For AJAX submission (no page reload)
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+        
+        try {
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            });
+            
+            if (response.ok) {
+                // Success - show message
+                alert('Message sent successfully!');
+                form.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            alert('Error sending message. Please try again.');
+        }
+    };
+
+    // Attach to form
+    document.querySelector('form[name="contact"]').addEventListener('submit', handleSubmit);
+    </script>
+
+    <!-- 
+    NETLIFY FORM SETUP INSTRUCTIONS:
+    
+    1. Deploy site with form to Netlify
+    2. Go to Netlify Dashboard > Forms
+    3. Click on your form name
+    4. Go to "Form notifications"
+    5. Add email notifications:
+       - To: studio@arteamo.net
+       - To: petyaem@abv.bg
+    6. Customize email template (optional)
+    
+    FEATURES:
+    - Spam protection (honeypot + reCAPTCHA optional)
+    - Email notifications to multiple addresses
+    - Form submissions stored in Netlify (downloadable)
+    - No server code needed
+    - 100 submissions/month free
+    -->
+</body>
+</html>

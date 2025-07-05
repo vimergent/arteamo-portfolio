@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Gallery</title>
+</head>
+<body>
+    <h1>Debug Random Gallery</h1>
+    <div id="debug"></div>
+    
+    <script src="../project-config.js"></script>
+    <script>
+        // Custom encoding function
+        function encodeImagePath(path) {
+            return encodeURIComponent(path).replace(/\(/g, '%28').replace(/\)/g, '%29');
+        }
+        
+        const debugDiv = document.getElementById('debug');
+        let html = '<h2>Project Config Loaded:</h2>';
+        html += '<pre>' + (typeof projectConfig !== 'undefined' ? 'YES' : 'NO') + '</pre>';
+        
+        if (typeof projectConfig !== 'undefined') {
+            const firstProject = Object.keys(projectConfig)[0];
+            const firstImage = projectConfig[firstProject].images[0];
+            
+            html += '<h2>First Project:</h2>';
+            html += '<pre>' + firstProject + '</pre>';
+            
+            html += '<h2>First Image:</h2>';
+            html += '<pre>' + firstImage + '</pre>';
+            
+            // Test different path combinations
+            const paths = [
+                `../${firstProject}/${firstImage}`,
+                `../../${firstProject}/${firstImage}`,
+                `../${encodeImagePath(firstProject)}/${encodeImagePath(firstImage)}`,
+                `../../${encodeImagePath(firstProject)}/${encodeImagePath(firstImage)}`
+            ];
+            
+            html += '<h2>Testing Image Paths:</h2>';
+            paths.forEach((path, index) => {
+                html += `<div style="margin: 20px; border: 1px solid #ccc; padding: 10px;">`;
+                html += `<h3>Path ${index + 1}:</h3>`;
+                html += `<pre>${path}</pre>`;
+                html += `<img src="${path}" style="max-width: 200px; display: block;" 
+                         onload="this.nextElementSibling.textContent='✅ Loaded'" 
+                         onerror="this.nextElementSibling.textContent='❌ Failed: ' + this.src">`;
+                html += `<div>Loading...</div>`;
+                html += `</div>`;
+            });
+            
+            // Check actual file location
+            html += '<h2>Expected file location:</h2>';
+            html += '<pre>/root/Interiori/' + firstProject + '/' + firstImage + '</pre>';
+        }
+        
+        debugDiv.innerHTML = html;
+    </script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="version" content="1.2.0">
+    <meta name="deployment-date" content="2025-07-01">
+    <title data-translate="pageTitle">Studio Arteamo - Interior Design Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text x='0' y='14' font-size='16'>🏠</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-enhanced.css">
+    <link rel="stylesheet" href="../mobile-optimizations.css">
+    <script src="../performance-optimizer.js" defer></script>
+    <!-- <script src="../fix-image-paths-simple.js" defer></script> -->
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1 data-translate="company.name">STUDIO ARTEAMO</h1>
+                <span class="tagline" data-translate="company.tagline">Transforming Spaces Since 2008</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#projects" class="nav-link active" data-translate="nav.projects">Projects</a>
+                <a href="#about" class="nav-link" data-translate="nav.about">About</a>
+                <a href="#services" class="nav-link" data-translate="nav.services">Services</a>
+                <a href="#contact" class="nav-link" data-translate="nav.contact">Contact</a>
+                <div class="nav-language">
+                    <select class="lang-select" id="language-selector">
+                        <option value="bg">BG</option>
+                        <option value="en">EN</option>
+                        <option value="ru">RU</option>
+                        <option value="es">ES</option>
+                        <option value="he">HE</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title" data-translate="company.slogan">Creating Spaces That Inspire</h2>
+            <p class="hero-subtitle" data-translate="company.mission">We believe that every space is a place for expressing ideas and emotions. Our mission is to create interiors that inspire and change the way we see the world.</p>
+            
+            <!-- Automatic Random Gallery -->
+            <div class="random-gallery-container">
+                <div class="random-gallery" id="randomGallery">
+                    <!-- Images will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="filters" class="filters">
+        <div class="filter-container">
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all" data-translate="filters.allProjects">All Projects</button>
+                <button class="filter-btn" data-filter="residential" data-translate="filters.residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial" data-translate="filters.commercial">Commercial</button>
+                <button class="filter-btn" data-filter="office" data-translate="filters.office">Office</button>
+            </div>
+            <div class="sort-options">
+                <select id="sort-select">
+                    <option value="newest" data-translate="filters.newestFirst">Newest First</option>
+                    <option value="oldest" data-translate="filters.oldestFirst">Oldest First</option>
+                    <option value="name" data-translate="filters.byName">By Name</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="projects-grid">
+            <!-- Projects will be loaded dynamically from project-config.js -->
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 class="serif" data-translate="about.title">About Studio Arteamo</h2>
+                <p class="lead" data-translate="about.founded">Founded in 2008 by Eng. Petya Petrova, Studio Arteamo has become one of the leading names in interior design.</p>
+                <p data-translate="about.experience">With extensive experience in both public and private projects, our studio has earned recognition through multiple awards including the prestigious "Bathroom of the Year" competition by Ideal Standard.</p>
+                <div class="awards">
+                    <h3 data-translate="about.awards">Awards & Recognition</h3>
+                    <div data-awards="true">
+                        <ul>
+                            <li data-translate="about.award1">2009 - First Place, 3D Bathroom Project</li>
+                            <li data-translate="about.award2">2010 - Third Prize for "Peace and Relaxation" Project</li>
+                            <li data-translate="about.award3">2013 - Ideal Standard Bathroom of the Year for "Jazz Standard"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="image-placeholder"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="services-container">
+            <h2 class="serif" data-translate="services.title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3 data-translate="services.interiorDesign">Interior Design</h3>
+                    <p data-translate="services.interiorDesignDesc">We start with you - your desires, lifestyle, and aesthetics. Our team develops personalized concepts that combine avant-garde design with functionality. From initial sketches and 3D visualizations to detailed technical drawings, we create spaces that not only look impressive but feel like home.</p>
+                </div>
+                <div class="service-card">
+                    <h3 data-translate="services.supervision">Project Supervision</h3>
+                    <p data-translate="services.supervisionDesc">To ensure our vision becomes reality without compromise, we offer author supervision services. We oversee the entire execution process - from material selection to coordination with contractors. Our goal is to ensure flawless quality, deadline compliance, and project adherence down to the last detail.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2 class="serif" data-translate="contact.title">Get In Touch</h2>
+            <p class="contact-subtitle" data-translate="contact.subtitle">Let's create something extraordinary together</p>
+            <div id="contactFormContainer">
+                <!-- Contact form will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 <span data-translate="company.name">Studio Arteamo</span>. <span data-translate="common.allRightsReserved">All rights reserved</span>.</p>
+        </div>
+    </footer>
+
+    <script src="font-tester.js"></script>
+    <script src="script-enhanced.js"></script>
+    <script src="../translations.js"></script>
+    <script src="../language-switcher-v2.js"></script>
+    <script src="../project-config.js"></script>
+    <script src="../awards-handler.js"></script>
+    <script src="../contact-form.js"></script>
+    <script src="dynamic-projects.js"></script>
+    <script>
+        // Custom encoding function that properly encodes parentheses
+        function encodeImagePath(path) {
+            return encodeURIComponent(path).replace(/\(/g, '%28').replace(/\)/g, '%29');
+        }
+        
+        function openProjectGallery(projectFolder, projectName) {
+            const currentPath = window.location.pathname;
+            const fromPath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
+            window.location.href = `../gallery-premium.html?project=${encodeURIComponent(projectFolder)}&name=${encodeURIComponent(projectName)}&from=${encodeURIComponent(fromPath)}`;
+        }
+
+        // Get gallery data from centralized configuration
+        const currentLang = localStorage.getItem('selectedLanguage') || 'en';
+        const galleryData = Object.entries(projectConfig).map(([folder, config]) => ({
+            folder: folder,
+            name: config.name[currentLang] || config.name.en,
+            images: config.images.slice(0, 5) // Take first 5 images for random gallery
+        }));
+
+        // Function to get random images
+        function getRandomImages(count = 12) {
+            const allImages = [];
+            
+            // Collect all images with project info
+            galleryData.forEach(project => {
+                project.images.forEach(image => {
+                    allImages.push({
+                        src: `../${encodeImagePath(project.folder)}/${encodeImagePath(image)}`,
+                        projectName: project.name,
+                        projectFolder: project.folder
+                    });
+                });
+            });
+            
+            // Shuffle array
+            for (let i = allImages.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [allImages[i], allImages[j]] = [allImages[j], allImages[i]];
+            }
+            
+            // Return requested number of images
+            return allImages.slice(0, count);
+        }
+
+        // Function to create gallery
+        function createRandomGallery() {
+            const gallery = document.getElementById('randomGallery');
+            const randomImages = getRandomImages(12);
+            
+            randomImages.forEach((imageData, index) => {
+                const item = document.createElement('div');
+                item.className = 'random-gallery-item';
+                item.style.setProperty('--item-index', index);
+                
+                const img = document.createElement('img');
+                img.src = imageData.src;
+                img.alt = imageData.projectName;
+                img.loading = 'lazy';
+                img.decoding = 'async';
+                
+                const overlay = document.createElement('div');
+                overlay.className = 'gallery-item-overlay';
+                
+                const title = document.createElement('div');
+                title.className = 'gallery-item-title';
+                title.textContent = imageData.projectName;
+                
+                overlay.appendChild(title);
+                item.appendChild(img);
+                item.appendChild(overlay);
+                
+                // Click handler
+                item.addEventListener('click', () => {
+                    openProjectGallery(imageData.projectFolder, imageData.projectName);
+                });
+                
+                gallery.appendChild(item);
+            });
+        }
+
+        // Auto-refresh gallery every 10 seconds
+        function autoRefreshGallery() {
+            const gallery = document.getElementById('randomGallery');
+            
+            // Fade out
+            gallery.style.opacity = '0';
+            gallery.style.transition = 'opacity 0.5s ease';
+            
+            setTimeout(() => {
+                // Clear and recreate
+                gallery.innerHTML = '';
+                createRandomGallery();
+                
+                // Fade in
+                setTimeout(() => {
+                    gallery.style.opacity = '1';
+                }, 100);
+            }, 500);
+        }
+
+        // Initialize gallery when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            createRandomGallery();
+            
+            // Auto-refresh every 10 seconds
+            setInterval(autoRefreshGallery, 10000);
+        });
+    </script>
+</body>
+</html>

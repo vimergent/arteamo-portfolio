@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Project Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .check-item {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .status-ok { color: green; }
+        .status-error { color: red; }
+        .projects-test {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .test-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .test-image {
+            width: 100%;
+            height: 200px;
+            background: #f0f0f0;
+            margin-bottom: 10px;
+        }
+        .test-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Project Display Check</h1>
+    
+    <div class="check-item">
+        <h2>DOM Check</h2>
+        <div id="domCheck"></div>
+    </div>
+    
+    <div class="check-item">
+        <h2>Projects in Grid</h2>
+        <div id="projectCount"></div>
+    </div>
+    
+    <div class="check-item">
+        <h2>CSS Check</h2>
+        <div id="cssCheck"></div>
+    </div>
+    
+    <div class="check-item">
+        <h2>Test Project Display</h2>
+        <div class="projects-test" id="testGrid"></div>
+    </div>
+
+    <script src="../project-config.js"></script>
+    <script>
+        // Check if projects are in the DOM
+        function checkDOM() {
+            const domCheck = document.getElementById('domCheck');
+            
+            // Go to parent frame and check
+            try {
+                if (window.parent && window.parent.document) {
+                    const parentGrid = window.parent.document.querySelector('.projects-grid');
+                    const parentCards = window.parent.document.querySelectorAll('.project-card');
+                    
+                    domCheck.innerHTML = `
+                        <p class="${parentGrid ? 'status-ok' : 'status-error'}">
+                            Parent grid found: ${parentGrid ? 'Yes' : 'No'}
+                        </p>
+                        <p class="${parentCards.length > 0 ? 'status-ok' : 'status-error'}">
+                            Project cards in parent: ${parentCards.length}
+                        </p>
+                    `;
+                } else {
+                    domCheck.innerHTML = '<p>Cannot access parent frame</p>';
+                }
+            } catch (e) {
+                domCheck.innerHTML = '<p>Error accessing parent: ' + e.message + '</p>';
+            }
+            
+            // Check this page
+            const grid = document.querySelector('.projects-grid');
+            const cards = document.querySelectorAll('.project-card');
+            
+            domCheck.innerHTML += `
+                <p class="${grid ? 'status-ok' : 'status-error'}">
+                    Grid on this page: ${grid ? 'Found' : 'Not found (expected)'}
+                </p>
+                <p>Project cards on this page: ${cards.length}</p>
+            `;
+        }
+        
+        // Check CSS visibility
+        function checkCSS() {
+            const cssCheck = document.getElementById('cssCheck');
+            
+            // Create a test project card
+            const testCard = document.createElement('div');
+            testCard.className = 'project-card';
+            testCard.style.position = 'absolute';
+            testCard.style.left = '-9999px';
+            document.body.appendChild(testCard);
+            
+            const computed = window.getComputedStyle(testCard);
+            
+            cssCheck.innerHTML = `
+                <p>Test card visibility:</p>
+                <p>- Display: ${computed.display}</p>
+                <p>- Opacity: ${computed.opacity}</p>
+                <p>- Visibility: ${computed.visibility}</p>
+                <p>- Transform: ${computed.transform}</p>
+                <p>- Animation: ${computed.animation || computed.animationName}</p>
+            `;
+            
+            document.body.removeChild(testCard);
+        }
+        
+        // Test project rendering
+        function testProjects() {
+            const testGrid = document.getElementById('testGrid');
+            
+            if (typeof projectConfig !== 'undefined') {
+                let count = 0;
+                Object.entries(projectConfig).slice(0, 3).forEach(([folder, data]) => {
+                    const card = document.createElement('div');
+                    card.className = 'test-card';
+                    
+                    card.innerHTML = `
+                        <div class="test-image">
+                            <img src="../${folder}/${data.coverImage || 'placeholder.jpg'}" 
+                                 alt="${data.name?.en || folder}"
+                                 onerror="this.parentElement.innerHTML='<p style=\\'text-align:center;padding:80px 0;\\'>Image not found:<br>../${folder}/${data.coverImage}</p>'">
+                        </div>
+                        <h3>${data.name?.en || folder}</h3>
+                        <p>Path: ../${folder}/</p>
+                        <p>Cover: ${data.coverImage || 'none'}</p>
+                    `;
+                    
+                    testGrid.appendChild(card);
+                    count++;
+                });
+                
+                document.getElementById('projectCount').innerHTML = `
+                    <p class="status-ok">Total projects in config: ${Object.keys(projectConfig).length}</p>
+                    <p>Showing first ${count} for testing</p>
+                `;
+            } else {
+                document.getElementById('projectCount').innerHTML = '<p class="status-error">projectConfig not loaded!</p>';
+            }
+        }
+        
+        // Run checks
+        checkDOM();
+        checkCSS();
+        testProjects();
+        
+        // Also check console
+        console.log('Project config keys:', typeof projectConfig !== 'undefined' ? Object.keys(projectConfig) : 'Not loaded');
+    </script>
+</body>
+</html>

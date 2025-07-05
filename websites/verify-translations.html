@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .test-frame {
+            width: 100%;
+            height: 600px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .status {
+            padding: 10px;
+            background: #e8f5e9;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Studio Arteamo - Translation Verification</h1>
+        <p>Test the language switcher functionality on website1-minimalist</p>
+    </div>
+    
+    <div class="controls">
+        <button onclick="switchLanguage('bg')">Switch to Bulgarian (BG)</button>
+        <button onclick="switchLanguage('en')">Switch to English (EN)</button>
+        <button onclick="switchLanguage('ru')">Switch to Russian (RU)</button>
+        <button onclick="switchLanguage('es')">Switch to Spanish (ES)</button>
+    </div>
+    
+    <iframe id="testFrame" class="test-frame" src="website1-minimalist/index.html"></iframe>
+    
+    <div class="status">
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Click the language buttons above to test switching</li>
+            <li>Verify that ALL text changes, including:
+                <ul>
+                    <li>Page title in browser tab</li>
+                    <li>Navigation menu items</li>
+                    <li>Hero section text</li>
+                    <li>Filter buttons (All Projects, Residential, etc.)</li>
+                    <li>Sort dropdown options</li>
+                    <li>Project titles and descriptions</li>
+                    <li>Footer text</li>
+                </ul>
+            </li>
+            <li>The language should persist when refreshing the page</li>
+        </ol>
+    </div>
+    
+    <script>
+        function switchLanguage(lang) {
+            const iframe = document.getElementById('testFrame');
+            const iframeWindow = iframe.contentWindow;
+            
+            // Change language in iframe
+            if (iframeWindow && iframeWindow.localStorage) {
+                iframeWindow.localStorage.setItem('language', lang);
+                iframe.src = iframe.src; // Reload iframe
+            }
+        }
+    </script>
+</body>
+</html>

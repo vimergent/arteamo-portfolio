@@ -1,0 +1,224 @@
+[
+  {
+    "website": "website1-minimalist",
+    "totalImages": 8,
+    "workingImages": 8,
+    "brokenImages": 0,
+    "backgroundImages": 0,
+    "missing404s": 0,
+    "details": {
+      "broken": [],
+      "missing": []
+    }
+  },
+  {
+    "website": "website2-dark-luxury",
+    "totalImages": 6,
+    "workingImages": 6,
+    "brokenImages": 0,
+    "backgroundImages": 0,
+    "missing404s": 0,
+    "details": {
+      "broken": [],
+      "missing": []
+    }
+  },
+  {
+    "website": "website3-magazine",
+    "totalImages": 10,
+    "workingImages": 10,
+    "brokenImages": 0,
+    "backgroundImages": 0,
+    "missing404s": 0,
+    "details": {
+      "broken": [],
+      "missing": []
+    }
+  },
+  {
+    "website": "website4-interactive-grid",
+    "totalImages": 8,
+    "workingImages": 8,
+    "brokenImages": 0,
+    "backgroundImages": 0,
+    "missing404s": 0,
+    "details": {
+      "broken": [],
+      "missing": []
+    }
+  },
+  {
+    "website": "website5-fancy",
+    "totalImages": 12,
+    "workingImages": 12,
+    "brokenImages": 0,
+    "backgroundImages": 0,
+    "missing404s": 0,
+    "details": {
+      "broken": [],
+      "missing": []
+    }
+  },
+  {
+    "website": "website6-coastal",
+    "totalImages": 26,
+    "workingImages": 24,
+    "brokenImages": 2,
+    "backgroundImages": 0,
+    "missing404s": 1,
+    "details": {
+      "broken": [
+        {
+          "src": "Elite%20Clinic%202021/Cam10.jpg",
+          "alt": "Instagram 11"
+        },
+        {
+          "src": "website6-coastal/index.html",
+          "alt": ""
+        }
+      ],
+      "missing": [
+        "Elite%20Clinic%202021/Cam10.jpg"
+      ]
+    }
+  },
+  {
+    "website": "website7-noir",
+    "totalImages": 10,
+    "workingImages": 9,
+    "brokenImages": 1,
+    "backgroundImages": 0,
+    "missing404s": 1,
+    "details": {
+      "broken": [
+        {
+          "src": "Elite%20Clinic%202021/Cam10.jpg",
+          "alt": "Bespoke Furniture"
+        }
+      ],
+      "missing": [
+        "Elite%20Clinic%202021/Cam10.jpg"
+      ]
+    }
+  },
+  {
+    "website": "website8-biophilic",
+    "totalImages": 16,
+    "workingImages": 15,
+    "brokenImages": 1,
+    "backgroundImages": 0,
+    "missing404s": 1,
+    "details": {
+      "broken": [
+        {
+          "src": "Elite%20Clinic%202021/Cam10.jpg",
+          "alt": "After"
+        }
+      ],
+      "missing": [
+        "Elite%20Clinic%202021/Cam10.jpg"
+      ]
+    }
+  },
+  {
+    "website": "website9-makeover",
+    "totalImages": 6,
+    "workingImages": 2,
+    "brokenImages": 4,
+    "backgroundImages": 0,
+    "missing404s": 0,
+    "details": {
+      "broken": [
+        {
+          "src": "Apartament%20Flavia%20Garden%202024/cam01.jpg",
+          "alt": "Before"
+        },
+        {
+          "src": "Apartament%20Flavia%20Garden%202024/cam010.jpg",
+          "alt": "After"
+        },
+        {
+          "src": "Elite%20Clinic%202021/Cam01.jpg",
+          "alt": "Before"
+        },
+        {
+          "src": "Elite%20Clinic%202021/Cam09.jpg",
+          "alt": "After"
+        }
+      ],
+      "missing": []
+    }
+  },
+  {
+    "website": "website10-magazine-v2",
+    "totalImages": 9,
+    "workingImages": 9,
+    "brokenImages": 0,
+    "backgroundImages": 0,
+    "missing404s": 0,
+    "details": {
+      "broken": [],
+      "missing": []
+    }
+  },
+  {
+    "website": "website11-japandi",
+    "totalImages": 4,
+    "workingImages": 4,
+    "brokenImages": 0,
+    "backgroundImages": 0,
+    "missing404s": 0,
+    "details": {
+      "broken": [],
+      "missing": []
+    }
+  },
+  {
+    "website": "website12-bulgarian",
+    "totalImages": 5,
+    "workingImages": 5,
+    "brokenImages": 0,
+    "backgroundImages": 0,
+    "missing404s": 0,
+    "details": {
+      "broken": [],
+      "missing": []
+    }
+  },
+  {
+    "website": "website13-retro",
+    "totalImages": 3,
+    "workingImages": 3,
+    "brokenImages": 0,
+    "backgroundImages": 0,
+    "missing404s": 0,
+    "details": {
+      "broken": [],
+      "missing": []
+    }
+  },
+  {
+    "website": "website14-zen",
+    "totalImages": 3,
+    "workingImages": 3,
+    "brokenImages": 0,
+    "backgroundImages": 0,
+    "missing404s": 0,
+    "details": {
+      "broken": [],
+      "missing": []
+    }
+  },
+  {
+    "website": "website15-ascii",
+    "totalImages": 0,
+    "workingImages": 0,
+    "brokenImages": 0,
+    "backgroundImages": 0,
+    "missing404s": 0,
+    "details": {
+      "broken": [],
+      "missing": []
+    }
+  }
+]

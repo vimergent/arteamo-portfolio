@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .debug-info {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .project-debug {
+            background: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        pre {
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .status-ok { color: green; }
+        .status-error { color: red; }
+        .status-warning { color: orange; }
+    </style>
+</head>
+<body>
+    <h1>Project Loading Debug</h1>
+    
+    <div class="debug-info">
+        <h2>Status Checks</h2>
+        <div id="statusChecks"></div>
+    </div>
+    
+    <div class="debug-info">
+        <h2>Project Config Data</h2>
+        <pre id="projectData"></pre>
+    </div>
+    
+    <div class="debug-info">
+        <h2>Projects Found</h2>
+        <div id="projectsList"></div>
+    </div>
+    
+    <div class="debug-info">
+        <h2>Console Output</h2>
+        <pre id="consoleOutput"></pre>
+    </div>
+
+    <script src="../project-config.js"></script>
+    <script>
+        const debug = {
+            log: [],
+            
+            init() {
+                this.checkStatus();
+                this.displayProjectData();
+                this.interceptConsole();
+            },
+            
+            checkStatus() {
+                const checks = document.getElementById('statusChecks');
+                
+                // Check project-config.js loaded
+                const configLoaded = typeof projectConfig !== 'undefined';
+                checks.innerHTML += `<p class="${configLoaded ? 'status-ok' : 'status-error'}">
+                    ✓ project-config.js loaded: ${configLoaded}
+                </p>`;
+                
+                // Check if projectConfig has data
+                if (configLoaded) {
+                    const projectCount = Object.keys(projectConfig).length;
+                    checks.innerHTML += `<p class="${projectCount > 0 ? 'status-ok' : 'status-error'}">
+                        ✓ Projects found: ${projectCount}
+                    </p>`;
+                }
+                
+                // Check DOM elements
+                const hasProjectsGrid = document.querySelector('.projects-grid') !== null;
+                checks.innerHTML += `<p class="${hasProjectsGrid ? 'status-ok' : 'status-warning'}">
+                    ✓ Projects grid element: ${hasProjectsGrid ? 'Found' : 'Not on this page'}
+                </p>`;
+                
+                // Check localStorage
+                const lang = localStorage.getItem('selectedLanguage');
+                checks.innerHTML += `<p class="status-ok">
+                    ✓ Current language: ${lang || 'en (default)'}
+                </p>`;
+            },
+            
+            displayProjectData() {
+                if (typeof projectConfig !== 'undefined') {
+                    document.getElementById('projectData').textContent = JSON.stringify(projectConfig, null, 2);
+                    
+                    const list = document.getElementById('projectsList');
+                    Object.entries(projectConfig).forEach(([folder, data]) => {
+                        const div = document.createElement('div');
+                        div.className = 'project-debug';
+                        div.innerHTML = `
+                            <strong>${folder}</strong><br>
+                            Name: ${data.name?.en || 'No name'}<br>
+                            Category: ${data.category || 'No category'}<br>
+                            Year: ${data.year || 'No year'}<br>
+                            Cover Image: ${data.coverImage || 'No cover image'}<br>
+                            Images: ${data.images?.length || 0} images
+                        `;
+                        list.appendChild(div);
+                    });
+                } else {
+                    document.getElementById('projectData').textContent = 'projectConfig is not defined!';
+                }
+            },
+            
+            interceptConsole() {
+                const originalLog = console.log;
+                const originalError = console.error;
+                
+                console.log = (...args) => {
+                    this.log.push('[LOG] ' + args.join(' '));
+                    this.updateConsoleDisplay();
+                    originalLog.apply(console, args);
+                };
+                
+                console.error = (...args) => {
+                    this.log.push('[ERROR] ' + args.join(' '));
+                    this.updateConsoleDisplay();
+                    originalError.apply(console, args);
+                };
+            },
+            
+            updateConsoleDisplay() {
+                document.getElementById('consoleOutput').textContent = this.log.join('\n');
+            }
+        };
+        
+        debug.init();
+    </script>
+</body>
+</html>

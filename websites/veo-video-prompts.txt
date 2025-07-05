@@ -1,0 +1,51 @@
+# Studio Arteamo - Google Veo 3 Video Generation Prompts
+
+## Main Hero Video Prompt (Copy and paste into Veo 3):
+
+"Create a luxurious 60-second interior design showcase video. Begin with aerial shot pushing through windows into elegant penthouse at golden hour in Varna, Bulgaria. Transition to designer's hand sketching plans with golden particles. Show time-lapse transformation of empty rooms into luxury spaces - walls painting themselves, furniture sliding into place, lights materializing. Include diverse design team working in modern studio with holographic displays. Showcase multiple completed interiors: coastal penthouse, sophisticated office, boutique hotel lobby. Camera glides smoothly through spaces. Feature crystal awards and magazine covers floating on wall. End with pull-back shot revealing city skyline, Studio Arteamo logo in gold appearing with 'Transforming Spaces Since 2008'. Style: Cinematic, luxury real estate aesthetic. Colors: warm golds #d4af37, charcoals #2c2c2c, whites. Music: elegant ambient. 4K, 24fps, smooth architectural transitions."
+
+## Alternative Artistic Prompt:
+
+"Sophisticated interior design studio montage. Flowing camera movements through luxury Bulgarian coastal apartments. Empty spaces transform into designer havens with particle effects. Marble, velvet, brass textures in macro detail. Team of designers arranging samples in slow motion. Award trophies with light rays. Modern minimalist aesthetic with warm golden hour lighting. No people talking, pure visual storytelling. End with elegant logo animation. Cinematic quality, 16:9, professional color grading."
+
+## Short Social Media Version (30 seconds):
+
+"Fast-paced luxury interior design transformation. Empty room morphs into stunning living space with furniture materializing. Quick cuts of marble bathrooms, modern kitchens, elegant bedrooms. Designer hands arranging samples. Gold award trophy spinning. Studio Arteamo logo with golden particles. High-energy but sophisticated. Vertical 9:16 format for Instagram Reels."
+
+## Specific Scene Prompts for Mixing:
+
+### Scene 1 - Opening:
+"Drone shot approaching modern glass building at sunset, camera pushes through window into minimalist luxury apartment with ocean view"
+
+### Scene 2 - Design Process:
+"Close-up of architect's hand sketching floor plans, golden light particles swirl around pencil, drawings come to life in 3D"
+
+### Scene 3 - Transformation:
+"Time-lapse of empty white room transforming: paint flows across walls, hardwood floor appears, modern furniture slides in, chandelier descends from ceiling, plants grow"
+
+### Scene 4 - Team Shot:
+"Elegant design team in black attire collaborating around holographic table showing 3D room model, natural light, shallow depth of field"
+
+### Scene 5 - Project Tours:
+"Smooth camera dolly through three connected luxury spaces: marble bathroom to walk-in closet to master bedroom, continuous movement"
+
+### Scene 6 - Awards:
+"Crystal awards on illuminated shelves, camera push-in on 'Bathroom of the Year' trophy with light refraction effects"
+
+### Scene 7 - Logo Finale:
+"Text animation: 'STUDIO ARTEAMO' appears in gold letters with light traveling along edges, tagline fades in below, city lights background"
+
+## Style References to Include:
+- "Style of luxury real estate videos by Sotheby's International Realty"
+- "Architectural Digest home tour cinematography"
+- "Apple product reveal video aesthetics"
+- "Kinetic typography like high-end perfume commercials"
+
+## Technical Notes:
+- Smooth camera movements only (no handheld shake)
+- Warm color temperature (3200-4000K)
+- High contrast but retain shadow detail
+- Depth of field for luxury feel
+- Match cuts between scenes
+- No harsh transitions
+- Subtle lens flares on gold elements
