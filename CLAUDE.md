@@ -4,7 +4,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## IMPORTANT: Permanent Rules
 
-### 1. Documentation Rule - CRITICAL FOR CONTINUITY
+### 1. Deployment Capabilities Rule - CLAUDE CODE CAN DEPLOY
+**ALWAYS remember Claude Code has full deployment capabilities**:
+- Can commit and push to GitHub (auto-triggers Netlify deploy)
+- Has Netlify CLI with authentication token
+- Has headless Chrome and Puppeteer for testing
+- Should deploy proactively after making changes
+- See `/root/Interiori/DEPLOYMENT_CAPABILITIES.md` for details
+- **CRITICAL**: Never commit .netlify/ directory - it causes redirect loops!
+- **CRITICAL**: Check `/root/Interiori/ACTION_PLAN_FOR_FUTURE_INSTANCE.md` if redirect loops occur
+
+### 2. Documentation Rule - CRITICAL FOR CONTINUITY
 **ALWAYS create a session summary file** at the end of each work session:
 - Filename format: `SESSION_SUMMARY_YYYY-MM-DD.md`
 - Document ALL changes made during the session
@@ -135,11 +145,12 @@ node manage-sessions.js list    # List all sessions
 node manage-sessions.js current # View current session
 node manage-sessions.js start   # Start new session
 
-# TODO management
+# TODO management (File-based persistent system)
 node todo-manager.js view      # View current TODOs
 node todo-manager.js add "Task" high|medium|low  # Add TODO
 node todo-manager.js complete <number>  # Complete TODO
 node todo-manager.js archive   # Archive completed TODOs
+# Note: Always check /root/Interiori/websites/TODO.md for current tasks
 
 # NPM script shortcuts
 npm test                      # Runs test-comprehensive.js
@@ -148,6 +159,11 @@ npm run test:accessibility   # Runs test-accessibility.js
 npm run test:performance     # Runs test-performance.js
 npm run minify               # Runs minify-assets.js
 npm run serve                # Runs python3 serve.py
+
+# Utility scripts
+node generate-pdf.js          # Generate PDF documentation
+node performance-audit.js     # Performance analysis tool
+./verify-gallery-implementation.sh  # Verify gallery setup
 ```
 
 ## Website Structure
@@ -252,9 +268,11 @@ diff test-baseline.log test-after.log  # Check for regressions
 
 ### Netlify Configuration
 - Live site: https://studio-arteamo.netlify.app
+- Primary domain: arteamo.net (DNS configured via Netlify nameservers)
 - Configuration: `netlify.toml` with optimized caching headers
 - Email functionality: `netlify/functions/send-email.js`
 - URL redirects: `_redirects` file for clean URLs
+- See `/root/Interiori/DOMAIN_CONFIGURATION.md` for domain details
 
 ### Performance Guidelines
 - Always run `node minify-assets.js` before deployment
@@ -325,3 +343,102 @@ node generate-pdf.js          # Generate PDF documentation
 - Accessibility score must remain above 90
 - Performance metrics: < 3s load time, > 90 performance score
 - Test on both desktop and mobile viewports
+
+## Common Patterns and Solutions
+
+### Image Path Encoding
+```javascript
+// Always use this function for image paths with special characters
+function encodeImagePath(str) {
+    return encodeURIComponent(str)
+        .replace(/\(/g, '%28')
+        .replace(/\)/g, '%29');
+}
+```
+
+### Language Switching (Dual Key Support)
+```javascript
+// Maintain backward compatibility
+localStorage.setItem('selectedLanguage', lang);
+localStorage.setItem('language', lang);  // Legacy support
+```
+
+### Error Handling Pattern
+```javascript
+try {
+    // Operation
+} catch (error) {
+    console.error(`Error in [Component]: ${error.message}`);
+    // Graceful fallback
+}
+```
+
+## Critical Files and Their Purpose
+
+### Configuration Files
+- `.claude/settings.local.json` - Claude permissions and allowed operations
+- `netlify.toml` - Netlify deployment configuration with edge functions
+- `_redirects` - URL routing and geo-based language detection
+- `_headers` - HTTP headers for security and caching
+
+### Core System Files
+- `translations.js` - All UI text in 6 languages (BG, EN, RU, ES, HE, ZH)
+- `project-config.js` - Centralized metadata for all 11 projects
+- `dynamic-projects.js` - Runtime project rendering engine
+- `performance-optimizer.js` - Lazy loading and optimization logic
+- `language-switcher-v2.js` - Language switching with localStorage persistence
+
+### Testing Infrastructure
+- `test-comprehensive.js` - Primary test suite to run before/after changes
+- `test-production-ready.js` - Final checks before deployment
+- `performance-audit.js` - Detailed performance analysis
+
+## GitHub and Deployment
+
+### Repository Information
+- GitHub repo: `vimergent/arteamo-portfolio`
+- Primary branch: `master`
+- Netlify site: https://studio-arteamo.netlify.app
+- Netlify site ID: `653fed52-9287-47f1-8e95-d5846b6c7982`
+
+### Deployment Process
+1. Run all tests: `node test-comprehensive.js`
+2. Minify assets: `node minify-assets.js`
+3. Commit changes: `git commit -m "feat/fix: description"`
+4. Push to GitHub: `git push origin master`
+5. Netlify auto-deploys from master branch
+
+## Hidden Features and Admin Access
+
+### CMS Admin Panel
+- URL: `/admin/` on website1-minimalist
+- Password: `arteamo2024admin`
+- Manages all project content across languages
+- Exports to static JavaScript files
+- Data stored in localStorage
+
+### Netlify Edge Functions
+- Automatic image optimization
+- Geo-based language detection
+- Performance enhancements
+- Contact form handling via `netlify/functions/send-email.js`
+
+## Emergency Procedures
+
+### If Tests Fail
+1. Check recent changes: `git diff`
+2. Review error messages carefully
+3. Run specific test: `node test-single.js website1-minimalist`
+4. Revert if needed: `git checkout <file>`
+
+### If Site is Down
+1. Check Netlify dashboard for build errors
+2. Review recent commits: `git log --oneline -10`
+3. Deploy previous version if needed
+4. Test locally first: `python3 serve.py`
+
+### Lost Context Recovery
+1. Read this CLAUDE.md file
+2. Check recent sessions: `ls -la SESSION_SUMMARY_*.md`
+3. Review TODO list: `cat /root/Interiori/websites/TODO.md`
+4. Run tests to understand current state
