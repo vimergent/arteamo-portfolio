@@ -1,0 +1,41 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Temporary files
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Archive files
+*.tar.gz
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Node modules
+node_modules/
+package-lock.json
+
+# Test files
+test-*.js
+test-*.html
+final-validation.js
+
+# Deployment
+deploy.sh
+serve.py
+fix-deploy.html
+debug-galleries.md
+# Local Netlify folder
+.netlify

@@ -1,0 +1,8 @@
+# Root Netlify Configuration
+# This file tells Netlify to use the websites directory
+
+[build]
+  publish = "websites"
+  command = "echo 'No build needed'"
+
+# All other configuration is in websites/netlify.toml
