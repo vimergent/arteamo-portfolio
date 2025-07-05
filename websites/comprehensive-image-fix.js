@@ -123,11 +123,20 @@
         });
     });
     
-    // Start observing
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true
-    });
+    // Start observing when DOM is ready
+    if (document.body) {
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+    } else {
+        document.addEventListener('DOMContentLoaded', function() {
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true
+            });
+        });
+    }
     
     // Intercept fetch requests for images
     const originalFetch = window.fetch;
