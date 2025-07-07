@@ -24,7 +24,17 @@ class ContactForm {
     createForm(container) {
         const currentLang = localStorage.getItem('selectedLanguage') || 'en';
         const translations = window.translations && window.translations[currentLang] ? 
-            window.translations[currentLang].contact : {};
+            window.translations[currentLang].contact : {
+                formName: 'Name',
+                formEmail: 'Email',
+                formPhone: 'Phone',
+                formSubject: 'Subject',
+                formMessage: 'Message',
+                formSubmit: 'Send Message',
+                formSuccessTitle: 'Thank You!',
+                formSuccessMessage: 'We will get back to you as soon as possible.',
+                formNewMessage: 'Send Another Message'
+            };
         
         container.innerHTML = `
             <form id="${this.formId}" 
@@ -323,26 +333,23 @@ class ContactForm {
 
 // Initialize contact form
 // Since script is loaded with defer, DOM is already ready
-(function() {
-    const contactForm = new ContactForm();
+console.log('Contact form script loaded');
+
+// Create global instance
+window.contactForm = new ContactForm();
+
+// Initialize immediately since defer ensures DOM is ready
+setTimeout(() => {
+    console.log('Attempting to initialize contact form...');
+    console.log('Translations available:', !!window.translations);
+    console.log('Container exists:', !!document.getElementById('contactFormContainer'));
     
-    // Wait for translations to load
-    function tryInit() {
-        if (window.translations) {
-            contactForm.init();
-        } else {
-            setTimeout(tryInit, 100);
-        }
+    // Force initialization even without translations
+    const container = document.getElementById('contactFormContainer');
+    if (container && !window.contactForm.initialized) {
+        window.contactForm.init();
     }
-    
-    // Check if DOM is already loaded (which it should be with defer)
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', tryInit);
-    } else {
-        // DOM is already loaded
-        tryInit();
-    }
-})();
+}, 500); // Small delay to ensure other scripts have loaded
 
 // Re-initialize when language changes
 document.addEventListener('languageChanged', () => {
