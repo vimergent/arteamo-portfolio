@@ -115,6 +115,17 @@ class ContactForm {
                 width: 100%;
             }
             
+            #contactFormContainer .form-group {
+                display: block !important;
+                width: 100% !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            #contactFormContainer .form-group > * {
+                display: block !important;
+                width: 100% !important;
+            }
+            
             .form-group label {
                 display: block;
                 margin-bottom: 0.5rem;
