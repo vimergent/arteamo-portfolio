@@ -8,12 +8,17 @@ class ContactForm {
     init() {
         if (this.initialized) return;
         
+        console.log('ContactForm: Initializing...');
         const formContainer = document.getElementById('contactFormContainer');
-        if (!formContainer) return;
+        if (!formContainer) {
+            console.error('ContactForm: Container not found');
+            return;
+        }
         
         this.createForm(formContainer);
         this.attachEventListeners();
         this.initialized = true;
+        console.log('ContactForm: Initialized successfully');
     }
 
     createForm(container) {
@@ -316,8 +321,9 @@ class ContactForm {
     }
 }
 
-// Initialize contact form when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
+// Initialize contact form
+// Since script is loaded with defer, DOM is already ready
+(function() {
     const contactForm = new ContactForm();
     
     // Wait for translations to load
@@ -329,8 +335,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    tryInit();
-});
+    // Check if DOM is already loaded (which it should be with defer)
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', tryInit);
+    } else {
+        // DOM is already loaded
+        tryInit();
+    }
+})();
 
 // Re-initialize when language changes
 document.addEventListener('languageChanged', () => {
