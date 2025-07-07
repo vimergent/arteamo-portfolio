@@ -1,0 +1,541 @@
+{
+  "summary": {
+    "totalRequests": 18,
+    "totalSize": "10.86MB",
+    "domImages": 17,
+    "backgroundImages": 1,
+    "oversizedImages": 17,
+    "lazyLoadedImages": 14,
+    "formats": {
+      "jpg": 16,
+      "org/2000/svg\" viewbox=\"0 0 4 5\"><path fill=\"%23666\" d=\"m2 0l0 2h4zm0 5l0 3h4z\"/></svg>": 1,
+      "01\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23grain)\"/></svg>": 1
+    },
+    "cacheHitRate": "11%"
+  },
+  "images": [
+    {
+      "url": "https://arteamo.net/Apartament%20Flavia%20Garden%202024/cam01.jpg",
+      "size": 578544,
+      "sizeFormatted": "565.0KB",
+      "contentType": "image/jpeg",
+      "cached": false,
+      "loadTime": -555922.22431
+    },
+    {
+      "url": "data:image/svg+xml;charset=US-ASCII,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 4 5\"><path fill=\"%23666\" d=\"M2 0L0 2h4zm0 5L0 3h4z\"/></svg>",
+      "size": 0,
+      "sizeFormatted": "0.0KB",
+      "contentType": "image/svg+xml;charset=US-ASCII",
+      "cached": true,
+      "loadTime": 0
+    },
+    {
+      "url": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"grain\" patternUnits=\"userSpaceOnUse\" width=\"100\" height=\"100\"><circle cx=\"50\" cy=\"50\" r=\"0.5\" fill=\"%23000\" opacity=\"0.01\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23grain)\"/></svg>",
+      "size": 0,
+      "sizeFormatted": "0.0KB",
+      "contentType": "image/svg+xml",
+      "cached": true,
+      "loadTime": 0
+    },
+    {
+      "url": "https://arteamo.net/Apartament%20%D0%9A%D0%B2.%20%D0%A7%D0%B0%D0%B9%D0%BA%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0_2017/Dnevna01.jpg",
+      "size": 528859,
+      "sizeFormatted": "516.5KB",
+      "contentType": "image/jpeg",
+      "cached": false,
+      "loadTime": -555971.685525
+    },
+    {
+      "url": "https://arteamo.net/Playground%20Grand%20Mall%20Varna%202018/Playground%20%281%29.jpg",
+      "size": 1015461,
+      "sizeFormatted": "991.7KB",
+      "contentType": "image/jpeg",
+      "cached": false,
+      "loadTime": -555943.55184
+    },
+    {
+      "url": "https://arteamo.net/Balev%20Corporation%202020/Balev%20%282%29.jpg",
+      "size": 605450,
+      "sizeFormatted": "591.3KB",
+      "contentType": "image/jpeg",
+      "cached": false,
+      "loadTime": -555934.854069
+    },
+    {
+      "url": "https://arteamo.net/Elite%20Clinic%202021/Cam09.jpg",
+      "size": 422625,
+      "sizeFormatted": "412.7KB",
+      "contentType": "image/jpeg",
+      "cached": false,
+      "loadTime": -555957.553651
+    },
+    {
+      "url": "https://arteamo.net/Balev%20Corporation%202020/Balev%20%281%29.jpg",
+      "size": 531340,
+      "sizeFormatted": "518.9KB",
+      "contentType": "image/jpeg",
+      "cached": false,
+      "loadTime": -555956.706262
+    },
+    {
+      "url": "https://arteamo.net/Apartament%20K55_2021/Vladi%20%284%29.jpg",
+      "size": 1923341,
+      "sizeFormatted": "1878.3KB",
+      "contentType": "image/jpeg",
+      "cached": false,
+      "loadTime": -555940.466031
+    },
+    {
+      "url": "https://arteamo.net/Apartament%20%D0%A1%D0%B8%D0%BC%D1%84%D0%BE%D0%BD%D0%B8%D1%8F%20-%20%D0%91%D1%80%D0%B8%D0%B7%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0_%202019/Alex%20%282%29.jpg",
+      "size": 591907,
+      "sizeFormatted": "578.0KB",
+      "contentType": "image/jpeg",
+      "cached": false,
+      "loadTime": -555807.6504820001
+    },
+    {
+      "url": "https://arteamo.net/Gichev%20sped%202019/GichevSped1%20%282%29.jpg",
+      "size": 543331,
+      "sizeFormatted": "530.6KB",
+      "contentType": "image/jpeg",
+      "cached": false,
+      "loadTime": -555775.212056
+    },
+    {
+      "url": "https://arteamo.net/Apartament%20K55_2021/Vladi%20%281%29.jpg",
+      "size": 1478731,
+      "sizeFormatted": "1444.1KB",
+      "contentType": "image/jpeg",
+      "cached": false,
+      "loadTime": -555710.1658399999
+    },
+    {
+      "url": "https://arteamo.net/Apartament%20%D0%A1%D0%B8%D0%BC%D1%84%D0%BE%D0%BD%D0%B8%D1%8F%20-%20%D0%91%D1%80%D0%B8%D0%B7%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0_%202019/Alex%20%281%29.jpg",
+      "size": 541312,
+      "sizeFormatted": "528.6KB",
+      "contentType": "image/jpeg",
+      "cached": false,
+      "loadTime": -555975.599092
+    },
+    {
+      "url": "https://arteamo.net/Oliv%20vilas%20sv.Vlas%202019/7O.V..jpg",
+      "size": 449052,
+      "sizeFormatted": "438.5KB",
+      "contentType": "image/jpeg",
+      "cached": false,
+      "loadTime": -555932.6675239999
+    },
+    {
+      "url": "https://arteamo.net/Playground%20Grand%20Mall%20Varna%202018/Playground%20%286%29.jpg",
+      "size": 168883,
+      "sizeFormatted": "164.9KB",
+      "contentType": "image/jpeg",
+      "cached": false,
+      "loadTime": -555876.208462
+    },
+    {
+      "url": "https://arteamo.net/Apartament%20%D0%A2%D1%80%D0%B0%D0%BA%D0%B0%D1%82%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0_2021/1-1-2000x1200.jpg",
+      "size": 910970,
+      "sizeFormatted": "889.6KB",
+      "contentType": "image/jpeg",
+      "cached": false,
+      "loadTime": -555852.374416
+    },
+    {
+      "url": "https://arteamo.net/Gichev%20sped%202019/GichevSped1%20%281%29.jpg",
+      "size": 535727,
+      "sizeFormatted": "523.2KB",
+      "contentType": "image/jpeg",
+      "cached": false,
+      "loadTime": -555798.102318
+    },
+    {
+      "url": "https://arteamo.net/Work%20Del%20Mar%202022/1%20%281%29.jpg",
+      "size": 561436,
+      "sizeFormatted": "548.3KB",
+      "contentType": "image/jpeg",
+      "cached": false,
+      "loadTime": -555758.485217
+    }
+  ],
+  "domImages": [
+    {
+      "src": "https://arteamo.net/Apartament%20%D0%9A%D0%B2.%20%D0%A7%D0%B0%D0%B9%D0%BA%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0_2017/Dnevna01.jpg",
+      "currentSrc": "https://arteamo.net/Apartament%20%D0%9A%D0%B2.%20%D0%A7%D0%B0%D0%B9%D0%BA%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0_2017/Dnevna01.jpg",
+      "srcset": "",
+      "sizes": "",
+      "alt": "Chayka District",
+      "loading": "eager",
+      "decoding": "auto",
+      "complete": true,
+      "naturalDimensions": {
+        "width": 1024,
+        "height": 768
+      },
+      "displayDimensions": {
+        "width": 229,
+        "height": 172
+      },
+      "isVisible": true,
+      "isLazyLoaded": false,
+      "aspectRatio": "1.33"
+    },
+    {
+      "src": "https://arteamo.net/Balev%20Corporation%202020/Balev%20%282%29.jpg",
+      "currentSrc": "https://arteamo.net/Balev%20Corporation%202020/Balev%20%282%29.jpg",
+      "srcset": "",
+      "sizes": "",
+      "alt": "Balev Corporation",
+      "loading": "eager",
+      "decoding": "auto",
+      "complete": true,
+      "naturalDimensions": {
+        "width": 1024,
+        "height": 768
+      },
+      "displayDimensions": {
+        "width": 229,
+        "height": 172
+      },
+      "isVisible": true,
+      "isLazyLoaded": false,
+      "aspectRatio": "1.33"
+    },
+    {
+      "src": "https://arteamo.net/Playground%20Grand%20Mall%20Varna%202018/Playground%20%281%29.jpg",
+      "currentSrc": "https://arteamo.net/Playground%20Grand%20Mall%20Varna%202018/Playground%20%281%29.jpg",
+      "srcset": "",
+      "sizes": "",
+      "alt": "Playground Grand Mall",
+      "loading": "eager",
+      "decoding": "auto",
+      "complete": true,
+      "naturalDimensions": {
+        "width": 2500,
+        "height": 1406
+      },
+      "displayDimensions": {
+        "width": 229,
+        "height": 172
+      },
+      "isVisible": true,
+      "isLazyLoaded": false,
+      "aspectRatio": "1.78"
+    },
+    {
+      "src": "https://arteamo.net/Apartament%20%D0%A1%D0%B8%D0%BC%D1%84%D0%BE%D0%BD%D0%B8%D1%8F%20-%20%D0%91%D1%80%D0%B8%D0%B7%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0_%202019/Alex%20%282%29.jpg",
+      "currentSrc": "https://arteamo.net/Apartament%20%D0%A1%D0%B8%D0%BC%D1%84%D0%BE%D0%BD%D0%B8%D1%8F%20-%20%D0%91%D1%80%D0%B8%D0%B7%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0_%202019/Alex%20%282%29.jpg",
+      "srcset": "",
+      "sizes": "",
+      "alt": "Symphony Breeze",
+      "loading": "lazy",
+      "decoding": "auto",
+      "complete": true,
+      "naturalDimensions": {
+        "width": 1024,
+        "height": 768
+      },
+      "displayDimensions": {
+        "width": 229,
+        "height": 172
+      },
+      "isVisible": true,
+      "isLazyLoaded": true,
+      "aspectRatio": "1.33"
+    },
+    {
+      "src": "https://arteamo.net/Gichev%20sped%202019/GichevSped1%20%282%29.jpg",
+      "currentSrc": "https://arteamo.net/Gichev%20sped%202019/GichevSped1%20%282%29.jpg",
+      "srcset": "",
+      "sizes": "",
+      "alt": "Gichev Residence",
+      "loading": "lazy",
+      "decoding": "auto",
+      "complete": true,
+      "naturalDimensions": {
+        "width": 1024,
+        "height": 768
+      },
+      "displayDimensions": {
+        "width": 229,
+        "height": 172
+      },
+      "isVisible": true,
+      "isLazyLoaded": true,
+      "aspectRatio": "1.33"
+    },
+    {
+      "src": "https://arteamo.net/Apartament%20K55_2021/Vladi%20%281%29.jpg",
+      "currentSrc": "https://arteamo.net/Apartament%20K55_2021/Vladi%20%281%29.jpg",
+      "srcset": "",
+      "sizes": "",
+      "alt": "Apartment K55",
+      "loading": "lazy",
+      "decoding": "auto",
+      "complete": true,
+      "naturalDimensions": {
+        "width": 2048,
+        "height": 1365
+      },
+      "displayDimensions": {
+        "width": 229,
+        "height": 172
+      },
+      "isVisible": true,
+      "isLazyLoaded": true,
+      "aspectRatio": "1.50"
+    },
+    {
+      "src": "https://arteamo.net/Apartament%20Flavia%20Garden%202024/cam01.jpg",
+      "currentSrc": "https://arteamo.net/Apartament%20Flavia%20Garden%202024/cam01.jpg",
+      "srcset": "",
+      "sizes": "",
+      "alt": "Flavia Garden Apartment",
+      "loading": "lazy",
+      "decoding": "auto",
+      "complete": true,
+      "naturalDimensions": {
+        "width": 1024,
+        "height": 768
+      },
+      "displayDimensions": {
+        "width": 352,
+        "height": 264
+      },
+      "isVisible": true,
+      "isLazyLoaded": true,
+      "aspectRatio": "1.33"
+    },
+    {
+      "src": "https://arteamo.net/Elite%20Clinic%202021/Cam09.jpg",
+      "currentSrc": "https://arteamo.net/Elite%20Clinic%202021/Cam09.jpg",
+      "srcset": "",
+      "sizes": "",
+      "alt": "Elite Clinic",
+      "loading": "lazy",
+      "decoding": "auto",
+      "complete": true,
+      "naturalDimensions": {
+        "width": 1024,
+        "height": 768
+      },
+      "displayDimensions": {
+        "width": 352,
+        "height": 264
+      },
+      "isVisible": true,
+      "isLazyLoaded": true,
+      "aspectRatio": "1.33"
+    },
+    {
+      "src": "https://arteamo.net/Apartament%20K55_2021/Vladi%20%284%29.jpg",
+      "currentSrc": "https://arteamo.net/Apartament%20K55_2021/Vladi%20%284%29.jpg",
+      "srcset": "",
+      "sizes": "",
+      "alt": "Apartment K55",
+      "loading": "lazy",
+      "decoding": "auto",
+      "complete": true,
+      "naturalDimensions": {
+        "width": 2048,
+        "height": 1365
+      },
+      "displayDimensions": {
+        "width": 352,
+        "height": 264
+      },
+      "isVisible": true,
+      "isLazyLoaded": true,
+      "aspectRatio": "1.50"
+    },
+    {
+      "src": "https://arteamo.net/Balev%20Corporation%202020/Balev%20%281%29.jpg",
+      "currentSrc": "https://arteamo.net/Balev%20Corporation%202020/Balev%20%281%29.jpg",
+      "srcset": "",
+      "sizes": "",
+      "alt": "Balev Corporation",
+      "loading": "lazy",
+      "decoding": "auto",
+      "complete": true,
+      "naturalDimensions": {
+        "width": 1024,
+        "height": 768
+      },
+      "displayDimensions": {
+        "width": 352,
+        "height": 264
+      },
+      "isVisible": true,
+      "isLazyLoaded": true,
+      "aspectRatio": "1.33"
+    },
+    {
+      "src": "https://arteamo.net/Apartament%20%D0%A1%D0%B8%D0%BC%D1%84%D0%BE%D0%BD%D0%B8%D1%8F%20-%20%D0%91%D1%80%D0%B8%D0%B7%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0_%202019/Alex%20%281%29.jpg",
+      "currentSrc": "https://arteamo.net/Apartament%20%D0%A1%D0%B8%D0%BC%D1%84%D0%BE%D0%BD%D0%B8%D1%8F%20-%20%D0%91%D1%80%D0%B8%D0%B7%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0_%202019/Alex%20%281%29.jpg",
+      "srcset": "",
+      "sizes": "",
+      "alt": "Symphony Breeze",
+      "loading": "lazy",
+      "decoding": "auto",
+      "complete": true,
+      "naturalDimensions": {
+        "width": 1024,
+        "height": 768
+      },
+      "displayDimensions": {
+        "width": 352,
+        "height": 264
+      },
+      "isVisible": true,
+      "isLazyLoaded": true,
+      "aspectRatio": "1.33"
+    },
+    {
+      "src": "https://arteamo.net/Oliv%20vilas%20sv.Vlas%202019/7O.V..jpg",
+      "currentSrc": "https://arteamo.net/Oliv%20vilas%20sv.Vlas%202019/7O.V..jpg",
+      "srcset": "",
+      "sizes": "",
+      "alt": "Oliv Villas",
+      "loading": "lazy",
+      "decoding": "auto",
+      "complete": true,
+      "naturalDimensions": {
+        "width": 1685,
+        "height": 1089
+      },
+      "displayDimensions": {
+        "width": 352,
+        "height": 264
+      },
+      "isVisible": true,
+      "isLazyLoaded": true,
+      "aspectRatio": "1.55"
+    },
+    {
+      "src": "https://arteamo.net/Playground%20Grand%20Mall%20Varna%202018/Playground%20%286%29.jpg",
+      "currentSrc": "https://arteamo.net/Playground%20Grand%20Mall%20Varna%202018/Playground%20%286%29.jpg",
+      "srcset": "",
+      "sizes": "",
+      "alt": "Playground Grand Mall",
+      "loading": "lazy",
+      "decoding": "auto",
+      "complete": true,
+      "naturalDimensions": {
+        "width": 1280,
+        "height": 960
+      },
+      "displayDimensions": {
+        "width": 352,
+        "height": 264
+      },
+      "isVisible": true,
+      "isLazyLoaded": true,
+      "aspectRatio": "1.33"
+    },
+    {
+      "src": "https://arteamo.net/Apartament%20%D0%9A%D0%B2.%20%D0%A7%D0%B0%D0%B9%D0%BA%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0_2017/Dnevna01.jpg",
+      "currentSrc": "https://arteamo.net/Apartament%20%D0%9A%D0%B2.%20%D0%A7%D0%B0%D0%B9%D0%BA%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0_2017/Dnevna01.jpg",
+      "srcset": "",
+      "sizes": "",
+      "alt": "Chayka District",
+      "loading": "lazy",
+      "decoding": "auto",
+      "complete": true,
+      "naturalDimensions": {
+        "width": 1024,
+        "height": 768
+      },
+      "displayDimensions": {
+        "width": 352,
+        "height": 264
+      },
+      "isVisible": true,
+      "isLazyLoaded": true,
+      "aspectRatio": "1.33"
+    },
+    {
+      "src": "https://arteamo.net/Apartament%20%D0%A2%D1%80%D0%B0%D0%BA%D0%B0%D1%82%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0_2021/1-1-2000x1200.jpg",
+      "currentSrc": "https://arteamo.net/Apartament%20%D0%A2%D1%80%D0%B0%D0%BA%D0%B0%D1%82%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0_2021/1-1-2000x1200.jpg",
+      "srcset": "",
+      "sizes": "",
+      "alt": "Trakata Residence",
+      "loading": "lazy",
+      "decoding": "auto",
+      "complete": true,
+      "naturalDimensions": {
+        "width": 2000,
+        "height": 1200
+      },
+      "displayDimensions": {
+        "width": 352,
+        "height": 264
+      },
+      "isVisible": true,
+      "isLazyLoaded": true,
+      "aspectRatio": "1.67"
+    },
+    {
+      "src": "https://arteamo.net/Gichev%20sped%202019/GichevSped1%20%281%29.jpg",
+      "currentSrc": "https://arteamo.net/Gichev%20sped%202019/GichevSped1%20%281%29.jpg",
+      "srcset": "",
+      "sizes": "",
+      "alt": "Gichev Residence",
+      "loading": "lazy",
+      "decoding": "auto",
+      "complete": true,
+      "naturalDimensions": {
+        "width": 1024,
+        "height": 768
+      },
+      "displayDimensions": {
+        "width": 352,
+        "height": 264
+      },
+      "isVisible": true,
+      "isLazyLoaded": true,
+      "aspectRatio": "1.33"
+    },
+    {
+      "src": "https://arteamo.net/Work%20Del%20Mar%202022/1%20%281%29.jpg",
+      "currentSrc": "https://arteamo.net/Work%20Del%20Mar%202022/1%20%281%29.jpg",
+      "srcset": "",
+      "sizes": "",
+      "alt": "Del Mar Office",
+      "loading": "lazy",
+      "decoding": "auto",
+      "complete": true,
+      "naturalDimensions": {
+        "width": 1440,
+        "height": 1525
+      },
+      "displayDimensions": {
+        "width": 352,
+        "height": 264
+      },
+      "isVisible": true,
+      "isLazyLoaded": true,
+      "aspectRatio": "0.94"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "issue": "17 oversized images",
+      "impact": "Could save ~8.9MB",
+      "solution": "Resize images to appropriate dimensions and use srcset for responsive images"
+    },
+    {
+      "priority": "HIGH",
+      "issue": "No WebP images found",
+      "impact": "Could save 25-35% on image file sizes",
+      "solution": "Convert images to WebP format with JPEG/PNG fallbacks"
+    },
+    {
+      "priority": "MEDIUM",
+      "issue": "2 images without cache headers",
+      "impact": "Increases load time for repeat visitors",
+      "solution": "Add Cache-Control headers for image assets"
+    }
+  ]
+}
