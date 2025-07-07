@@ -39,3 +39,7 @@ fix-deploy.html
 debug-galleries.md
 # Local Netlify folder
 .netlify
+
+# Experimental tools (not for commit)
+github-version-browser/
+github-versions/

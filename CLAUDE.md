@@ -4,15 +4,31 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## IMPORTANT: Permanent Rules
 
+### 0. TODO List Rule - CHECK TODOS IMMEDIATELY
+**ALWAYS check the TODO list at the start of EVERY session**:
+- Use TodoRead tool immediately after reading CLAUDE.md
+- Current high-priority tasks include:
+  - Fix font consistency issues (inline CSS conflicts)
+  - Fix contact form layout (fields showing horizontally)
+  - Set up staging environment at test.arteamo.net
+  - Video enhancement features (loading indicators, fullscreen, keyboard controls)
+- Check `/root/Interiori/websites/TODO.md` for file-based todos
+- Check `/root/Interiori/TODO_2025-07-03.md` for video enhancement tasks
+- Check `/root/Interiori/TODO_CURRENT_STATE_2025-07-07.md` for latest critical issues
+- Use TodoWrite to track progress throughout session
+
 ### 1. Deployment Capabilities Rule - CLAUDE CODE CAN DEPLOY
 **ALWAYS remember Claude Code has full deployment capabilities**:
 - Can commit and push to GitHub (auto-triggers Netlify deploy)
-- Has Netlify CLI with authentication token
+- Has Netlify CLI with authentication token (stored in environment)
 - Has headless Chrome and Puppeteer for testing
 - Should deploy proactively after making changes
 - See `/root/Interiori/DEPLOYMENT_CAPABILITIES.md` for details
 - **CRITICAL**: Never commit .netlify/ directory - it causes redirect loops!
 - **CRITICAL**: Check `/root/Interiori/ACTION_PLAN_FOR_FUTURE_INSTANCE.md` if redirect loops occur
+- Always run `ls -la /root/Interiori/websites/.netlify/` and remove if found
+- Can use Netlify CLI: `netlify status`, `netlify deploy --prod`, `netlify logs:function`
+- **IMPORTANT**: The Netlify auth token is already configured - no need to re-authenticate
 
 ### 2. Documentation Rule - CRITICAL FOR CONTINUITY
 **ALWAYS create a session summary file** at the end of each work session:
@@ -37,7 +53,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Start new session: `node /root/Interiori/manage-sessions.js start`
 - This ensures correct order even if server date/time is incorrect
 
-### 2. Holistic Analysis Rule
+### 3. Holistic Analysis Rule
 **ALWAYS analyze changes in the context of the whole project**:
 - Before making any change, search for all files that might be affected
 - Check for dependencies and interconnected components
@@ -46,7 +62,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Verify that new features don't break existing functionality
 - Run comprehensive tests after significant modifications
 
-### 3. Version Control Rule
+### 4. Version Control Rule
 **ALWAYS use GitHub for version control**:
 - Commit changes frequently with descriptive messages
 - Use the format: `git commit -m "feat/fix/docs: description of change"`
@@ -55,6 +71,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - If something breaks, you can easily restore: `git checkout <commit-hash>`
 - Push to GitHub regularly to maintain remote backup
 - Document commit strategy in git messages
+
+### 5. Claude Settings and Permissions Rule
+**Claude Code has full permissions configured**:
+- Settings file: `/.claude/settings.local.json` contains all allowed operations
+- All authentication tokens (GitHub, Netlify) are pre-configured in environment
+- No manual authentication needed - just use the tools
+- Full access to: file operations, git commands, Netlify CLI, testing tools
+- Can create, edit, delete files; commit and push to GitHub; deploy to Netlify
+- Can use Netlify CLI with authentication token
+- Can run all test scripts and deployment commands
+- WebFetch allowed for specific domains (studio-arteamo.netlify.app, arteamo.net)
+- Full npm and node script execution permissions
+- See full permissions list in `/.claude/settings.local.json`
 
 ## Repository Overview
 
@@ -151,6 +180,11 @@ node todo-manager.js add "Task" high|medium|low  # Add TODO
 node todo-manager.js complete <number>  # Complete TODO
 node todo-manager.js archive   # Archive completed TODOs
 # Note: Always check /root/Interiori/websites/TODO.md for current tasks
+# Also check /root/Interiori/TODO_2025-07-03.md for video enhancement priorities
+# Also check /root/Interiori/websites/TODO_2025-07-03.md for video enhancement tasks
+
+# Email testing
+node test-contact-form.js     # Test contact form email functionality
 
 # NPM script shortcuts
 npm test                      # Runs test-comprehensive.js
@@ -263,6 +297,9 @@ diff test-baseline.log test-after.log  # Check for regressions
 - All development should maintain multi-language support
 - Performance optimization is critical (minified assets, lazy loading)
 - Accessibility compliance is required (tested with axe-core)
+- Recent focus: Video integration with ArteamoAd.mp4 promotional content
+- All 15 website variations are complete (as of 2025-06-28)
+- Only website1-minimalist continues active development
 
 ## Deployment
 
@@ -316,8 +353,11 @@ node generate-pdf.js          # Generate PDF documentation
 - `/root/Interiori/TESTING_CHECKLIST.md` - Comprehensive testing procedures
 - `/root/Interiori/SESSION_MANAGEMENT_BEST_PRACTICES.md` - Session continuity guide
 - `/root/Interiori/websites/TODO.md` - Current task list
+- `/root/Interiori/websites/TODO_2025-07-03.md` - Video enhancement priorities
 - `/root/Interiori/CMS_TECHNICAL_SPEC.md` - CMS implementation details
 - `/root/Interiori/WEBSITE_SPECIFICATIONS.md` - Specifications for all 15 website variations
+- `/root/Interiori/ACTION_PLAN_FOR_FUTURE_INSTANCE.md` - Critical redirect loop troubleshooting
+- `/root/Interiori/DEPLOYMENT_CAPABILITIES.md` - Full deployment abilities reference
 
 ## Code Quality Standards
 
@@ -399,6 +439,7 @@ try {
 - GitHub repo: `vimergent/arteamo-portfolio`
 - Primary branch: `master`
 - Netlify site: https://studio-arteamo.netlify.app
+- Primary domain: arteamo.net (configured via Netlify DNS)
 - Netlify site ID: `653fed52-9287-47f1-8e95-d5846b6c7982`
 
 ### Deployment Process
@@ -417,11 +458,11 @@ try {
 - Exports to static JavaScript files
 - Data stored in localStorage
 
-### Netlify Edge Functions
-- Automatic image optimization
-- Geo-based language detection
-- Performance enhancements
+### Netlify Functions
 - Contact form handling via `netlify/functions/send-email.js`
+- Sends emails to: studio@arteamo.net, petyaem@abv.bg
+- Form submissions proxied through `/api/*` redirects
+- Note: Edge functions temporarily disabled due to redirect loop issues
 
 ## Emergency Procedures
 
@@ -442,3 +483,19 @@ try {
 2. Check recent sessions: `ls -la SESSION_SUMMARY_*.md`
 3. Review TODO list: `cat /root/Interiori/websites/TODO.md`
 4. Run tests to understand current state
+
+### Critical Files to Never Commit
+- `.netlify/` directory (causes redirect loops and deployment failures)
+- `node_modules/` and `package-lock.json` (auto-generated)
+- Test output files matching `test-*.html` pattern
+
+## Critical Emergency: Redirect Loop Fix
+
+**If experiencing redirect loops on deployment:**
+1. Immediately check: `ls -la /root/Interiori/websites/.netlify/`
+2. If `.netlify/` directory exists: `rm -rf /root/Interiori/websites/.netlify/`
+3. Verify removal: `ls -la /root/Interiori/websites/.netlify/` (should show error)
+4. Ensure it's in .gitignore: `grep "\.netlify" /root/Interiori/websites/.gitignore`
+5. Commit the removal: `git add -A && git commit -m "fix: remove .netlify directory"`
+6. Push to fix deployment: `git push origin master`
+7. See `/root/Interiori/ACTION_PLAN_FOR_FUTURE_INSTANCE.md` for detailed troubleshooting
