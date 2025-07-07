@@ -101,10 +101,18 @@ class ContactForm {
             .contact-form {
                 max-width: 600px;
                 margin: 0 auto;
+                display: block !important;
             }
             
             .form-group {
                 margin-bottom: 1.5rem;
+                display: block !important;
+                width: 100%;
+            }
+            
+            .contact-form .form-group {
+                display: block !important;
+                width: 100%;
             }
             
             .form-group label {
