@@ -44,7 +44,7 @@ class ContactForm {
                   data-netlify-honeypot="bot-field"
                   data-netlify-recaptcha="true"
                   class="contact-form"
-                  style="display: block !important; max-width: 600px !important; margin: 0 auto !important;">
+                  style="display: block !important; flex-direction: column !important; max-width: 600px !important; margin: 0 auto !important;">
                 
                 <!-- Hidden field for Netlify Forms -->
                 <input type="hidden" name="form-name" value="contact">
@@ -115,31 +115,52 @@ class ContactForm {
         styles.id = 'contactFormStyles';
         styles.innerHTML = `
             .contact-form {
-                max-width: 600px;
-                margin: 0 auto;
+                max-width: 600px !important;
+                margin: 0 auto !important;
+                display: block !important;
+                flex-direction: column !important;
+            }
+            
+            .contact-form:not(.processing) {
                 display: block !important;
             }
             
             .form-group {
                 margin-bottom: 1.5rem;
                 display: block !important;
-                width: 100%;
+                width: 100% !important;
+                flex: none !important;
+                flex-direction: column !important;
             }
             
             .contact-form .form-group {
                 display: block !important;
-                width: 100%;
+                width: 100% !important;
+                clear: both !important;
+                float: none !important;
             }
             
             #contactFormContainer .form-group {
                 display: block !important;
                 width: 100% !important;
                 margin-bottom: 1.5rem !important;
+                flex: none !important;
             }
             
             #contactFormContainer .form-group > * {
                 display: block !important;
                 width: 100% !important;
+                clear: both !important;
+                float: none !important;
+            }
+            
+            /* Override any flex container styles */
+            #contactFormContainer,
+            #contactFormContainer form,
+            #contactFormContainer .contact-form {
+                display: block !important;
+                flex-direction: column !important;
+                flex-wrap: nowrap !important;
             }
             
             .form-group label {

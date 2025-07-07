@@ -1387,9 +1387,9 @@ p {
 
 /* Contact Form Styles */
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .form-group {
