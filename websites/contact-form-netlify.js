@@ -28,7 +28,8 @@ class ContactForm {
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
                   data-netlify-recaptcha="true"
-                  class="contact-form">
+                  class="contact-form"
+                  style="display: block !important; max-width: 600px !important; margin: 0 auto !important;">
                 
                 <!-- Hidden field for Netlify Forms -->
                 <input type="hidden" name="form-name" value="contact">
@@ -41,29 +42,29 @@ class ContactForm {
                 <!-- Language field to track form submission language -->
                 <input type="hidden" name="language" value="${currentLang}">
                 
-                <div class="form-group">
-                    <label for="name">${translations.formName || 'Name'} *</label>
-                    <input type="text" id="name" name="name" required>
+                <div class="form-group" style="display: block !important; width: 100% !important; margin-bottom: 1.5rem !important;">
+                    <label for="name" style="display: block !important; margin-bottom: 0.5rem !important;">${translations.formName || 'Name'} *</label>
+                    <input type="text" id="name" name="name" required style="display: block !important; width: 100% !important;">
                 </div>
                 
-                <div class="form-group">
-                    <label for="email">${translations.formEmail || 'Email'} *</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="form-group" style="display: block !important; width: 100% !important; margin-bottom: 1.5rem !important;">
+                    <label for="email" style="display: block !important; margin-bottom: 0.5rem !important;">${translations.formEmail || 'Email'} *</label>
+                    <input type="email" id="email" name="email" required style="display: block !important; width: 100% !important;">
                 </div>
                 
-                <div class="form-group">
-                    <label for="phone">${translations.formPhone || 'Phone'}</label>
-                    <input type="tel" id="phone" name="phone">
+                <div class="form-group" style="display: block !important; width: 100% !important; margin-bottom: 1.5rem !important;">
+                    <label for="phone" style="display: block !important; margin-bottom: 0.5rem !important;">${translations.formPhone || 'Phone'}</label>
+                    <input type="tel" id="phone" name="phone" style="display: block !important; width: 100% !important;">
                 </div>
                 
-                <div class="form-group">
-                    <label for="subject">${translations.formSubject || 'Subject'} *</label>
-                    <input type="text" id="subject" name="subject" required>
+                <div class="form-group" style="display: block !important; width: 100% !important; margin-bottom: 1.5rem !important;">
+                    <label for="subject" style="display: block !important; margin-bottom: 0.5rem !important;">${translations.formSubject || 'Subject'} *</label>
+                    <input type="text" id="subject" name="subject" required style="display: block !important; width: 100% !important;">
                 </div>
                 
-                <div class="form-group">
-                    <label for="message">${translations.formMessage || 'Message'} *</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                <div class="form-group" style="display: block !important; width: 100% !important; margin-bottom: 1.5rem !important;">
+                    <label for="message" style="display: block !important; margin-bottom: 0.5rem !important;">${translations.formMessage || 'Message'} *</label>
+                    <textarea id="message" name="message" rows="5" required style="display: block !important; width: 100% !important;"></textarea>
                 </div>
                 
                 <div class="form-group">
