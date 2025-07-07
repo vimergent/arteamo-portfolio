@@ -4,6 +4,46 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## IMPORTANT: Permanent Rules
 
+### 0. Testing and Version Control Rule - ALWAYS TEST AFTER CHANGES
+**MANDATORY: Test with Puppeteer after every deployment**:
+- Run `node test-after-deploy.js` after pushing changes
+- This tests: version tracking, fonts, contact form, mobile view, performance
+- Update version before deploying: `node update-deployment-version.js`
+- Version format: major.minor.patch (e.g., 1.3.1)
+- Deployment metadata in index.html:
+  ```html
+  <meta name="version" content="1.3.1">
+  <meta name="deployment-date" content="2025-07-07">
+  <meta name="deployment-time" content="13:44 UTC">
+  ```
+
+**Testing Algorithm with Puppeteer**:
+1. **Setup**: Headless Chrome with cache disabled
+2. **Version Check**: Verify latest deployment version
+3. **Font Test**: Confirm Inter body font and Playfair Display serif
+4. **Contact Form Test**: 
+   - Check display: block (not flex)
+   - Verify vertical stacking
+   - Count form elements
+   - Test on desktop (1920x1080) and mobile (375x667)
+5. **Performance**: Ensure < 3 second load time
+6. **Summary**: Clear pass/fail for each component
+
+**Example Test Script**:
+```javascript
+const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+});
+await page.setCacheEnabled(false); // Always disable cache
+await page.goto('https://arteamo.net', { 
+    waitUntil: 'networkidle2',
+    timeout: 30000 
+});
+```
+
+## IMPORTANT: Permanent Rules
+
 ### 0. TODO List Rule - CHECK TODOS IMMEDIATELY
 **ALWAYS check the TODO list at the start of EVERY session**:
 - Use TodoRead tool immediately after reading CLAUDE.md
@@ -121,6 +161,49 @@ index.html (entry point)
 - **Testing**: Puppeteer-based comprehensive test suite with axe-core accessibility
 - **Deployment**: Netlify static hosting (https://studio-arteamo.netlify.app)
 - **No Framework Dependencies**: Direct HTML/CSS/JS - no React, Vue, or build tools
+
+## Testing Workflow - CRITICAL FOR QUALITY
+
+### Pre-Deployment Testing
+```bash
+# 1. Update version BEFORE committing
+node update-deployment-version.js
+
+# 2. Run comprehensive tests locally
+node test-comprehensive.js
+
+# 3. Commit with updated version
+git add -A
+git commit -m "fix/feat: description"
+
+# 4. Push to trigger deployment
+git push origin master
+```
+
+### Post-Deployment Testing (MANDATORY)
+```bash
+# Wait 1-2 minutes for Netlify deployment
+# Then run post-deployment test
+node test-after-deploy.js
+
+# If tests fail, check specific issues:
+node test-contact-form-live.js  # Test contact form specifically
+node test-images-comprehensive.js  # Test image loading
+node test-performance.js  # Performance metrics
+```
+
+### Key Testing Files
+- `test-after-deploy.js` - Main post-deployment test (ALWAYS RUN THIS)
+- `update-deployment-version.js` - Updates version metadata
+- `test-comprehensive.js` - Full local test suite
+- `test-contact-form-live.js` - Contact form specific tests
+
+### Browser Testing Best Practices
+1. **Always disable cache**: `await page.setCacheEnabled(false)`
+2. **Wait for network idle**: `waitUntil: 'networkidle2'`
+3. **Test multiple viewports**: Desktop (1920x1080) and Mobile (375x667)
+4. **Check computed styles**: Use `window.getComputedStyle()` not just CSS classes
+5. **Verify actual rendering**: Take screenshots for visual confirmation
 
 ## Development Commands
 
