@@ -553,7 +553,7 @@ p {
 }
 
 .project-card:hover {
-    transform: translateY(-12px) scale(1.02);
+    transform: translateY(-12px);
     box-shadow: var(--shadow-xl);
 }
 
@@ -573,12 +573,12 @@ p {
     height: 100%;
     object-fit: cover;
     transition: all var(--transition-slow);
-    filter: grayscale(0.1);
+    /* Removed grayscale filter for better color */
 }
 
 .project-card:hover .project-image img {
     transform: scale(1.08);
-    filter: grayscale(0);
+    /* Removed grayscale filter */
 }
 
 .project-overlay {
@@ -593,8 +593,7 @@ p {
     justify-content: center;
     opacity: 0;
     transition: all var(--transition-base);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    /* Removed backdrop blur that was making images appear blurry */
 }
 
 .project-card:hover .project-overlay {

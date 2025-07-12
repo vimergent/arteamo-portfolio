@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="version" content="1.3.2">
+    <meta name="version" content="1.3.3">
     <meta name="deployment-date" content="2025-07-07">
-    <meta name="deployment-time" content="14:08 UTC">
+    <meta name="deployment-time" content="16:17 UTC">
     <meta name="description" content="Studio Arteamo - Award-winning interior design studio in Bulgaria. Creating sophisticated contemporary spaces since 2008. View our portfolio of residential and commercial projects.">
     <meta name="keywords" content="interior design, Studio Arteamo, Bulgaria, Varna, contemporary design, residential design, commercial design, Petya Petrova">
     <meta name="author" content="Studio Arteamo">
@@ -30,9 +30,11 @@
     <noscript><link rel="stylesheet" href="styles-enhanced.min.css"></noscript>
     <link rel="preload" href="mobile-optimizations.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="mobile-optimizations.min.css"></noscript>
-    <script src="performance-optimizer.js" defer></script>
-    <script src="enhanced-lazy-loading.js" defer></script>
-    <!-- <script src="fix-image-paths-simple.js" defer></script> -->
+    <script src="performance-optimizer.js?v=1.3.3" defer></script>
+    <script src="enhanced-lazy-loading.js?v=1.3.3" defer></script>
+    <script src="remove-blur-fix.js?v=1.3.3"></script>
+    <!-- Fullscreen video intro - LOCAL TESTING ONLY -->
+    <script src="fullscreen-video-intro.js?v=1.3.3"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -186,7 +188,10 @@
 
     <footer class="footer">
         <div class="footer-container">
-            <p>&copy; 2024 <span data-translate="company.name">Studio Arteamo</span>. <span data-translate="common.allRightsReserved">All rights reserved</span>.</p>
+            <p>&copy; <span id="footer-year">2025</span> <span data-translate="company.name">Studio Arteamo</span>. <span data-translate="common.allRightsReserved">All rights reserved</span>.</p>
+            <div class="version-info" style="margin-top: 10px; font-size: 11px; opacity: 0.6;">
+                v1.3.3 | 2025-07-07
+            </div>
         </div>
     </footer>
 
@@ -204,5 +209,25 @@
     <script src="video-player.js" defer></script>
     <!-- Mobile video intro -->
     <script src="mobile-video-intro.js"></script>
+    
+    <!-- Update footer year from deployment date -->
+    <script>
+        // Get deployment date from meta tag
+        const deploymentDate = document.querySelector('meta[name="deployment-date"]')?.content;
+        if (deploymentDate) {
+            const year = new Date(deploymentDate).getFullYear();
+            const footerYear = document.getElementById('footer-year');
+            if (footerYear) {
+                footerYear.textContent = year;
+                console.log('Footer year updated to:', year, 'from date:', deploymentDate);
+            }
+        } else {
+            // Fallback to 2025
+            const footerYear = document.getElementById('footer-year');
+            if (footerYear) {
+                footerYear.textContent = '2025';
+            }
+        }
+    </script>
 </body>
 </html>

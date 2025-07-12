@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Arteamo JS</title>
+</head>
+<body>
+    <h1>Checking Arteamo.net JavaScript Execution</h1>
+    <div id="results"></div>
+    
+    <script>
+        const results = document.getElementById('results');
+        
+        async function checkSite() {
+            try {
+                // Load the page in an iframe
+                results.innerHTML += '<p>Loading arteamo.net...</p>';
+                
+                // Fetch and check JavaScript files
+                const jsFiles = [
+                    'translations.js',
+                    'project-config.min.js',
+                    'dynamic-projects.js',
+                    'script-enhanced.js'
+                ];
+                
+                for (const file of jsFiles) {
+                    try {
+                        const response = await fetch(`https://arteamo.net/${file}`);
+                        const text = await response.text();
+                        results.innerHTML += `<p>✓ ${file} loaded (${text.length} bytes)</p>`;
+                        
+                        // Check for specific content
+                        if (file === 'project-config.min.js') {
+                            if (text.includes('Apartament Flavia Garden')) {
+                                results.innerHTML += '<p style="color:green">✓ Project config contains projects</p>';
+                            }
+                        }
+                        if (file === 'dynamic-projects.js') {
+                            if (text.includes('renderProjects') || text.includes('createProjectCard')) {
+                                results.innerHTML += '<p style="color:green">✓ Dynamic projects has render functions</p>';
+                            }
+                        }
+                    } catch (e) {
+                        results.innerHTML += `<p style="color:red">✗ Error loading ${file}: ${e.message}</p>`;
+                    }
+                }
+                
+                // Check if projects are rendered
+                const pageResponse = await fetch('https://arteamo.net/');
+                const pageHtml = await pageResponse.text();
+                
+                if (pageHtml.includes('projects-grid')) {
+                    results.innerHTML += '<p style="color:green">✓ Projects grid found in HTML</p>';
+                }
+                
+                if (pageHtml.includes('project-item')) {
+                    results.innerHTML += '<p style="color:green">✓ Project items found</p>';
+                } else {
+                    results.innerHTML += '<p style="color:red">✗ No project items found - projects not rendered</p>';
+                }
+                
+            } catch (error) {
+                results.innerHTML += `<p style="color:red">Error: ${error.message}</p>`;
+            }
+        }
+        
+        checkSite();
+    </script>
+</body>
+</html>

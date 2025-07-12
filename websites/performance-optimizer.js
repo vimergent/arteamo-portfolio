@@ -87,18 +87,18 @@
         });
     }
 
-    // Progressive image loading with blur-up effect
+    // Progressive image loading (blur effect removed for sharper images)
     function setupProgressiveImages() {
         const images = document.querySelectorAll('img[data-src]');
         
         images.forEach(img => {
-            // Add blur effect initially
-            img.style.filter = 'blur(5px)';
-            img.style.transition = 'filter 0.3s';
+            // Smooth transition without blur
+            img.style.transition = 'opacity 0.3s';
+            img.style.opacity = '0.8';
             
-            // When image loads, remove blur
+            // When image loads, full opacity
             img.addEventListener('load', function() {
-                this.style.filter = 'none';
+                this.style.opacity = '1';
             });
         });
     }

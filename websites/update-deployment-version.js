@@ -38,6 +38,15 @@ function updateDeploymentVersion() {
         );
     }
     
+    // Update version in footer if exists
+    const versionRegex = /v\d+\.\d+\.\d+ \| \d{4}-\d{2}-\d{2}/;
+    if (versionRegex.test(content)) {
+        content = content.replace(
+            versionRegex,
+            `v${newVersion} | ${date}`
+        );
+    }
+    
     // Write back
     fs.writeFileSync(indexPath, content);
     

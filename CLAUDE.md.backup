@@ -1,0 +1,47 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project Overview
+
+This is an image optimization tool for the Interiori project. The repository contains a bash script that optimizes images in project folders by resizing, compressing, and converting them to WebP format.
+
+## Key Commands
+
+### Running the optimization script
+```bash
+cd websites
+./optimize-single-project.sh "Project Folder Name"
+```
+
+Example:
+```bash
+./optimize-single-project.sh "Apartament Flavia Garden 2024"
+```
+
+## Architecture
+
+The project has a simple structure:
+- `websites/optimize-single-project.sh` - Main bash script that handles image optimization
+- Project folders should be placed in the `websites/` directory
+- Output is saved to `websites/optimized/[Project Name]/` with two subdirectories:
+  - `images/` - Optimized JPEG images (max 2000px wide, 90% quality)
+  - `webp/` - WebP versions (88% quality)
+
+## Dependencies
+
+The script requires:
+- ImageMagick (`convert` and `identify` commands)
+- WebP tools (`cwebp` command)
+- Standard Unix utilities (`stat`, `numfmt`)
+
+## Script Behavior
+
+The optimization script:
+1. Validates that the project folder exists
+2. Creates output directories under `optimized/`
+3. Processes all JPG, JPEG, and PNG files in the project folder
+4. Resizes images wider than 2000px to fit within 2000px width
+5. Applies JPEG optimization with 90% quality, stripping metadata
+6. Creates WebP versions with 88% quality
+7. Reports file size comparisons for each processed image

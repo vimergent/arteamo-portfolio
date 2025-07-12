@@ -59,10 +59,9 @@
             img.src = src;
             img.classList.add('loaded');
             
-            // Remove blur effect after load
+            // Full opacity after load
             setTimeout(() => {
-                img.style.filter = 'none';
-                img.style.transform = 'scale(1)';
+                img.style.opacity = '1';
             }, 50);
         };
         
@@ -82,11 +81,10 @@
         const images = Array.from(document.querySelectorAll('img[data-src], img[loading="lazy"]'));
         
         images.forEach(img => {
-            // Add loading styles
+            // Add loading styles (removed blur for sharper images)
             if (!img.classList.contains('loaded')) {
-                img.style.filter = 'blur(5px)';
-                img.style.transform = 'scale(1.1)';
-                img.style.transition = 'filter 0.3s, transform 0.3s';
+                img.style.opacity = '0.8';
+                img.style.transition = 'opacity 0.3s';
             }
             
             // Set up lazy loading
