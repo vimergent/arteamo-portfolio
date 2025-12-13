@@ -4,9 +4,21 @@
 [build]
   publish = "."
   command = "echo 'No build needed'"
+  functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "18"
+
+# Netlify CMS Configuration
+[[redirects]]
+  from = "/admin-cms"
+  to = "/admin-cms/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin-cms/*"
+  to = "/admin-cms/:splat"
+  status = 200
 
 # Asset optimization
 [build.processing]

@@ -1,0 +1,280 @@
+# Netlify CMS Configuration for Studio Arteamo Portfolio
+# Multi-language interior design project management
+
+backend:
+  name: git-gateway
+  branch: staging  # Will change to master after testing
+
+# Local development
+local_backend: true
+
+# Media storage - Cloudinary integration
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: arteamo
+    api_key: YOUR_CLOUDINARY_API_KEY  # Will be added from env vars
+    default_transformations:
+      - - fetch_format: auto
+          quality: auto
+          crop: limit
+          width: 1920
+
+# Publish mode
+publish_mode: editorial_workflow
+
+# Media folder for fallback
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Collections
+collections:
+  # Projects Collection
+  - name: "projects"
+    label: "Projects"
+    label_singular: "Project"
+    folder: "content/projects"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    identifier_field: "project_id"
+    summary: "{{name_en}} ({{year}})"
+    sortable_fields: ['year', 'name_en', 'category']
+    view_filters:
+      - label: Residential
+        field: category
+        pattern: 'residential'
+      - label: Commercial
+        field: category
+        pattern: 'commercial'
+      - label: Office
+        field: category
+        pattern: 'office'
+      - label: Medical
+        field: category
+        pattern: 'medical'
+
+    fields:
+      # Basic Info
+      - label: "Project ID"
+        name: "project_id"
+        widget: "string"
+        hint: "Unique identifier (e.g., flavia-garden-2024)"
+
+      - label: "Year"
+        name: "year"
+        widget: "number"
+        value_type: "int"
+        min: 2000
+        max: 2030
+        default: 2024
+
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - label: "Residential"
+            value: "residential"
+          - label: "Commercial"
+            value: "commercial"
+          - label: "Office"
+            value: "office"
+          - label: "Medical"
+            value: "medical"
+        default: "residential"
+
+      - label: "Area (sqm)"
+        name: "area"
+        widget: "number"
+        value_type: "int"
+        min: 0
+        hint: "Project area in square meters"
+
+      # Bulgarian Language
+      - label: "Name (Bulgarian)"
+        name: "name_bg"
+        widget: "string"
+        required: true
+        hint: "Project name in Bulgarian"
+
+      - label: "Subtitle (Bulgarian)"
+        name: "subtitle_bg"
+        widget: "string"
+        required: false
+        hint: "Short tagline in Bulgarian"
+
+      - label: "Description (Bulgarian)"
+        name: "description_bg"
+        widget: "text"
+        required: true
+        hint: "Full project description in Bulgarian"
+
+      # English Language
+      - label: "Name (English)"
+        name: "name_en"
+        widget: "string"
+        required: true
+        hint: "Project name in English"
+
+      - label: "Subtitle (English)"
+        name: "subtitle_en"
+        widget: "string"
+        required: false
+        hint: "Short tagline in English"
+
+      - label: "Description (English)"
+        name: "description_en"
+        widget: "text"
+        required: true
+        hint: "Full project description in English"
+
+      # Russian Language
+      - label: "Name (Russian)"
+        name: "name_ru"
+        widget: "string"
+        required: true
+        hint: "Project name in Russian"
+
+      - label: "Subtitle (Russian)"
+        name: "subtitle_ru"
+        widget: "string"
+        required: false
+        hint: "Short tagline in Russian"
+
+      - label: "Description (Russian)"
+        name: "description_ru"
+        widget: "text"
+        required: true
+        hint: "Full project description in Russian"
+
+      # Spanish Language
+      - label: "Name (Spanish)"
+        name: "name_es"
+        widget: "string"
+        required: true
+        hint: "Project name in Spanish"
+
+      - label: "Subtitle (Spanish)"
+        name: "subtitle_es"
+        widget: "string"
+        required: false
+        hint: "Short tagline in Spanish"
+
+      - label: "Description (Spanish)"
+        name: "description_es"
+        widget: "text"
+        required: true
+        hint: "Full project description in Spanish"
+
+      # Hebrew Language
+      - label: "Name (Hebrew)"
+        name: "name_he"
+        widget: "string"
+        required: false
+        hint: "Project name in Hebrew (optional)"
+
+      - label: "Subtitle (Hebrew)"
+        name: "subtitle_he"
+        widget: "string"
+        required: false
+        hint: "Short tagline in Hebrew (optional)"
+
+      - label: "Description (Hebrew)"
+        name: "description_he"
+        widget: "text"
+        required: false
+        hint: "Full project description in Hebrew (optional)"
+
+      # Chinese Language
+      - label: "Name (Chinese)"
+        name: "name_zh"
+        widget: "string"
+        required: false
+        hint: "Project name in Chinese (optional)"
+
+      - label: "Subtitle (Chinese)"
+        name: "subtitle_zh"
+        widget: "string"
+        required: false
+        hint: "Short tagline in Chinese (optional)"
+
+      - label: "Description (Chinese)"
+        name: "description_zh"
+        widget: "text"
+        required: false
+        hint: "Full project description in Chinese (optional)"
+
+      # Images
+      - label: "Cover Image"
+        name: "cover_image"
+        widget: "image"
+        required: true
+        hint: "Main project image (shown in gallery grid)"
+        media_library:
+          config:
+            multiple: false
+
+      - label: "Gallery Images"
+        name: "images"
+        widget: "list"
+        required: true
+        min: 1
+        hint: "Project gallery images (drag to reorder)"
+        field:
+          label: "Image"
+          name: "image"
+          widget: "image"
+          media_library:
+            config:
+              multiple: false
+
+      # Metadata
+      - label: "Published"
+        name: "published"
+        widget: "boolean"
+        default: true
+        hint: "Show/hide project on website"
+
+      - label: "Featured"
+        name: "featured"
+        widget: "boolean"
+        default: false
+        hint: "Feature this project on homepage"
+
+      - label: "Display Order"
+        name: "display_order"
+        widget: "number"
+        required: false
+        hint: "Custom sort order (lower numbers appear first)"
+
+  # Site Settings Collection
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "General Settings"
+        name: "general"
+        file: "content/settings/general.yml"
+        fields:
+          - label: "Site Title"
+            name: "site_title"
+            widget: "string"
+            default: "Studio Arteamo"
+
+          - label: "Contact Email"
+            name: "contact_email"
+            widget: "string"
+            default: "studio@arteamo.net"
+
+          - label: "Contact Phone"
+            name: "contact_phone"
+            widget: "string"
+            default: "+359 897 983 127"
+
+          - label: "Founded Year"
+            name: "founded_year"
+            widget: "number"
+            default: 2008
+
+          - label: "Enable Analytics"
+            name: "enable_analytics"
+            widget: "boolean"
+            default: true
