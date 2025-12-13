@@ -12,8 +12,8 @@ local_backend: true
 media_library:
   name: cloudinary
   config:
-    cloud_name: arteamo
-    api_key: YOUR_CLOUDINARY_API_KEY  # Will be added from env vars
+    cloud_name: db1khwdaa
+    api_key: 774928794947698
     default_transformations:
       - - fetch_format: auto
           quality: auto
