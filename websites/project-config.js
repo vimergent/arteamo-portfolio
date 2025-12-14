@@ -11,59 +11,11 @@
  * 2. Run: node sync-markdown-to-config.js
  * 3. Or use the CMS at /admin-cms/ (commits trigger auto-sync)
  *
- * Last updated: 2025-12-14T18:43:20.169Z
- * Projects count: 12
+ * Last updated: 2025-12-14T23:08:34.776Z
+ * Projects count: 11
  */
 
 const projectConfig = {
-  "flavia-garden-test": {
-    "name": {
-      "bg": "Апартамент Флавия Гардън",
-      "en": "Flavia Garden Apartment",
-      "ru": "Апартамент Флавия Гарден",
-      "es": "Apartamento Flavia Garden",
-      "he": "דירת פלביה גארדן",
-      "zh": "弗拉维亚花园公寓"
-    },
-    "subtitle": {
-      "bg": "Модерен дизайн с топли акценти",
-      "en": "Modern design with warm accents",
-      "ru": "Современный дизайн с теплыми акцентами",
-      "es": "Diseño moderno con acentos cálidos",
-      "he": "עיצוב מודרני עם מבטאים חמים",
-      "zh": "温暖点缀的现代设计"
-    },
-    "description": {
-      "bg": "Този апартамент съчетава съвременни линии с уютна атмосфера. Просторната всекидневна се отваря към кухненско студио, създавайки перфектно пространство за семейството.",
-      "en": "This apartment combines contemporary lines with a cozy atmosphere. The spacious living room opens onto a kitchen studio, creating the perfect space for a family.",
-      "ru": "Эта квартира сочетает в себе современные линии с уютной атмосферой. Просторная гостиная открывается в кухонную студию, создавая идеальное пространство для семьи.",
-      "es": "Este apartamento combina líneas contemporáneas con un ambiente acogedor. El amplio salón se abre a un estudio de cocina, creando el espacio perfecto para una familia.",
-      "he": "דירה זו משלבת קווים עכשוויים עם אווירה נעימה. הסלון המרווח נפתח למטבח סטודיו, ויוצר את המרחב המושלם למשפחה.",
-      "zh": "这间公寓将当代线条与温馨氛围相结合。宽敞的客厅通往厨房工作室，为家庭创造了完美的空间。"
-    },
-    "category": "residential",
-    "year": 2024,
-    "area": 120,
-    "location": "София, България",
-    "coverImage": "projects/flavia-garden-2024/cam01.jpg",
-    "images": [
-      "projects/flavia-garden-2024/cam01.jpg",
-      "projects/flavia-garden-2024/cam02.jpg",
-      "projects/flavia-garden-2024/cam03.jpg",
-      "projects/flavia-garden-2024/cam04.jpg",
-      "projects/flavia-garden-2024/cam05.jpg",
-      "projects/flavia-garden-2024/cam06.jpg",
-      "projects/flavia-garden-2024/cam07.jpg",
-      "projects/flavia-garden-2024/cam08.jpg",
-      "projects/flavia-garden-2024/cam09.jpg",
-      "projects/flavia-garden-2024/cam10.jpg"
-    ],
-    "published": true,
-    "featured": true,
-    "order": 1,
-    "slug": "flavia-garden-test",
-    "originalKey": ""
-  },
   "Apartament Flavia Garden 2024": {
     "name": {
       "bg": "Апартамент Флавия Гардън",

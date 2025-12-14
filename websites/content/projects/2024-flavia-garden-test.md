@@ -28,6 +28,7 @@ category: "residential"
 year: 2024
 area: 120
 location: "София, България"
+published: false
 
 # Images (will be Cloudinary URLs after migration)
 cover_image: "projects/flavia-garden-2024/cam01.jpg"
