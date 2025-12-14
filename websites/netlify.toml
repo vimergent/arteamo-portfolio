@@ -36,9 +36,25 @@
 
 # Enhanced security headers
 
-# Relaxed CSP for CMS admin - must come BEFORE /* rule
+# Relaxed CSP for CMS admin - try exact paths
 [[headers]]
-  for = "/admin-cms/*"
+  for = "/admin-cms"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://identity.netlify.com; img-src 'self' data: blob: https://res.cloudinary.com; connect-src 'self' https://api.netlify.com https://*.netlify.com https://github.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+
+[[headers]]
+  for = "/admin-cms/"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://identity.netlify.com; img-src 'self' data: blob: https://res.cloudinary.com; connect-src 'self' https://api.netlify.com https://*.netlify.com https://github.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+
+[[headers]]
+  for = "/admin-cms/index.html"
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
