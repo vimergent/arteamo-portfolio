@@ -11,7 +11,7 @@
  * 2. Run: node sync-markdown-to-config.js
  * 3. Or use the CMS at /admin-cms/ (commits trigger auto-sync)
  *
- * Last updated: 2025-12-13T22:38:24.354Z
+ * Last updated: 2025-12-14T18:43:20.169Z
  * Projects count: 12
  */
 
