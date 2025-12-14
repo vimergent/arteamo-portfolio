@@ -1,58 +1,59 @@
 ---
-# Project Metadata
-name_bg: "Резиденция Гичев"
-name_en: "Gichev Residence"
-name_ru: "Резиденция Гичев"
-name_es: "Residencia Gichev"
-name_he: ""
-name_zh: ""
-
-# Subtitles
-subtitle_bg: "Съвременен Дизайн"
-subtitle_en: "Contemporary Design"
-subtitle_ru: "Современный Дизайн"
-subtitle_es: "Diseño Contemporáneo"
-subtitle_he: ""
-subtitle_zh: ""
-
-# Descriptions
-description_bg: "Изискан семеен дом, демонстриращ съвременни дизайнерски принципи."
-description_en: "A refined family home showcasing contemporary design principles."
-description_ru: "Изысканный семейный дом, демонстрирующий современные принципы дизайна."
-description_es: "Un hogar familiar refinado que muestra principios de diseño contemporáneo."
-description_he: ""
-description_zh: ""
-
-# Project Details
-category: "residential"
+name_bg: Резиденция Гичев
+name_en: Gichev Residence
+name_ru: Резиденция Гичев
+name_es: Residencia Gichev
+name_he: ''
+name_zh: ''
+subtitle_bg: Съвременен Дизайн
+subtitle_en: Contemporary Design
+subtitle_ru: Современный Дизайн
+subtitle_es: Diseño Contemporáneo
+subtitle_he: ''
+subtitle_zh: ''
+description_bg: 'Изискан семеен дом, демонстриращ съвременни дизайнерски принципи.'
+description_en: A refined family home showcasing contemporary design principles.
+description_ru: 'Изысканный семейный дом, демонстрирующий современные принципы дизайна.'
+description_es: Un hogar familiar refinado que muestra principios de diseño contemporáneo.
+description_he: ''
+description_zh: ''
+category: residential
 year: 2019
 area: 130
-location: "Варна, България"
-
-# Images (local paths - will be migrated to Cloudinary)
-cover_image: "gichev-sped-2019/GichevSped1 (1).jpg"
+location: 'Варна, България'
+cover_image: >-
+  https://res.cloudinary.com/db1khwdaa/image/upload/v1765660283/projects/gichev-sped-2019/GichevSped1%20%281%29.jpg
 images:
-  - "gichev-sped-2019/GichevSped1 (1).jpg"
-  - "gichev-sped-2019/GichevSped1 (2).jpg"
-  - "gichev-sped-2019/GichevSped1 (3).jpg"
-  - "gichev-sped-2019/GichevSped1 (4).jpg"
-  - "gichev-sped-2019/GichevSped1 (5).jpg"
-  - "gichev-sped-2019/GichevSped1 (6).jpg"
-  - "gichev-sped-2019/GichevSped1 (7).jpg"
-  - "gichev-sped-2019/GichevSped1 (8).jpg"
-  - "gichev-sped-2019/GichevSped1 (9).jpg"
-  - "gichev-sped-2019/GichevSped1 (10).jpg"
-  - "gichev-sped-2019/GichevSped1 (11).jpg"
-  - "gichev-sped-2019/GichevSped1 (12).jpg"
-  - "gichev-sped-2019/GichevSped1 (13).jpg"
-
-# Publishing Settings
+  - >-
+    https://res.cloudinary.com/db1khwdaa/image/upload/v1765660283/projects/gichev-sped-2019/GichevSped1%20%281%29.jpg
+  - >-
+    https://res.cloudinary.com/db1khwdaa/image/upload/v1765660291/projects/gichev-sped-2019/GichevSped1%20%282%29.jpg
+  - >-
+    https://res.cloudinary.com/db1khwdaa/image/upload/v1765660292/projects/gichev-sped-2019/GichevSped1%20%283%29.jpg
+  - >-
+    https://res.cloudinary.com/db1khwdaa/image/upload/v1765660293/projects/gichev-sped-2019/GichevSped1%20%284%29.jpg
+  - >-
+    https://res.cloudinary.com/db1khwdaa/image/upload/v1765660294/projects/gichev-sped-2019/GichevSped1%20%285%29.jpg
+  - >-
+    https://res.cloudinary.com/db1khwdaa/image/upload/v1765660295/projects/gichev-sped-2019/GichevSped1%20%286%29.jpg
+  - >-
+    https://res.cloudinary.com/db1khwdaa/image/upload/v1765660296/projects/gichev-sped-2019/GichevSped1%20%287%29.jpg
+  - >-
+    https://res.cloudinary.com/db1khwdaa/image/upload/v1765660297/projects/gichev-sped-2019/GichevSped1%20%288%29.jpg
+  - >-
+    https://res.cloudinary.com/db1khwdaa/image/upload/v1765660297/projects/gichev-sped-2019/GichevSped1%20%289%29.jpg
+  - >-
+    https://res.cloudinary.com/db1khwdaa/image/upload/v1765660284/projects/gichev-sped-2019/GichevSped1%20%2810%29.jpg
+  - >-
+    https://res.cloudinary.com/db1khwdaa/image/upload/v1765660285/projects/gichev-sped-2019/GichevSped1%20%2811%29.jpg
+  - >-
+    https://res.cloudinary.com/db1khwdaa/image/upload/v1765660287/projects/gichev-sped-2019/GichevSped1%20%2812%29.jpg
+  - >-
+    https://res.cloudinary.com/db1khwdaa/image/upload/v1765660288/projects/gichev-sped-2019/GichevSped1%20%2813%29.jpg
 published: true
 featured: false
 order: 999
-
-# Original project key (for reference)
-original_key: "Gichev sped 2019"
+original_key: Gichev sped 2019
 ---
 
 # Gichev Residence
