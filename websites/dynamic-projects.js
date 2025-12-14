@@ -66,10 +66,13 @@ const projectManager = {
         const projectName = projectData.name?.[lang] || projectData.name?.en || folderName;
         const projectDesc = projectData.description?.[lang] || projectData.description?.en || '';
         const coverImage = projectData.coverImage || (projectData.images && projectData.images[0]) || 'placeholder.jpg';
-        
+
+        // Check if coverImage is already a full URL (Cloudinary) or relative path
+        const imageSrc = coverImage.startsWith('http') ? coverImage : `${encodeImagePath(folderName)}/${encodeImagePath(coverImage)}`;
+
         card.innerHTML = `
             <div class="project-image">
-                <img src="${encodeImagePath(folderName)}/${encodeImagePath(coverImage)}" 
+                <img src="${imageSrc}" 
                      alt="${projectName}"
                      loading="lazy"
                      onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect width=%22400%22 height=%22300%22 fill=%22%23f8f8f8%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-family=%22Inter%22%3ENo Image%3C/text%3E%3C/svg%3E'">
