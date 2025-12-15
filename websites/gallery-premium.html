@@ -872,7 +872,10 @@
             }
             
             const project = projectData[projectFolder];
-            projectImages = project.images.map(img => `../${projectFolder}/${img}`);
+            // Check if image URL is already absolute (Cloudinary) or relative path
+            projectImages = project.images.map(img =>
+                img.startsWith('http') ? img : `../${projectFolder}/${img}`
+            );
             
             // Update all content
             document.getElementById('galleryTitle').textContent = project.name;
