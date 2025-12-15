@@ -27,8 +27,10 @@ function getRandomImages(count = 6) {
     galleryData.forEach(project => {
         // Only take first 2 images per project for faster loading
         project.images.slice(0, 2).forEach(image => {
-            // Use direct folder path to access images
-            const imagePath = `${encodeImagePath(project.folder)}/${encodeImagePath(image)}`;
+            // Check if image is already a full URL (Cloudinary) or relative path
+            const imagePath = image.startsWith('http')
+                ? image
+                : `${encodeImagePath(project.folder)}/${encodeImagePath(image)}`;
             allImages.push({
                 src: imagePath,
                 projectName: project.name,
