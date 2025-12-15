@@ -33,7 +33,7 @@ collections:
   - name: "projects"
     label: "Projects"
     label_singular: "Project"
-    folder: "content/projects"
+    folder: "websites/content/projects"
     create: true
     slug: "{{year}}-{{slug}}"
     identifier_field: "project_id"
