@@ -39,11 +39,24 @@
             }
         });
     });
-    
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true
-    });
-    
+
+    // Only observe if document.body exists
+    if (document.body) {
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+    } else {
+        // If body doesn't exist yet, wait for it
+        document.addEventListener('DOMContentLoaded', function() {
+            if (document.body) {
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                });
+            }
+        });
+    }
+
     console.log('Blur removal fix applied');
 })();
