@@ -12,7 +12,7 @@ from pathlib import Path
 
 # Configuration
 PORT = 8090
-DIRECTORY = "/root/Interiori/websites"
+DIRECTORY = str(Path(__file__).resolve().parent)
 
 class MyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
