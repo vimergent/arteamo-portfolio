@@ -37,12 +37,11 @@ class ContactForm {
             };
         
         container.innerHTML = `
-            <form id="${this.formId}" 
-                  name="contact" 
-                  method="POST" 
+            <form id="${this.formId}"
+                  name="contact"
+                  method="POST"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
-                  data-netlify-recaptcha="true"
                   class="contact-form"
                   style="display: block !important; flex-direction: column !important; max-width: 600px !important; margin: 0 auto !important;">
                 
@@ -80,10 +79,6 @@ class ContactForm {
                 <div class="form-group" style="display: block !important; width: 100% !important; margin-bottom: 1.5rem !important;">
                     <label for="message" style="display: block !important; margin-bottom: 0.5rem !important;">${translations.formMessage || 'Message'} *</label>
                     <textarea id="message" name="message" rows="5" required style="display: block !important; width: 100% !important;"></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <div data-netlify-recaptcha="true"></div>
                 </div>
                 
                 <div class="form-group">
@@ -269,17 +264,6 @@ class ContactForm {
                 margin-bottom: 2rem;
             }
             
-            /* reCAPTCHA styling */
-            .g-recaptcha {
-                margin: 0 auto;
-                display: inline-block;
-            }
-            
-            [data-netlify-recaptcha] {
-                display: flex;
-                justify-content: center;
-                margin-bottom: 1rem;
-            }
         `;
         
         document.head.appendChild(styles);
